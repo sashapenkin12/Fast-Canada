@@ -1,0 +1,7 @@
+.venv
+migrations
+templates
+GOOGLE_MAPS_API_KEY.env
+SECRET_KEY.env
+db.sqlite3
+.env
