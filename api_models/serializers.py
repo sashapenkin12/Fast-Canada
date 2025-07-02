@@ -90,6 +90,7 @@ class ProductSerializer(serializers.ModelSerializer):
     pros = serializers.ListField(child=serializers.CharField(), read_only=True, source='pros.splitlines')
     cons = serializers.ListField(child=serializers.CharField(), read_only=True, source='cons.splitlines')
 
+
     class Meta:
         model = Product
         fields = ['id', 'brand', 'name', 'slug', 'description', 'pros', 'cons', 'created_at', 'updated_at']
