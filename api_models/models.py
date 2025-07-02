@@ -8,8 +8,8 @@ class City(models.Model):
     name = models.CharField(max_length=100, unique=True)
     province = models.CharField(max_length=100, default="Онтарио")
     services = models.ManyToManyField('Service', related_name='cities')
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
+    latitude = models.FloatField(help_text="Широта города (например, 43.6532 для Торонто)")
+    longitude = models.FloatField(help_text="Долгота города (например, -79.3832 для Торонто)")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -38,8 +38,6 @@ class Service(models.Model):
     full_description = models.TextField()
     icon = models.URLField(blank=True)
     image = models.URLField(blank=True)
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='service')
 
@@ -109,8 +107,6 @@ class BlogPost(models.Model):
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
     image = models.URLField(blank=True)
     video_on_youtube = models.URLField(blank=True)
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='blog_post')
 
@@ -143,8 +139,6 @@ class Contact(models.Model):
 class About(models.Model):
     mission = models.TextField()
     experience = models.TextField()
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='about')
 
@@ -178,8 +172,6 @@ class CaseStudy(models.Model):
     description = models.TextField()
     image = models.URLField(blank=True)
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True, blank=True)
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='case_study')
 
