@@ -32,7 +32,7 @@ class Service(models.Model):
         ('installations', 'Установка'),
     ]
     title = models.CharField(max_length=200, unique=True)
-    type_service = models.CharField(max_length=10, choices=SERVICE_TYPE_CHOICES)
+    type_service = models.CharField(choices=SERVICE_TYPE_CHOICES)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     short_description = models.TextField()
     full_description = models.TextField()
@@ -137,8 +137,8 @@ class Contact(models.Model):
 
 
 class About(models.Model):
-    mission = models.TextField()
-    experience = models.TextField()
+    mission = models.TextField(max_length=500)
+    experience = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='about')
 
