@@ -24,7 +24,7 @@ class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
         fields = ['id', 'slug', 'category', 'title', 'translated_short_description', 'translated_full_description',
-                  'icon', 'image', 'meta_title', 'meta_description', 'created_at']
+                  'icon', 'image', 'created_at']
 
 
 class CitySerializer(serializers.ModelSerializer):
@@ -33,7 +33,7 @@ class CitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = City
-        fields = ['id', 'name', 'province', 'services', 'locations', 'meta_title', 'meta_description', 'created_at']
+        fields = ['id', 'name', 'province', 'services', 'locations', 'created_at']
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -110,8 +110,7 @@ class BlogPostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BlogPost
-        fields = ['id', 'slug', 'translated_title', 'translated_content', 'category', 'image', 'meta_title',
-                  'meta_description', 'created_at']
+        fields = ['id', 'slug', 'translated_title', 'translated_content', 'category', 'image', 'created_at']
 
 
 class BrandSerializer(serializers.ModelSerializer):
@@ -153,7 +152,7 @@ class AboutSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = About
-        fields = ['id', 'translated_mission', 'translated_experience', 'meta_title', 'meta_description', 'created_at']
+        fields = ['id', 'translated_mission', 'translated_experience', 'created_at']
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -173,7 +172,7 @@ class CaseStudySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CaseStudy
-        fields = ['id', 'slug', 'title', 'description', 'image', 'city', 'meta_title', 'meta_description', 'created_at']
+        fields = ['id', 'slug', 'title', 'description', 'image', 'city', 'created_at']
 
 
 class VacancySerializer(serializers.ModelSerializer):

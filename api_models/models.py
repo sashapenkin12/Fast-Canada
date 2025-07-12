@@ -36,8 +36,8 @@ class Service(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     short_description = models.TextField()
     full_description = models.TextField()
-    icon = models.URLField(blank=True)
-    image = models.URLField(blank=True)
+    icon = models.ImageField("media/service_icon", blank=True)
+    image = models.ImageField("media/service_image", blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='service')
 
@@ -58,8 +58,6 @@ class Brand(models.Model):
     slug = models.SlugField(max_length=100, unique=True, blank=True)
     logo = models.ImageField("media/brands_images", blank=True)
     description = models.TextField()
-    meta_title = models.CharField(max_length=200, blank=True)
-    meta_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='brand')
 
@@ -105,7 +103,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     content = models.TextField()
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
-    image = models.URLField(blank=True)
+    image = models.ImageField("media/blog_image", blank=True)
     video_on_youtube = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='blog_post')
@@ -149,7 +147,7 @@ class About(models.Model):
 class Employee(models.Model):
     name = models.CharField(max_length=100)
     position = models.CharField(max_length=100)
-    photo = models.URLField(blank=True)
+    photo = models.ImageField("media/employee_image", blank=True)
     bio = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -158,7 +156,7 @@ class Employee(models.Model):
 
 
 class Gallery(models.Model):
-    image = models.URLField()
+    image = models.ImageField('media/gallery_image', blank=True)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -170,7 +168,7 @@ class CaseStudy(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     description = models.TextField()
-    image = models.URLField(blank=True)
+    image = models.ImageField('media/case_study_image', blank=True)
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='case_study')
@@ -222,6 +220,7 @@ class Vacancy(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class VacancyApplication(models.Model):
     vacancy = models.ForeignKey(Vacancy, on_delete=models.CASCADE, related_name='applications')

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import City, Location, Service, Contact, Brand, BlogPost, About, Employee, Gallery, CaseStudy, Vacancy, \
-    VacancyApplication
+    VacancyApplication, Product
 
 
 @admin.register(City)
@@ -90,3 +90,9 @@ class VacancyAdmin(admin.ModelAdmin):
 class VacancyApplicationAdmin(admin.ModelAdmin):
     list_display = ['name', 'vacancy', 'email', 'phone', 'created_at']
     list_filter = ['vacancy']
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['brand', 'name', 'description', 'pros', 'cons', 'updated_at', 'created_at']
+    list_filter = ['brand']
