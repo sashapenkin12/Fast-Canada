@@ -3,7 +3,8 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     ServiceViewSet, BrandViewSet, BlogPostViewSet, ContactViewSet,
     CityViewSet, LocationViewSet, AboutViewSet, EmployeeViewSet,
-    GalleryViewSet, CaseStudyViewSet, ProductViewSet, VacancyViewSet, VacancyApplicationViewSet
+    GalleryViewSet, CaseStudyViewSet, ProductViewSet, VacancyViewSet, VacancyApplicationViewSet, send_email_view,
+    send_to_housecall
 )
 
 router = DefaultRouter()
@@ -23,4 +24,6 @@ router.register(r'vacancy-applications', VacancyApplicationViewSet, basename='va
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('send-email/', send_email_view, name='send_email'),
+    path('send-to-housecall/', send_to_housecall, name='send_to_housecall'),
 ]

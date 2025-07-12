@@ -8,8 +8,11 @@ from .serializers import (
     GallerySerializer, CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer
 )
 from integrations.housecall import send_to_housecall_pro
-from django.core.mail import send_mail
 from django.conf import settings
+from django.core.mail import send_mail
+from django.http import HttpResponse
+import requests
+from decouple import config
 
 
 class CityViewSet(viewsets.ReadOnlyModelViewSet):
@@ -129,3 +132,24 @@ class VacancyApplicationViewSet(viewsets.ModelViewSet):
         )
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+def send_email_view(request):
+    if request.method == 'POST':
+        subject = 'Тестовое письмо'
+        message = 'Это тестовое сообщение от вашего Django-приложения.'
+        from_email = 'bloodyangel10k@gmail.com'
+        recipient_list = ['bloodyangel10k@gmail.com']
+        send_mail(subject, message, from_email, recipient_list)
+        return HttpResponse('Письмо отправлено!')
+    return HttpResponse('Используйте POST-запрос для отправки.')
+
+
+def send_to_housecall(request):
+    if request.method == 'POST':
+        url = 'https://api.housecallpro.com/endpoint'
+        headers = {'Authorization': f'Bearer {config("HOUSECALL_API_KEY")}'}
+        data = {'message': 'Тестовое сообщение'}
+        response = requests.post(url, headers=headers, json=data)
+        return HttpResponse(f'Отправлено: {response.text}')
+    return HttpResponse('Используйте POST-запрос.')

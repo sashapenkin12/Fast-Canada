@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce1ed517-95d8-46f9-92b2-9be3538c3f9c" name="Changes" comment="sixth_commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ce1ed517-95d8-46f9-92b2-9be3538c3f9c" name="Changes" comment="Fix_for_Sayna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_models/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <workItem from="1752035331741" duration="7233000" />
       <workItem from="1752128899676" duration="3134000" />
       <workItem from="1752223099523" duration="2395000" />
-      <workItem from="1752308808124" duration="718000" />
+      <workItem from="1752308808124" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <option name="closed" value="true" />
@@ -237,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751815502869</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix_for_Sayna">
+      <option name="closed" value="true" />
+      <created>1752309784481</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752309784481</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +268,7 @@
     <MESSAGE value="fourth_commit" />
     <MESSAGE value="fifth_commit" />
     <MESSAGE value="sixth_commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="sixth_commit" />
+    <MESSAGE value="Fix_for_Sayna" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix_for_Sayna" />
   </component>
 </project>
