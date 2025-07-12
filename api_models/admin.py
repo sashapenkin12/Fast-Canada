@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import City, Location, Service, Contact, Brand, BlogPost, About, Employee, Gallery, CaseStudy, Vacancy, \
     VacancyApplication, Product
+from ckeditor.widgets import CKEditorWidget
+from django.db import models
 
 
 @admin.register(City)
@@ -20,9 +22,13 @@ class LocationAdmin(admin.ModelAdmin):
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ['get_category', 'title', 'slug', 'created_at']
-    search_fields = ['title', 'slug', 'short_description']
-    list_filter = ['title']
+    search_fields = ['title', 'slug', 'full_description']
+    list_filter = ['type_service']
     prepopulated_fields = {'slug': ('title',)}
+
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
 
     def get_category(self, obj):
         return obj.get_category()
@@ -51,10 +57,14 @@ class BlogPostAdmin(admin.ModelAdmin):
     list_filter = ['category']
     prepopulated_fields = {'slug': ('title',)}
 
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
+
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ['id', 'created_at']
+    list_display = ['id', 'mission', 'experience', 'created_at']
     search_fields = ['mission', 'experience']
 
 

@@ -18,6 +18,7 @@ from decouple import config
 class CityViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = City.objects.all()
     serializer_class = CitySerializer
+    lookup_field = 'name'
 
 
 class LocationViewSet(viewsets.ReadOnlyModelViewSet):
@@ -105,6 +106,8 @@ class VacancyViewSet(viewsets.ModelViewSet):
 
 
 class VacancyApplicationViewSet(viewsets.ModelViewSet):
+    serializer_class = VacancyApplicationSerializer
+
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -127,18 +130,21 @@ class VacancyApplicationViewSet(viewsets.ModelViewSet):
             subject,
             message,
             settings.DEFAULT_FROM_EMAIL,
-            [settings.HR_EMAIL],
+            [settings.HR_EMAIL],  # Требуется настройка в settings.py
             fail_silently=False,
         )
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def perform_create(self, serializer):
+        serializer.save()
 
 
 def send_email_view(request):
     if request.method == 'POST':
         subject = 'Тестовое письмо'
         message = 'Это тестовое сообщение от вашего Django-приложения.'
-        from_email = 'bloodyangel10k@gmail.com'
+        from_email = settings.DEFAULT_FROM_EMAIL
         recipient_list = ['bloodyangel10k@gmail.com']
         send_mail(subject, message, from_email, recipient_list)
         return HttpResponse('Письмо отправлено!')
@@ -150,6 +156,10 @@ def send_to_housecall(request):
         url = 'https://api.housecallpro.com/endpoint'
         headers = {'Authorization': f'Bearer {config("HOUSECALL_API_KEY")}'}
         data = {'message': 'Тестовое сообщение'}
-        response = requests.post(url, headers=headers, json=data)
-        return HttpResponse(f'Отправлено: {response.text}')
+        try:
+            response = requests.post(url, headers=headers, json=data, timeout=10)
+            response.raise_for_status()
+            return HttpResponse(f'Отправлено: {response.text}')
+        except requests.RequestException as e:
+            return HttpResponse(f'Ошибка: {str(e)}', status=500)
     return HttpResponse('Используйте POST-запрос.')

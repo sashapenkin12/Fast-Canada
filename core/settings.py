@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'integrations',
     'drf_yasg',
     'corsheaders',
+    'ckeditor',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [

@@ -6,25 +6,19 @@ from integrations.google_translate import translate_text
 
 class ServiceSerializer(serializers.ModelSerializer):
     category = serializers.SerializerMethodField()
-    title = serializers.CharField(source='get_title_display')
-    translated_short_description = serializers.SerializerMethodField()
+    title = serializers.CharField(source='get_type_service_display')  # Corrected from get_title_display
     translated_full_description = serializers.SerializerMethodField()
 
     def get_category(self, obj):
         return obj.get_category()
 
-    def get_translated_short_description(self, obj):
-        language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.short_description, language)
-
     def get_translated_full_description(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.full_description, language)
+        return translate_text(obj.full_description if obj.full_description else '', language)
 
     class Meta:
         model = Service
-        fields = ['id', 'slug', 'category', 'title', 'translated_short_description', 'translated_full_description',
-                  'icon', 'image', 'created_at']
+        fields = ['id', 'slug', 'category', 'title', 'translated_full_description', 'icon', 'image', 'created_at']
 
 
 class CitySerializer(serializers.ModelSerializer):
@@ -55,33 +49,33 @@ class ContactSerializer(serializers.ModelSerializer):
 
     def validate_name(self, value):
         if not value or len(value) > 70:
-            raise serializers.ValidationError("Имя должно быть не длиннее 70 символов и не пустым")
+            raise serializers.ValidationError("Name must not exceed 70 characters and must not be empty")
         return value
 
     def validate_phone(self, value):
         import re
         pattern = r'^\+1\s*[\(\.]*\d{3}[\)\.\-]*\s*\d{3}[\.\-]*\s*\d{4}$'
         if not re.match(pattern, value):
-            raise serializers.ValidationError("Неверный формат телефона. Пример: +1 (123) 456-7890")
+            raise serializers.ValidationError("Invalid phone format. Example: +1 (123) 456-7890")
         digits = re.sub(r'\D', '', value)
         if len(digits) != 11 or not digits.startswith('1'):
-            raise serializers.ValidationError("Номер должен содержать 10 цифр после +1")
+            raise serializers.ValidationError("Phone number must contain 10 digits after +1")
         normalized = f"+1 ({digits[1:4]}) {digits[4:7]}-{digits[7:11]}"
         return normalized
 
     def validate_email(self, value):
         if not value or '@' not in value:
-            raise serializers.ValidationError("Неверный формат email")
+            raise serializers.ValidationError("Invalid email format")
         return value
 
     def validate_address(self, value):
         if not value:
-            raise serializers.ValidationError("Адрес обязателен")
+            raise serializers.ValidationError("Address is required")
         return value
 
     def validate_description(self, value):
         if not value:
-            raise serializers.ValidationError("Описание обязательно")
+            raise serializers.ValidationError("Description is required")
         return value
 
 
@@ -89,7 +83,6 @@ class ProductSerializer(serializers.ModelSerializer):
     brand = serializers.SlugRelatedField(slug_field='slug', queryset=Brand.objects.all())
     pros = serializers.ListField(child=serializers.CharField(), read_only=True, source='pros.splitlines')
     cons = serializers.ListField(child=serializers.CharField(), read_only=True, source='cons.splitlines')
-
 
     class Meta:
         model = Product
@@ -124,18 +117,15 @@ class BrandSerializer(serializers.ModelSerializer):
 
     def get_translated_name(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
-        from integrations.google_translate import translate_text
         return translate_text(obj.name, language)
 
     def get_translated_description(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
-        from integrations.google_translate import translate_text
         return translate_text(obj.description, language)
 
     class Meta:
         model = Brand
-        fields = ['id', 'slug', 'translated_name', 'translated_description', 'logo', 'meta_title', 'meta_description',
-                  'created_at', 'products']
+        fields = ['id', 'slug', 'translated_name', 'translated_description', 'logo', 'created_at', 'products']
 
 
 class AboutSerializer(serializers.ModelSerializer):
@@ -188,5 +178,3 @@ class VacancyApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = VacancyApplication
         fields = ['id', 'vacancy', 'name', 'email', 'phone', 'resume', 'message', 'created_at']
-
-
