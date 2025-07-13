@@ -143,7 +143,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     content = RichTextField(blank=True, null=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
-    image = models.ImageField(upload_to='blog_image/', blank=True, null=True)
+    # image = models.ImageField(upload_to='blog_image/', blank=True, null=True)
     video_on_youtube = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     faqs = GenericRelation('FAQ', related_query_name='blog_post')
@@ -164,6 +164,20 @@ class BlogPost(models.Model):
     class Meta:
         verbose_name = "Blog Post"
         verbose_name_plural = "Blog Posts"
+
+
+class BlogImage(models.Model):
+    blog_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='blog_images/', blank=True, null=True)
+    caption = models.CharField(max_length=200, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Image for {self.blog_post.title}"
+
+    class Meta:
+        verbose_name = "Blog Image"
+        verbose_name_plural = "Blog Images"
 
 
 class Contact(models.Model):
@@ -201,34 +215,6 @@ class About(models.Model):
         verbose_name_plural = "About Pages"
 
 
-class Employee(models.Model):
-    name = models.CharField(max_length=100)
-    position = models.CharField(max_length=100)
-    photo = models.ImageField(upload_to='employee_image/', blank=True, null=True)
-    bio = models.TextField(blank=True)  # Can be replaced with RichTextField
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = "Employee"
-        verbose_name_plural = "Employees"
-
-
-class Gallery(models.Model):
-    image = models.ImageField(upload_to='gallery_image/', blank=True, null=True)
-    description = RichTextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Image {self.id}"
-
-    class Meta:
-        verbose_name = "Gallery Image"
-        verbose_name_plural = "Gallery Images"
-
-
 class CaseStudy(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
@@ -261,7 +247,7 @@ class FAQ(models.Model):
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
     question = models.CharField(max_length=200)
-    answer = models.TextField()  # Can be replaced with RichTextField
+    answer = RichTextField(blank=True, null=True)
     order = models.PositiveIntegerField(default=0, help_text="Display order")
 
     class Meta:
@@ -278,7 +264,6 @@ class Vacancy(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     description = models.TextField()
     requirements = models.TextField(blank=True)
-    salary = models.CharField(max_length=100, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)

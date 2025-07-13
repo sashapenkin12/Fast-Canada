@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import City, Location, Service, Contact, Brand, BlogPost, About, Employee, Gallery, CaseStudy, Product, \
-    VacancyApplication, Vacancy
+from .models import City, Location, Service, Contact, Brand, BlogPost, About, CaseStudy, Product, BlogImage, \
+    VacancyApplication, Vacancy, FAQ
 from integrations.google_translate import translate_text
 
 
@@ -89,7 +89,14 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'brand', 'name', 'slug', 'description', 'pros', 'cons', 'created_at', 'updated_at']
 
 
+class BlogImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogImage
+        fields = ['id', 'image', 'caption', 'created_at']
+
+
 class BlogPostSerializer(serializers.ModelSerializer):
+    images = BlogImageSerializer(many=True, read_only=True)
     translated_title = serializers.SerializerMethodField()
     translated_content = serializers.SerializerMethodField()
 
@@ -103,7 +110,16 @@ class BlogPostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BlogPost
-        fields = ['id', 'slug', 'translated_title', 'translated_content', 'category', 'image', 'created_at']
+        fields = ['id', 'slug', 'translated_title', 'translated_content', 'category', 'images', 'created_at']
+
+
+class FAQSerializer(serializers.ModelSerializer):
+    content_object_type = serializers.CharField(source='content_type.model', read_only=True)
+    content_object_id = serializers.IntegerField(source='object_id', read_only=True)
+
+    class Meta:
+        model = FAQ
+        fields = ['id', 'question', 'answer', 'order', 'content_object_type', 'content_object_id', 'created_at']
 
 
 class BrandSerializer(serializers.ModelSerializer):
@@ -143,18 +159,6 @@ class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = About
         fields = ['id', 'translated_mission', 'translated_experience', 'created_at']
-
-
-class EmployeeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Employee
-        fields = ['id', 'name', 'position', 'photo', 'bio', 'created_at']
-
-
-class GallerySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Gallery
-        fields = ['id', 'image', 'description', 'created_at']
 
 
 class CaseStudySerializer(serializers.ModelSerializer):

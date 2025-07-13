@@ -1,11 +1,11 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
-from .models import City, Location, Service, Contact, Brand, BlogPost, About, Employee, Gallery, CaseStudy, Product, \
-    VacancyApplication, Vacancy
+from .models import City, Location, Service, Contact, Brand, BlogPost, About, CaseStudy, Product, BlogImage, \
+    VacancyApplication, Vacancy, FAQ
 from .serializers import (
     CitySerializer, LocationSerializer, ServiceSerializer, ContactSerializer,
-    BrandSerializer, BlogPostSerializer, AboutSerializer, EmployeeSerializer,
-    GallerySerializer, CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer
+    BrandSerializer, BlogPostSerializer, AboutSerializer, BlogImageSerializer,
+    CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer, FAQSerializer
 )
 from integrations.housecall import send_to_housecall_pro
 from django.conf import settings
@@ -13,6 +13,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 import requests
 from decouple import config
+from paginations import *
 
 
 class CityViewSet(viewsets.ReadOnlyModelViewSet):
@@ -30,6 +31,7 @@ class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
     lookup_field = 'slug'
+    pagination_class = ServicePagination
 
 
 class ContactViewSet(viewsets.ModelViewSet):
@@ -63,6 +65,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = 'slug'
+    pagination_class = ProductPagination
 
     def get_queryset(self):
         queryset = Product.objects.all()
@@ -76,6 +79,25 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = 'slug'
+    pagination_class = BlogPostPagination
+
+
+class BlogImageViewSet(viewsets.ModelViewSet):
+    queryset = BlogImage.objects.all()
+    serializer_class = BlogImageSerializer
+
+    def get_queryset(self):
+        if 'blog_post_id' in self.kwargs:
+            return BlogImage.objects.filter(blog_post_id=self.kwargs['blog_post_id'])
+        return super().get_queryset()
+
+    def perform_create(self, serializer):
+        blog_post_id = self.kwargs.get('blog_post_id')
+        if blog_post_id:
+            blog_post = BlogPost.objects.get(id=blog_post_id)
+            serializer.save(blog_post=blog_post)
+        else:
+            serializer.save()
 
 
 class AboutViewSet(viewsets.ReadOnlyModelViewSet):
@@ -83,26 +105,46 @@ class AboutViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = AboutSerializer
 
 
-class EmployeeViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Employee.objects.all()
-    serializer_class = EmployeeSerializer
-
-
-class GalleryViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Gallery.objects.all()
-    serializer_class = GallerySerializer
-
-
 class CaseStudyViewSet(viewsets.ModelViewSet):
     queryset = CaseStudy.objects.all()
     serializer_class = CaseStudySerializer
     lookup_field = 'slug'
+    pagination_class = CaseStudyPagination
 
 
 class VacancyViewSet(viewsets.ModelViewSet):
     queryset = Vacancy.objects.filter(is_active=True)
     serializer_class = VacancySerializer
     lookup_field = 'slug'
+    pagination_class = VacancyPagination
+
+
+class FAQViewSet(viewsets.ModelViewSet):
+    queryset = FAQ.objects.all()
+    serializer_class = FAQSerializer
+    pagination_class = FAQPagination
+
+    def get_queryset(self):
+        # Фильтрация по связанной модели, если указан параметр content_type и object_id
+        content_type = self.request.query_params.get('content_type')
+        object_id = self.request.query_params.get('object_id')
+        queryset = self.queryset
+        if content_type and object_id:
+            from django.contrib.contenttypes.models import ContentType
+            ct = ContentType.objects.get(model=content_type)
+            queryset = queryset.filter(content_type=ct, object_id=object_id)
+        return queryset.order_by('order')
+
+    def perform_create(self, serializer):
+        # Установка content_type и object_id при создании
+        content_type = self.request.query_params.get('content_type')
+        object_id = self.request.query_params.get('object_id')
+        if content_type and object_id:
+            from django.contrib.contenttypes.models import ContentType
+            ct = ContentType.objects.get(model=content_type)
+            serializer.save(content_type=ct, object_id=object_id)
+        else:
+            serializer.save()
 
 
 class VacancyApplicationViewSet(viewsets.ModelViewSet):
