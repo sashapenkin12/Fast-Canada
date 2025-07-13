@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import City, Location, Service, Contact, Brand, BlogPost, About, Employee, Gallery, CaseStudy, Vacancy, \
+from .models import City, Location, Service, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, \
     VacancyApplication, Product
 from ckeditor.widgets import CKEditorWidget
 from django.db import models
@@ -66,19 +66,6 @@ class BlogPostAdmin(admin.ModelAdmin):
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['id', 'mission', 'experience', 'created_at']
     search_fields = ['mission', 'experience']
-
-
-@admin.register(Employee)
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ['name', 'position', 'created_at']
-    search_fields = ['name', 'bio']
-    list_filter = ['position']
-
-
-@admin.register(Gallery)
-class GalleryAdmin(admin.ModelAdmin):
-    list_display = ['id', 'description', 'created_at']
-    search_fields = ['description']
 
 
 @admin.register(CaseStudy)
