@@ -1,9 +1,12 @@
 from django.contrib import admin
 from .models import City, Location, Service, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, \
-    VacancyApplication, Product
+    VacancyApplication, Product, FAQ, BlogImage
 from ckeditor.widgets import CKEditorWidget
 from django.db import models
 
+class BlogImageInline(admin.TabularInline):
+    model = BlogImage
+    extra = 3
 
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
@@ -52,6 +55,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):
+    inlines = [BlogImageInline]
     list_display = ['title', 'slug', 'category', 'created_at']
     search_fields = ['title', 'slug', 'content']
     list_filter = ['category']
@@ -93,3 +97,9 @@ class VacancyApplicationAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['brand', 'name', 'description', 'pros', 'cons', 'updated_at', 'created_at']
     list_filter = ['brand']
+
+
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ['content_type', 'content_type', 'content_object', 'question', 'answer', 'order']
+    list_field = ['question']

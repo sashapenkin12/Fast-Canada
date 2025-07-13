@@ -96,9 +96,7 @@ class BlogImageSerializer(serializers.ModelSerializer):
 
 
 class BlogPostSerializer(serializers.ModelSerializer):
-    images = BlogImageSerializer(many=True, read_only=True)
-    translated_title = serializers.SerializerMethodField()
-    translated_content = serializers.SerializerMethodField()
+    images = BlogImageSerializer(many=True, required=False)  # Вложенное поле для нескольких изображений
 
     def get_translated_title(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
@@ -108,9 +106,28 @@ class BlogPostSerializer(serializers.ModelSerializer):
         language = self.context['request'].query_params.get('language', 'en')
         return translate_text(obj.content, language)
 
+    def create(self, validated_data):
+        images_data = validated_data.pop('images', [])
+        blog_post = BlogPost.objects.create(**validated_data)
+        for image_data in images_data:
+            BlogImage.objects.create(blog_post=blog_post, **image_data)
+        return blog_post
+
+    def update(self, instance, validated_data):
+        images_data = validated_data.pop('images', [])
+        instance.title = validated_data.get('title', instance.title)
+        instance.content = validated_data.get('content', instance.content)
+        instance.category = validated_data.get('category', instance.category)
+        instance.video_on_youtube = validated_data.get('video_on_youtube', instance.video_on_youtube)
+        instance.save()
+        instance.images.all().delete()
+        for image_data in images_data:
+            BlogImage.objects.create(blog_post=instance, **image_data)
+        return instance
+
     class Meta:
         model = BlogPost
-        fields = ['id', 'slug', 'translated_title', 'translated_content', 'category', 'images', 'created_at']
+        fields = ['id', 'slug', 'category', 'images', 'created_at']
 
 
 class FAQSerializer(serializers.ModelSerializer):
@@ -119,7 +136,7 @@ class FAQSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FAQ
-        fields = ['id', 'question', 'answer', 'order', 'content_object_type', 'content_object_id', 'created_at']
+        fields = ['id', 'question', 'answer', 'order', 'content_object_type', 'content_object_id']
 
 
 class BrandSerializer(serializers.ModelSerializer):

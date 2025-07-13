@@ -13,7 +13,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 import requests
 from decouple import config
-from paginations import *
+from .paginations import *
 
 
 class CityViewSet(viewsets.ReadOnlyModelViewSet):

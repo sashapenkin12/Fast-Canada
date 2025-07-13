@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce1ed517-95d8-46f9-92b2-9be3538c3f9c" name="Changes" comment="Fix_for_Sayna" />
+    <list default="true" id="ce1ed517-95d8-46f9-92b2-9be3538c3f9c" name="Changes" comment="Fix_for_Sayna">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_models/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_models/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +150,7 @@
       <workItem from="1752128899676" duration="3134000" />
       <workItem from="1752223099523" duration="2395000" />
       <workItem from="1752308808124" duration="12002000" />
-      <workItem from="1752391990305" duration="2267000" />
+      <workItem from="1752391990305" duration="11975000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <option name="closed" value="true" />
@@ -273,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752393996273</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix_for_Sayna">
+      <option name="closed" value="true" />
+      <created>1752394656888</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752394656888</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
