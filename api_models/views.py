@@ -47,10 +47,10 @@ class ContactViewSet(viewsets.ModelViewSet):
                 send_to_housecall_pro(contact)
                 contact.sent_to_crm = True
                 contact.save()
-                return Response({"message": "Заявка успешно отправлена в HouseCall Pro"},
+                return Response({"message": "Application successfully sent to HouseCall Pro"},
                                 status=status.HTTP_201_CREATED)
             except Exception as e:
-                return Response({"error": f"Ошибка отправки в CRM: {str(e)}"},
+                return Response({"error": f"Error sending to CRM: {str(e)}"},
                                 status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return Response({"errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -125,7 +125,7 @@ class FAQViewSet(viewsets.ModelViewSet):
     pagination_class = FAQPagination
 
     def get_queryset(self):
-        # Фильтрация по связанной модели, если указан параметр content_type и object_id
+        # Filtering by related model if content_type and object_id parameters are provided
         content_type = self.request.query_params.get('content_type')
         object_id = self.request.query_params.get('object_id')
         queryset = self.queryset
@@ -136,7 +136,7 @@ class FAQViewSet(viewsets.ModelViewSet):
         return queryset.order_by('order')
 
     def perform_create(self, serializer):
-        # Установка content_type и object_id при создании
+        # Setting content_type and object_id during creation
         content_type = self.request.query_params.get('content_type')
         object_id = self.request.query_params.get('object_id')
         if content_type and object_id:
@@ -172,7 +172,7 @@ class VacancyApplicationViewSet(viewsets.ModelViewSet):
             subject,
             message,
             settings.DEFAULT_FROM_EMAIL,
-            [settings.HR_EMAIL],  # Требуется настройка в settings.py
+            [settings.HR_EMAIL],  # Requires configuration in settings.py
             fail_silently=False,
         )
 
@@ -184,24 +184,24 @@ class VacancyApplicationViewSet(viewsets.ModelViewSet):
 
 def send_email_view(request):
     if request.method == 'POST':
-        subject = 'Тестовое письмо'
-        message = 'Это тестовое сообщение от вашего Django-приложения.'
+        subject = 'Test email'
+        message = 'This is a test message from your Django application.'
         from_email = settings.DEFAULT_FROM_EMAIL
         recipient_list = ['bloodyangel10k@gmail.com']
         send_mail(subject, message, from_email, recipient_list)
-        return HttpResponse('Письмо отправлено!')
-    return HttpResponse('Используйте POST-запрос для отправки.')
+        return HttpResponse('Email sent!')
+    return HttpResponse('Use a POST request to send.')
 
 
 def send_to_housecall(request):
     if request.method == 'POST':
         url = 'https://api.housecallpro.com/endpoint'
         headers = {'Authorization': f'Bearer {config("HOUSECALL_API_KEY")}'}
-        data = {'message': 'Тестовое сообщение'}
+        data = {'message': 'Test message'}
         try:
             response = requests.post(url, headers=headers, json=data, timeout=10)
             response.raise_for_status()
-            return HttpResponse(f'Отправлено: {response.text}')
+            return HttpResponse(f'Sent: {response.text}')
         except requests.RequestException as e:
-            return HttpResponse(f'Ошибка: {str(e)}', status=500)
-    return HttpResponse('Используйте POST-запрос.')
+            return HttpResponse(f'Error: {str(e)}', status=500)
+    return HttpResponse('Use a POST request.')
