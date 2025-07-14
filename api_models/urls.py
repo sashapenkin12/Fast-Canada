@@ -24,10 +24,6 @@ urlpatterns = [
     path('blog/', BlogPostViewSet.as_view({'get': 'list'}), name='blog-list'),
     path('blog/<slug:slug>/', BlogPostViewSet.as_view({'get': 'retrieve'}), name='blog-detail'),
 
-    # Blog images
-    path('blog-posts/<slug:blog_post_slug>/images/', BlogImageViewSet.as_view({'get': 'list'}), name='blogimage-list'),
-    path('blog-posts/<slug:blog_post_slug>/images/<slug:slug>/', BlogImageViewSet.as_view({'get': 'retrieve'}), name='blogimage-detail'),
-
     # Contact
     path('contact/', ContactViewSet.as_view({'get': 'list', 'post': 'create'}), name='contact'),
 

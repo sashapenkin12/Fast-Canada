@@ -139,6 +139,7 @@ class BlogPost(models.Model):
     ]
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
+    text_for_cover = models.CharField(max_length=150)
     content = RichTextField(blank=True, null=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
     # image = models.ImageField(upload_to='blog_image/', blank=True, null=True)

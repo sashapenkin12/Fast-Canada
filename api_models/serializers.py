@@ -124,7 +124,7 @@ class BlogPostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BlogPost
-        fields = ['id', 'slug', 'category', 'images', 'created_at']
+        fields = ['title', 'id', 'slug','content', 'category', 'images', 'created_at']
 
 
 class FAQSerializer(serializers.ModelSerializer):

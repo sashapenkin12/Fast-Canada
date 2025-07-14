@@ -68,14 +68,12 @@ class BrandHeaderViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    lookup_field = 'slug'
-    pagination_class = ProductPagination
+    queryset = Product.objects.all()
 
     def get_queryset(self):
-        queryset = Product.objects.all()
-        brand_slug = self.request.query_params.get('brand')
+        queryset = super().get_queryset()
+        brand_slug = self.request.query_params.get('brand', None)
         if brand_slug:
             queryset = queryset.filter(brand__slug=brand_slug)
         return queryset
