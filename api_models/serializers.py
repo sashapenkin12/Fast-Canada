@@ -39,13 +39,9 @@ class LocationSerializer(serializers.ModelSerializer):
 
 
 class ContactSerializer(serializers.ModelSerializer):
-    city = serializers.PrimaryKeyRelatedField(queryset=City.objects.all(), required=False)
-    service = serializers.PrimaryKeyRelatedField(queryset=Service.objects.all(), required=False)
-    location = serializers.PrimaryKeyRelatedField(queryset=Location.objects.all(), required=False)
-
     class Meta:
         model = Contact
-        fields = ['id', 'name', 'phone', 'email', 'address', 'description', 'city', 'service', 'location', 'created_at']
+        fields = ['id', 'name', 'phone', 'email', 'address', 'description', 'created_at', 'sent_to_crm', 'status']
 
     def validate_name(self, value):
         if not value or len(value) > 70:
@@ -53,15 +49,16 @@ class ContactSerializer(serializers.ModelSerializer):
         return value
 
     def validate_phone(self, value):
-        import re
-        pattern = r'^\+1\s*[\(\.]*\d{3}[\)\.\-]*\s*\d{3}[\.\-]*\s*\d{4}$'
-        if not re.match(pattern, value):
-            raise serializers.ValidationError("Invalid phone format. Example: +1 (123) 456-7890")
-        digits = re.sub(r'\D', '', value)
-        if len(digits) != 11 or not digits.startswith('1'):
-            raise serializers.ValidationError("Phone number must contain 10 digits after +1")
-        normalized = f"+1 ({digits[1:4]}) {digits[4:7]}-{digits[7:11]}"
-        return normalized
+        if value:
+            import re
+            pattern = r'^\+1\s*[\(\.]*\d{3}[\)\.\-]*\s*\d{3}[\.\-]*\s*\d{4}$'
+            if not re.match(pattern, value):
+                raise serializers.ValidationError("Invalid phone format. Example: +1 (123) 456-7890")
+            digits = re.sub(r'\D', '', value)
+            if len(digits) != 11 or not digits.startswith('1'):
+                raise serializers.ValidationError("Phone number must contain 10 digits after +1")
+            return f"+1 ({digits[1:4]}) {digits[4:7]}-{digits[7:11]}"
+        return value
 
     def validate_email(self, value):
         if not value or '@' not in value:
@@ -74,8 +71,8 @@ class ContactSerializer(serializers.ModelSerializer):
         return value
 
     def validate_description(self, value):
-        if not value:
-            raise serializers.ValidationError("Description is required")
+        if value is None:
+            return value
         return value
 
 
@@ -86,7 +83,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['id', 'brand', 'name', 'slug', 'description', 'pros', 'cons', 'created_at', 'updated_at']
+        fields = ['id', 'brand', 'name', 'slug', 'description', 'created_at', 'updated_at']
 
 
 class BlogImageSerializer(serializers.ModelSerializer):
@@ -161,6 +158,12 @@ class BrandSerializer(serializers.ModelSerializer):
         fields = ['id', 'slug', 'translated_name', 'translated_description', 'logo', 'created_at', 'products']
 
 
+class BrandHeaderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Brand
+        fields = ['name', 'slug', 'logo']
+
+
 class AboutSerializer(serializers.ModelSerializer):
     translated_mission = serializers.SerializerMethodField()
     translated_experience = serializers.SerializerMethodField()
@@ -189,7 +192,7 @@ class CaseStudySerializer(serializers.ModelSerializer):
 class VacancySerializer(serializers.ModelSerializer):
     class Meta:
         model = Vacancy
-        fields = ['id', 'title', 'slug', 'description', 'requirements', 'salary', 'created_at', 'updated_at',
+        fields = ['id', 'title', 'slug', 'conditions', 'location', 'created_at', 'updated_at', 'requirements',
                   'is_active']
 
 

@@ -110,8 +110,6 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     description = RichTextField(blank=True, null=True)
-    pros = models.TextField(blank=True, help_text="List of pros, separated by new lines")
-    cons = models.TextField(blank=True, help_text="List of cons, separated by new lines")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -181,17 +179,15 @@ class BlogImage(models.Model):
 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=70)
-    phone = models.CharField(max_length=20)
-    email = models.EmailField()
-    address = models.TextField()
-    description = RichTextField(blank=True, null=True)
-    city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True, blank=True)
-    service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True, blank=True)
-    location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    sent_to_crm = models.BooleanField(default=False)
-    faqs = GenericRelation('FAQ', related_query_name='contact')
+    name = models.CharField(max_length=70, help_text="Full name of the contact (max 70 characters)")
+    phone = models.CharField(max_length=20, blank=True, null=True, help_text="Phone number (e.g., +1 (123) 456-7890)")
+    email = models.EmailField(unique=True, help_text="Email address for communication")
+    address = models.TextField(help_text="Full address of the contact")
+    description = models.TextField(blank=True, null=True, help_text="Detailed description or notes about the contact")
+    created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time of contact creation")
+    sent_to_crm = models.BooleanField(default=False, help_text="Indicates if the contact was sent to CRM")
+    status = models.CharField(max_length=20, choices=[('new', 'New'), ('processed', 'Processed'), ('closed', 'Closed')],
+                             default='new', help_text="Status of the contact request")
 
     def __str__(self):
         return f"{self.name} - {self.email}"
@@ -199,6 +195,7 @@ class Contact(models.Model):
     class Meta:
         verbose_name = "Contact"
         verbose_name_plural = "Contacts"
+        ordering = ['-created_at']
 
 
 class About(models.Model):
@@ -262,11 +259,12 @@ class FAQ(models.Model):
 class Vacancy(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
-    description = models.TextField()
-    requirements = models.TextField(blank=True)
+    conditions = models.TextField(blank=True)
+    location = models.ForeignKey('City', on_delete=models.CASCADE, related_name='vacancies')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
+    requirements = models.TextField(blank=True, null=True)
 
     class Meta:
         verbose_name = "Vacancy"

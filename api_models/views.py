@@ -5,7 +5,8 @@ from .models import City, Location, Service, Contact, Brand, BlogPost, About, Ca
 from .serializers import (
     CitySerializer, LocationSerializer, ServiceSerializer, ContactSerializer,
     BrandSerializer, BlogPostSerializer, AboutSerializer, BlogImageSerializer,
-    CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer, FAQSerializer
+    CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer, FAQSerializer,
+    BrandHeaderSerializer
 )
 from integrations.housecall import send_to_housecall_pro
 from django.conf import settings
@@ -59,6 +60,11 @@ class BrandViewSet(viewsets.ModelViewSet):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
     lookup_field = 'slug'
+
+
+class BrandHeaderViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Brand.objects.all()
+    serializer_class = BrandHeaderSerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):

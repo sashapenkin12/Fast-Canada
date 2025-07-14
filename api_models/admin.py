@@ -41,9 +41,9 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'city', 'service', 'location', 'sent_to_crm', 'created_at']
+    list_display = ['name', 'email', 'sent_to_crm', 'created_at', 'description', 'status', 'address']
     search_fields = ['name', 'email']
-    list_filter = ['sent_to_crm', 'city', 'service', 'location']
+    list_filter = ['sent_to_crm', ]
 
 
 @admin.register(Brand)
@@ -82,7 +82,7 @@ class CaseStudyAdmin(admin.ModelAdmin):
 
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'is_active', 'created_at']
+    list_display = ['title', 'slug', 'is_active', 'created_at', 'location', 'conditions', 'requirements']
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ['is_active']
 
@@ -95,7 +95,7 @@ class VacancyApplicationAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['brand', 'name', 'description', 'pros', 'cons', 'updated_at', 'created_at']
+    list_display = ['brand', 'name', 'description', 'updated_at', 'created_at']
     list_filter = ['brand']
 
 
