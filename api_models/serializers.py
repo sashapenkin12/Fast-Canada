@@ -1,33 +1,88 @@
 from rest_framework import serializers
-from .models import City, Location, Service, Contact, Brand, BlogPost, About, CaseStudy, Product, BlogImage, \
-    VacancyApplication, Vacancy, FAQ
+from .models import City, Location, Contact, Brand, BlogPost, About, CaseStudy, Product, BlogImage, \
+    VacancyApplication, Vacancy, FAQ, Guarantee, Repair, Installation, CaseStudyImage, Promotion
 from integrations.google_translate import translate_text
 
 
-class ServiceSerializer(serializers.ModelSerializer):
-    category = serializers.SerializerMethodField()
-    title = serializers.CharField(source='get_type_service_display')  # Corrected from get_title_display
-    translated_full_description = serializers.SerializerMethodField()
-
-    def get_category(self, obj):
-        return obj.get_category()
-
-    def get_translated_full_description(self, obj):
-        language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.full_description if obj.full_description else '', language)
-
-    class Meta:
-        model = Service
-        fields = ['id', 'slug', 'category', 'title', 'translated_full_description', 'icon', 'image', 'created_at']
-
-
-class CitySerializer(serializers.ModelSerializer):
-    services = ServiceSerializer(many=True, read_only=True)
-    locations = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+class CityHeaderSerializer(serializers.ModelSerializer):
+    type = serializers.CharField(source='get_model_name', read_only=True)
 
     class Meta:
         model = City
-        fields = ['id', 'name', 'province', 'services', 'locations', 'created_at']
+        fields = ['name', 'slug', 'type']
+
+    def get_model_name(self, obj):
+        return obj._meta.model_name
+
+
+class BaseServiceHeaderSerializer(serializers.ModelSerializer):
+    type = serializers.CharField(source='get_model_name', read_only=True)
+
+    class Meta:
+        fields = ['name', 'slug', 'icon', 'cart_description']
+
+    def get_model_name(self, obj):
+        return obj._meta.model_name
+
+
+class RepairCombinedServiceHeaderSerializer(BaseServiceHeaderSerializer):
+    class Meta(BaseServiceHeaderSerializer.Meta):
+        model = Repair
+
+
+class InstallationCombinedServiceHeaderSerializer(BaseServiceHeaderSerializer):
+    class Meta(BaseServiceHeaderSerializer.Meta):
+        model = Installation
+
+
+class ServiceHeaderSerializer(serializers.ModelSerializer):
+    type = serializers.CharField(source='get_model_name', read_only=True)
+
+    class Meta:
+        fields = ['name', 'slug', 'icon', 'description', 'type']
+
+    def get_model_name(self, obj):
+        return obj._meta.model_name
+
+
+class PromotionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Promotion
+        fields = ['id', 'title', 'description', 'date', 'created_at']
+
+
+class RepairHeaderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Repair
+        fields = ['name', 'slug', 'icon']
+
+
+class InstallationHeaderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Installation
+        fields = ['name', 'slug', 'icon']
+
+
+class GuaranteeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Guarantee
+        fields = ['id', 'full_text', 'created_at']
+
+
+class RepairSerializer(serializers.ModelSerializer):
+    cities = serializers.SlugRelatedField(many=True, read_only=True, slug_field='slug')
+
+    class Meta:
+        model = Repair
+        fields = ['id', 'name', 'slug', 'short_description', 'full_description', 'icon', 'image', 'created_at', 'cities']
+
+
+class InstallationSerializer(serializers.ModelSerializer):
+    cities = serializers.SlugRelatedField(many=True, read_only=True, slug_field='slug')
+
+    class Meta:
+        model = Installation
+        fields = ['id', 'name', 'slug', 'short_description', 'full_description', 'icon', 'image', 'created_at', 'cities']
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -35,7 +90,18 @@ class LocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location
-        fields = ['id', 'name', 'city', 'address', 'created_at']
+        fields = ['id', 'name', 'city', 'latitude', 'longitude', 'created_at']
+
+
+class CitySerializer(serializers.ModelSerializer):
+    repair_services = RepairSerializer(many=True, read_only=True)
+    installation_services = InstallationSerializer(many=True, read_only=True)
+    locations = LocationSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = City
+        fields = ['id', 'name', 'province', 'repair_services', 'installation_services', 'locations', 'created_at',
+                  'slug', 'latitude', 'longitude']
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -78,12 +144,10 @@ class ContactSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     brand = serializers.SlugRelatedField(slug_field='slug', queryset=Brand.objects.all())
-    pros = serializers.ListField(child=serializers.CharField(), read_only=True, source='pros.splitlines')
-    cons = serializers.ListField(child=serializers.CharField(), read_only=True, source='cons.splitlines')
 
     class Meta:
         model = Product
-        fields = ['id', 'brand', 'name', 'slug', 'description', 'created_at', 'updated_at']
+        fields = ['id', 'brand', 'name', 'slug', 'description', 'created_at', 'updated_at', 'image']
 
 
 class BlogImageSerializer(serializers.ModelSerializer):
@@ -93,38 +157,34 @@ class BlogImageSerializer(serializers.ModelSerializer):
 
 
 class BlogPostSerializer(serializers.ModelSerializer):
-    images = BlogImageSerializer(many=True, required=False)  # Вложенное поле для нескольких изображений
+    images = BlogImageSerializer(many=True)
 
-    def get_translated_title(self, obj):
-        language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.title, language)
+    class Meta:
+        model = BlogPost
+        fields = ['id', 'title', 'slug', 'content', 'category', 'video_on_youtube', 'created_at', 'images', 'text_for_cover', 'short_description']
 
-    def get_translated_content(self, obj):
-        language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.content, language)
+    def validate_images(self, value):
+        if not value:
+            raise serializers.ValidationError("At least one image is required.")
+        return value
 
     def create(self, validated_data):
-        images_data = validated_data.pop('images', [])
+        images_data = validated_data.pop('images')
         blog_post = BlogPost.objects.create(**validated_data)
         for image_data in images_data:
             BlogImage.objects.create(blog_post=blog_post, **image_data)
         return blog_post
 
     def update(self, instance, validated_data):
-        images_data = validated_data.pop('images', [])
-        instance.title = validated_data.get('title', instance.title)
-        instance.content = validated_data.get('content', instance.content)
-        instance.category = validated_data.get('category', instance.category)
-        instance.video_on_youtube = validated_data.get('video_on_youtube', instance.video_on_youtube)
+        images_data = validated_data.pop('images', None)
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
         instance.save()
-        instance.images.all().delete()
-        for image_data in images_data:
-            BlogImage.objects.create(blog_post=instance, **image_data)
+        if images_data is not None:
+            instance.images.all().delete()
+            for image_data in images_data:
+                BlogImage.objects.create(blog_post=instance, **image_data)
         return instance
-
-    class Meta:
-        model = BlogPost
-        fields = ['title', 'id', 'slug','content', 'category', 'images', 'created_at']
 
 
 class FAQSerializer(serializers.ModelSerializer):
@@ -181,13 +241,19 @@ class AboutSerializer(serializers.ModelSerializer):
         fields = ['id', 'translated_mission', 'translated_experience', 'created_at']
 
 
+class CaseStudyImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CaseStudyImage
+        fields = ['id', 'image', 'caption', 'created_at']
+
+
 class CaseStudySerializer(serializers.ModelSerializer):
-    city = serializers.StringRelatedField()
+    images = CaseStudyImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = CaseStudy
-        fields = ['id', 'slug', 'title', 'description', 'image', 'city', 'created_at']
-
+        fields = ['id', 'title', 'slug', 'short_description', 'description', 'city', 'created_at', 'video_on_youtube',
+                  'images']
 
 class VacancySerializer(serializers.ModelSerializer):
     class Meta:
@@ -202,3 +268,4 @@ class VacancyApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = VacancyApplication
         fields = ['id', 'vacancy', 'name', 'email', 'phone', 'resume', 'message', 'created_at']
+

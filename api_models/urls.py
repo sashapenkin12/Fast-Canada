@@ -1,15 +1,35 @@
 from django.urls import path
 from .views import (
-    ServiceViewSet, BrandViewSet, BlogPostViewSet, ContactViewSet,
-    CityViewSet, LocationViewSet, AboutViewSet, BlogImageViewSet,
+    RepairViewSet, InstallationViewSet, BrandViewSet, BlogPostViewSet, ContactViewSet,
+    CityViewSet, LocationViewSet, AboutViewSet, BlogImageViewSet, ServicesByCityHeaderViewSet,
     CaseStudyViewSet, ProductViewSet, VacancyViewSet, VacancyApplicationViewSet,
-    send_email_view, send_to_housecall, FAQViewSet, BrandHeaderViewSet
+    send_email_view, send_to_housecall, FAQViewSet , BrandHeaderViewSet, GuaranteeViewSet,
+    RepairHeaderViewSet, InstallationHeaderViewSet, ServicesByCityViewSet, PromotionViewSet,
+    CombinedServiceHeaderViewSet, ServicesByCityHeaderSlugViewSet, CityHeaderViewSet
 )
 
 urlpatterns = [
-    # Services
-    path('services/', ServiceViewSet.as_view({'get': 'list'}), name='service-list'),
-    path('services/<slug:slug>/', ServiceViewSet.as_view({'get': 'retrieve'}), name='service-detail'),
+    # Guarantees
+    path('guarantees/', GuaranteeViewSet.as_view({'get': 'list'}), name='guarantee-list'),
+    path('guarantees/<int:pk>/', GuaranteeViewSet.as_view({'get': 'retrieve'}), name='guarantee-detail'),
+    path('promotions/', PromotionViewSet.as_view({'get': 'list'}), name='promotion-list'),
+
+    # Repairs
+    path('repairs/', RepairViewSet.as_view({'get': 'list'}), name='repair-list'),
+    path('repairs/<slug:slug>/', RepairViewSet.as_view({'get': 'retrieve'}), name='repair-detail'),
+    path('services-by-city/<str:city_slug>/', ServicesByCityViewSet.as_view({'get': 'list_services'}),
+         name='services-by-city'),
+
+    # Installations
+    path('installations/', InstallationViewSet.as_view({'get': 'list'}), name='installation-list'),
+    path('installations/<slug:slug>/', InstallationViewSet.as_view({'get': 'retrieve'}), name='installation-detail'),
+    path('services-combined-header/', CombinedServiceHeaderViewSet.as_view({'get': 'list'}), name='services-combined-header'),
+    # Headers
+    path('repair-headers/', RepairHeaderViewSet.as_view({'get': 'list'}), name='repair-header-list'),
+    path('installation-headers/', InstallationHeaderViewSet.as_view({'get': 'list'}), name='installation-header-list'),
+    path('services-by-city-header/<str:city_slug>/', ServicesByCityHeaderViewSet.as_view({'get': 'list_services'}),
+         name='services-by-city-header'),
+    path('services-combined-header/', CombinedServiceHeaderViewSet.as_view({'get': 'list'}), name='services-combined-header'),
 
     # Products
     path('products/', ProductViewSet.as_view({'get': 'list'}), name='product-list'),
@@ -30,6 +50,7 @@ urlpatterns = [
     # Cities
     path('cities/', CityViewSet.as_view({'get': 'list'}), name='city-list'),
     path('cities/<slug:slug>/', CityViewSet.as_view({'get': 'retrieve'}), name='city-detail'),
+    path('cities-headers/', CityHeaderViewSet.as_view({'get': 'list'}), name='city-header-list'),
 
     # Locations
     path('locations/', LocationViewSet.as_view({'get': 'list'}), name='location-list'),
@@ -48,11 +69,11 @@ urlpatterns = [
 
     # Vacancy Applications
     path('vacancy-applications/', VacancyApplicationViewSet.as_view({'get': 'list', 'post': 'create'}), name='vacancy-application-list'),
-    path('vacancy-applications/<slug:slug>/', VacancyApplicationViewSet.as_view({'get': 'retrieve'}), name='vacancy-application-detail'),
+    path('vacancy-applications/<int:pk>/', VacancyApplicationViewSet.as_view({'get': 'retrieve'}), name='vacancy-application-detail'),
 
     # FAQ
     path('faqs/', FAQViewSet.as_view({'get': 'list'}), name='faq-list'),
-    path('faqs/<slug:slug>/', FAQViewSet.as_view({'get': 'retrieve'}), name='faq-detail'),
+    path('faqs/<int:pk>/', FAQViewSet.as_view({'get': 'retrieve'}), name='faq-detail'),
 
     # Custom views
     path('send-email/', send_email_view, name='send_email'),
