@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import City, Location, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, \
-    VacancyApplication, Product, FAQ, BlogImage, Guarantee, Repair, Installation, Promotion
+from rest_framework.exceptions import ValidationError
+from .models import City, Location, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, VacancyApplication, Product, FAQ, BlogImage, Guarantee, Repair, Installation, Promotion
 from ckeditor.widgets import CKEditorWidget
 from django.db import models
 from django.forms.models import BaseInlineFormSet
