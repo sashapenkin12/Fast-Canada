@@ -38,6 +38,7 @@ class City(models.Model):
     installations = models.ManyToManyField('Installation', related_name='available_in_cities', blank=True)
     latitude = models.FloatField(help_text="City latitude (e.g., 43.6532 for Toronto)")
     longitude = models.FloatField(help_text="City longitude (e.g., -79.3832 for Toronto)")
+    place_id = models.CharField(max_length=100, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
 
@@ -55,13 +56,18 @@ class City(models.Model):
 
 
 class Repair(models.Model):
-    name = models.CharField(max_length=200, unique=True, help_text="Title of the repair service (e.g., Repairs_HVAC)", null=True, blank=True)
+    name = models.CharField(max_length=200, unique=True, help_text="Title of the repair service (e.g., Repairs_HVAC)",
+                            null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True, help_text="Unique slug generated from title")
-    short_description = models.CharField(max_length=200, help_text="Short description of the repair service", blank=True, null=True)
-    full_description = RichTextField(max_length=680, blank=True, null=True, help_text="Detailed description of the repair service")
-    cart_description = models.CharField(max_length=128, help_text="Short description of the installation service", blank=True, null=True)
+    short_description = models.CharField(max_length=200, help_text="Short description of the repair service",
+                                         blank=True, null=True)
+    full_description = RichTextField(max_length=680, blank=True, null=True,
+                                     help_text="Detailed description of the repair service")
+    cart_description = models.CharField(max_length=128, help_text="Short description of the installation service",
+                                        blank=True, null=True)
     icon = models.ImageField(upload_to='service_icon/', blank=True, null=True, help_text="Icon for the repair service")
-    image = models.ImageField(upload_to='service_image/', blank=True, null=True, help_text="Image for the repair service")
+    image = models.ImageField(upload_to='service_image/', blank=True, null=True,
+                              help_text="Image for the repair service")
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time of creation")
     faqs = GenericRelation('FAQ', related_query_name='repair')
 
@@ -85,13 +91,20 @@ class Repair(models.Model):
 
 
 class Installation(models.Model):
-    name = models.CharField(max_length=200, unique=True, help_text="Title of the installation service (e.g., Installations_AC)", null=True, blank=True)
+    name = models.CharField(max_length=200, unique=True,
+                            help_text="Title of the installation service (e.g., Installations_AC)", null=True,
+                            blank=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True, help_text="Unique slug generated from title")
-    short_description = models.CharField(max_length=200, help_text="Short description of the installation service", blank=True, null=True)
-    full_description = RichTextField(max_length=680, blank=True, null=True, help_text="Detailed description of the installation service")
-    cart_description = models.CharField(max_length=128, help_text="Short description of the installation service", blank=True, null=True)
-    icon = models.ImageField(upload_to='service_icon/', blank=True, null=True, help_text="Icon for the installation service")
-    image = models.ImageField(upload_to='service_image/', blank=True, null=True, help_text="Image for the installation service")
+    short_description = models.CharField(max_length=200, help_text="Short description of the installation service",
+                                         blank=True, null=True)
+    full_description = RichTextField(max_length=680, blank=True, null=True,
+                                     help_text="Detailed description of the installation service")
+    cart_description = models.CharField(max_length=128, help_text="Short description of the installation service",
+                                        blank=True, null=True)
+    icon = models.ImageField(upload_to='service_icon/', blank=True, null=True,
+                             help_text="Icon for the installation service")
+    image = models.ImageField(upload_to='service_image/', blank=True, null=True,
+                              help_text="Image for the installation service")
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time of creation")
     faqs = GenericRelation('FAQ', related_query_name='installation')
 
@@ -278,20 +291,6 @@ class About(models.Model):
         verbose_name_plural = "About Pages"
 
 
-class CaseStudyImage(models.Model):
-    case_study = models.ForeignKey('CaseStudy', on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='case_study_images/', help_text="Image for the case study")
-    caption = models.CharField(max_length=200, blank=True, null=True, help_text="Caption for the image")
-    created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time of image creation")
-
-    def __str__(self):
-        return f"Image for {self.case_study.title}"
-
-    class Meta:
-        verbose_name = "Case Study Image"
-        verbose_name_plural = "Case Study Images"
-
-
 class CaseStudy(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
@@ -319,6 +318,20 @@ class CaseStudy(models.Model):
     class Meta:
         verbose_name = "Case Study"
         verbose_name_plural = "Case Studies"
+
+
+class CaseStudyImage(models.Model):
+    case_study = models.ForeignKey(CaseStudy, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='case_study_images/', help_text="Image for the case study")
+    caption = models.CharField(max_length=200, blank=True, null=True, help_text="Caption for the image")
+    created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time of image creation")
+
+    def __str__(self):
+        return f"Image for {self.case_study.title}"
+
+    class Meta:
+        verbose_name = "Case Study Image"
+        verbose_name_plural = "Case Study Images"
 
 
 class FAQ(models.Model):

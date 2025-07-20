@@ -90,7 +90,7 @@ class LocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location
-        fields = ['id', 'name', 'city', 'latitude', 'longitude', 'created_at']
+        fields = ['id', 'name', 'city', 'latitude', 'longitude', 'created_at', 'plase_id']
 
 
 class CitySerializer(serializers.ModelSerializer):
@@ -101,7 +101,7 @@ class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
         fields = ['id', 'name', 'province', 'repair_services', 'installation_services', 'locations', 'created_at',
-                  'slug', 'latitude', 'longitude']
+                  'slug', 'latitude', 'longitude', 'plase_id']
 
 
 class ContactSerializer(serializers.ModelSerializer):

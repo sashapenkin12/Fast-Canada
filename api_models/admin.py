@@ -1,6 +1,7 @@
 from django.contrib import admin
 from rest_framework.exceptions import ValidationError
-from .models import City, Location, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, VacancyApplication, Product, FAQ, BlogImage, Guarantee, Repair, Installation, Promotion
+from .models import City, Location, Contact, Brand, BlogPost, About, CaseStudy, Vacancy, VacancyApplication, Product, \
+    FAQ, BlogImage, Guarantee, Repair, Installation, Promotion, CaseStudyImage
 from ckeditor.widgets import CKEditorWidget
 from django.db import models
 from django.forms.models import BaseInlineFormSet
@@ -12,6 +13,11 @@ class BlogImageInlineFormSet(BaseInlineFormSet):
         total_forms = len([form for form in self.forms if not form.cleaned_data.get('DELETE', False) and form.cleaned_data.get('image')])
         if total_forms == 0:
             raise ValidationError("РќРµРѕР±С…РѕРґРёРјРѕ РґРѕР±Р°РІРёС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕ РёР·РѕР±СЂР°Р¶РµРЅРёРµ.")
+
+
+class CaseStudyImageInline(admin.TabularInline):
+    model = CaseStudyImage
+    extra = 3
 
 
 class ProductInline(admin.TabularInline):
@@ -115,8 +121,9 @@ class AboutAdmin(admin.ModelAdmin):
 
 @admin.register(CaseStudy)
 class CaseStudyAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'city', 'created_at']
-    search_fields = ['title', 'slug', 'description']
+    list_display = ['title', 'created_at']
+    fields = ['title', 'slug', 'short_description', 'description', 'image', 'city', 'video_on_youtube']
+    inlines = [CaseStudyImageInline]
     list_filter = ['city']
     prepopulated_fields = {'slug': ('title',)}
 
