@@ -9,13 +9,11 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from decouple import config
 import requests
-
 from .models import (
     City, Location, Contact, Brand, BlogPost, About, CaseStudy,
     Product, BlogImage, VacancyApplication, Vacancy, FAQ,
     Guarantee, Repair, Installation, Promotion
 )
-
 from .serializers import (
     CitySerializer, LocationSerializer, ContactSerializer, RepairSerializer,
     RepairHeaderSerializer, InstallationHeaderSerializer, CityHeaderSerializer,
@@ -24,7 +22,6 @@ from .serializers import (
     CaseStudySerializer, ProductSerializer, VacancyApplicationSerializer, VacancySerializer,
     FAQSerializer, BrandHeaderSerializer, GuaranteeSerializer, RepairCombinedServiceHeaderSerializer
 )
-
 from .paginations import FAQPagination
 from integrations.housecall import send_to_housecall_pro
 

@@ -131,7 +131,7 @@ class Location(models.Model):
     name = models.CharField(max_length=100)
     city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="locations")
     slug = models.SlugField(max_length=100, unique=True, blank=True, null=True)
-    plase_id = models.CharField(max_length=100, null=True)
+    place_id = models.CharField(max_length=100, null=True)
     latitude = models.FloatField(help_text="City latitude (e.g., 43.6532 for Toronto)", null=True)
     longitude = models.FloatField(help_text="City longitude (e.g., -79.3832 for Toronto)", null=True)
     created_at = models.DateTimeField(auto_now_add=True)
