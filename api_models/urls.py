@@ -12,6 +12,7 @@ urlpatterns = [
     # Guarantees
     path('guarantees/', GuaranteeViewSet.as_view({'get': 'list'}), name='guarantee-list'),
     path('guarantees/<int:pk>/', GuaranteeViewSet.as_view({'get': 'retrieve'}), name='guarantee-detail'),
+
     path('promotions/', PromotionViewSet.as_view({'get': 'list'}), name='promotion-list'),
 
     # Repairs
@@ -23,13 +24,15 @@ urlpatterns = [
     # Installations
     path('installations/', InstallationViewSet.as_view({'get': 'list'}), name='installation-list'),
     path('installations/<slug:slug>/', InstallationViewSet.as_view({'get': 'retrieve'}), name='installation-detail'),
-    path('services-combined-header/', CombinedServiceHeaderViewSet.as_view({'get': 'list'}), name='services-combined-header'),
+
     # Headers
     path('repair-headers/', RepairHeaderViewSet.as_view({'get': 'list'}), name='repair-header-list'),
     path('installation-headers/', InstallationHeaderViewSet.as_view({'get': 'list'}), name='installation-header-list'),
     path('services-by-city-header/<str:city_slug>/', ServicesByCityHeaderViewSet.as_view({'get': 'list_services'}),
          name='services-by-city-header'),
     path('services-combined-header/', CombinedServiceHeaderViewSet.as_view({'get': 'list'}), name='services-combined-header'),
+    path('cities-headers/', CityHeaderViewSet.as_view({'get': 'list'}), name='city-header-list'),
+    path('brand-headers/', BrandHeaderViewSet.as_view({'get': 'list'}), name='brand-header-list'),
 
     # Products
     path('products/', ProductViewSet.as_view({'get': 'list'}), name='product-list'),
@@ -38,7 +41,6 @@ urlpatterns = [
     # Brands
     path('brands/', BrandViewSet.as_view({'get': 'list'}), name='brand-list'),
     path('brands/<slug:slug>/', BrandViewSet.as_view({'get': 'retrieve'}), name='brand-detail'),
-    path('brand-headers/', BrandHeaderViewSet.as_view({'get': 'list'}), name='brand-header-list'),
 
     # Blog
     path('blog/', BlogPostViewSet.as_view({'get': 'list'}), name='blog-list'),
@@ -50,7 +52,6 @@ urlpatterns = [
     # Cities
     path('cities/', CityViewSet.as_view({'get': 'list'}), name='city-list'),
     path('cities/<slug:slug>/', CityViewSet.as_view({'get': 'retrieve'}), name='city-detail'),
-    path('cities-headers/', CityHeaderViewSet.as_view({'get': 'list'}), name='city-header-list'),
 
     # Locations
     path('locations/', LocationViewSet.as_view({'get': 'list'}), name='location-list'),
