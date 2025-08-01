@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api_models',
+    'household_chemicals',
     'integrations',
     'drf_yasg',
     'corsheaders',
