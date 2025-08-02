@@ -1,12 +1,12 @@
 from rest_framework import serializers
 
-from household_chemicals.models import ChemicalProduct
 
-
-class ProductBaseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ChemicalProduct
-        fields = ('title', 'image', 'price', 'is_available')
+class ProductBaseSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    title = serializers.CharField()
+    image = serializers.ImageField()
+    price = serializers.DecimalField(max_digits=10, decimal_places=2)
+    is_available = serializers.BooleanField()
 
 
 class ProductDetailSerializer(ProductBaseSerializer):
