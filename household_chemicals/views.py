@@ -12,5 +12,5 @@ class CatalogView(ListAPIView):
 
 
 class ProductDetailView(RetrieveAPIView):
-    queryset = ChemicalProduct.objects.all()
+    queryset = ChemicalProduct.objects.filter(is_available=True)
     serializer_class = ProductDetailSerializer
