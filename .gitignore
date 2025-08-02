@@ -4,3 +4,4 @@ SECRET_KEY.env
 db.sqlite3
 .env
 .venv
+.idea
