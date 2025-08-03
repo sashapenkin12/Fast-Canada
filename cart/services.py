@@ -1,7 +1,7 @@
 """
 Service functions for working with database.
 """
-
+from django.shortcuts import get_object_or_404
 from household_chemicals.models import ChemicalProduct
 
 
@@ -14,4 +14,4 @@ def get_product_by_id(product_id: int) -> ChemicalProduct:
     Returns:
         ChemicalProduct: ChemicalProduct object with specified ID.
     """
-    return ChemicalProduct.objects.get(id=product_id)
+    return get_object_or_404(ChemicalProduct, id=product_id)

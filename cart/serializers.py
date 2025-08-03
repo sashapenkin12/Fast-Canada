@@ -4,6 +4,8 @@ Serializers for cart app.
 
 from rest_framework import serializers
 
+from decimal import Decimal
+
 
 class CartProductSerializer(serializers.Serializer):
     """
@@ -29,10 +31,10 @@ class CartItemSerializer(serializers.Serializer):
     """
     id = serializers.IntegerField()
     product = CartProductSerializer()
-    count = serializers.IntegerField()
+    count = serializers.IntegerField(min_value=1)
     total_price = serializers.SerializerMethodField()
 
-    def get_total_price(self, obj) -> int:
+    def get_total_price(self, obj: dict) -> Decimal:
         """
         Get total price of specified amount of products.
 
@@ -40,6 +42,6 @@ class CartItemSerializer(serializers.Serializer):
             obj: Serializer object.
 
         Returns:
-            int: Total price.
+            Decimal: Total price.
         """
         return obj['product']['price'] * obj['count']

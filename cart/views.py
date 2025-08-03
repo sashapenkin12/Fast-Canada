@@ -90,7 +90,7 @@ class DeleteItemView(APIView):
             Response: Response with 204 status code.
         """
         cart = request.session.get(settings.CART_SESSION_ID, [])
-        cart = [cart_item for cart_item in cart if cart.get('id') != item_id]
+        cart = [cart_item for cart_item in cart if cart_item.get('id') != item_id]
         request.session[settings.CART_SESSION_ID] = cart
         return Response({'detail': 'Item removed'}, status=status.HTTP_204_NO_CONTENT)
 
