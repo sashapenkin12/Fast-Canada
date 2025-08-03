@@ -32,7 +32,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api_models',
+    'cart',
     'household_chemicals',
+    'orders'
     'integrations',
     'drf_yasg',
     'corsheaders',
