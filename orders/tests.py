@@ -9,7 +9,7 @@ VALID_DATA = {
     "delivery_type": "pickup",
     "payment_type": "cash",
     "city": "Бишкек",
-    "address": "Исанова 105",
+    "address": "Исанова",
     "items": [
         {
             "product": 1,
