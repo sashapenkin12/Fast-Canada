@@ -1,7 +1,16 @@
-migrations
+# Игнорировать ВСЁ внутри всех папок migrations
+**/migrations/*
+# НО не игнорировать init-файлы
+!**/migrations/__init__.py
+
+# Секреты и служебные файлы
 GOOGLE_MAPS_API_KEY.env
 SECRET_KEY.env
 db.sqlite3
 .env
+
+# Виртуальное окружение
 .venv
+
+# IDE
 .idea
