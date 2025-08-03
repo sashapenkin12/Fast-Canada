@@ -1,45 +1,62 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from orders.serializers import OrderSerializer
 
-VALID_PHONE = "+996700123456"
-
 VALID_DATA = {
-    "full_name": "Sasha",
-    "address": "Bishkek, Chui",
-    "phone_number": VALID_PHONE,
-    "email": "sasha@example.com",
+    "first_name": "Асем",
+    "last_name": "Таштанова",
+    "email": "as@gmail.com",
+    "phone": "+996500505050",
+    "delivery_type": "pickup",
+    "payment_type": "cash",
+    "city": "Бишкек",
+    "address": "Исанова 105",
     "items": [
         {
-            "id": 1,
-            "product": {
-                "title": "Product 1",
-                "price": "100.00",
-            },
-            "count": 2
+            "product": 1,
+            "count": 2,
+            "price": "150.00"
         }
     ]
 }
 
-class OrderSerializerTest(SimpleTestCase):
+
+class OrderSerializerTest(TestCase):
 
     def test_valid_data(self):
         serializer = OrderSerializer(data=VALID_DATA)
         self.assertTrue(serializer.is_valid(), serializer.errors)
 
-    def test_invalid_phone_number(self):
+    def test_invalid_phone(self):
         data = VALID_DATA.copy()
-        data["phone_number"] = "12345"
+        data["phone"] = "0500505050"  # Без +996
         serializer = OrderSerializer(data=data)
         self.assertFalse(serializer.is_valid())
-        self.assertIn("phone_number", serializer.errors)
-        self.assertIn(
-            serializer.errors["phone_number"][0],
-            ["Некорректный номер телефона", "Неверный формат номера"]
-        )
+        self.assertIn("phone", serializer.errors)
 
-    def test_missing_required_field(self):
+    def test_missing_email(self):
         data = VALID_DATA.copy()
-        data.pop("email")
+        del data["email"]
         serializer = OrderSerializer(data=data)
         self.assertFalse(serializer.is_valid())
         self.assertIn("email", serializer.errors)
+
+    def test_invalid_email_format(self):
+        data = VALID_DATA.copy()
+        data["email"] = "notanemail"
+        serializer = OrderSerializer(data=data)
+        self.assertFalse(serializer.is_valid())
+        self.assertIn("email", serializer.errors)
+
+    def test_empty_items_list(self):
+        data = VALID_DATA.copy()
+        data["items"] = []
+        serializer = OrderSerializer(data=data)
+        self.assertFalse(serializer.is_valid())
+        self.assertIn("items", serializer.errors)
+
+    def test_negative_item_count(self):
+        data = VALID_DATA.copy()
+        data["items"][0]["count"] = -1
+        serializer = OrderSerializer(data=data)
+        self.assertFalse(serializer.is_valid())
+        self.assertIn("items", serializer.errors)
