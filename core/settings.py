@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'api_models',
     'cart',
     'household_chemicals',
-    'orders'
+    'orders',
     'integrations',
     'drf_yasg',
     'corsheaders',
