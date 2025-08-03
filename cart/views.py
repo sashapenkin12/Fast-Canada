@@ -1,24 +1,58 @@
 from django.conf import settings
 from rest_framework.views import APIView
+from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 
-from cart.serializers import CartItemSerializer
-from household_chemicals.models import ChemicalProduct
+from .serializers import CartItemSerializer, CartProductSerializer
+from .services import get_product_by_id
 
 
 class CartView(APIView):
-    def get(self, request):
-        cart = request.session.get('cart', [])
-        return CartItemSerializer(cart) if cart else Response(cart)
+    """
+    Cart View for retrieving current list of cart items
+
+    Methods:
+        get: Claims GET requests.
+    """
+    def get(self, request: Request, *args, **kwargs):
+        """
+        Retrieve current list of cart items by session ID.
+
+        Args:
+            request: Current HTTP request.
+
+        Returns:
+            Response: List of cart items.
+        """
+        cart = request.session.get(settings.CART_SESSION_ID, [])
+        serializer = CartItemSerializer(cart, many=True)
+        return Response(serializer.data)
 
 
 class AddItemView(APIView):
-    def post(self, request):
+    """
+    Cart View for adding a new item to the cart.
+
+    Methods:
+        post: Claims POST requests.
+    """
+    def post(self, request: Request, *args, **kwargs):
+        """
+        Add a new cart item.
+
+        Args:
+            request: Current HTTP request.
+
+        Returns:
+            Response: Response with 200 status code if data is valid, else 400
+        """
         product_id = request.data.get('product')
         item_data = request.data.copy()
 
-        product = ChemicalProduct.objects.get(id=product_id)
+        product = get_product_by_id(product_id)
+        product = CartProductSerializer(product)
+
         item_data['product'] = product
 
         cart = request.session.get(settings.CART_SESSION_ID, [])
@@ -38,7 +72,23 @@ class AddItemView(APIView):
 
 
 class DeleteItemView(APIView):
-    def delete(self, request, item_id):
+    """
+    Cart View for deleting an item from the cart.
+
+    Methods:
+        delete: Claims DELETE requests.
+    """
+    def delete(self, request: Request, item_id: int):
+        """
+        Delete a cart item.
+
+        Args:
+            request: Current HTTP request.
+            item_id: ID of the cart item, which needs to be deleted.
+
+        Returns:
+            Response: Response with 204 status code.
+        """
         cart = request.session.get(settings.CART_SESSION_ID, [])
         cart = [cart_item for cart_item in cart if cart.get('id') != item_id]
         request.session[settings.CART_SESSION_ID] = cart
@@ -46,7 +96,23 @@ class DeleteItemView(APIView):
 
 
 class DecreaseItemCountView(APIView):
-    def patch(self, request, item_id: int) -> Response:
+    """
+    Cart View for decreasing an amount of items in the cart.
+
+    Methods:
+        patch: Claims PATCH requests.
+    """
+    def patch(self, request: Request, item_id: int) -> Response:
+        """
+        Decrease a count of the cart item.
+
+        Args:
+            request: Current HTTP request.
+            item_id: ID of the cart item, which needs to be deleted.
+
+        Returns:
+            Response: Response with 200 status code if item exists, else 404.
+        """
         cart: list[dict] = request.session.get(settings.CART_SESSION_ID, [])
         if not cart:
             return Response(
@@ -64,7 +130,23 @@ class DecreaseItemCountView(APIView):
 
 
 class IncreaseItemCountView(APIView):
+    """
+    Cart View for increasing an amount of items in the cart.
+
+    Methods:
+        patch: Claims PATCH requests.
+    """
     def patch(self, request, item_id: int) -> Response:
+        """
+        Increase a count of the cart item.
+
+        Args:
+            request: Current HTTP request.
+            item_id: ID of the cart item, which needs to be deleted.
+
+        Returns:
+            Response: Response with 200 status code if item exists, else 404.
+        """
         cart: list[dict] = request.session.get(settings.CART_SESSION_ID, [])
         if not cart:
             return Response(
@@ -73,9 +155,6 @@ class IncreaseItemCountView(APIView):
             )
         for cart_item in cart:
             if cart_item.get('id') == item_id:
-                if cart_item['count'] == 1:
-                    cart.remove(cart_item)
-                else:
-                    cart_item['count'] += 1
+                cart_item['count'] += 1
         request.session[settings.CART_SESSION_ID] = cart
-        return Response({'detail': 'Item count decreased'}, status=status.HTTP_200_OK)
+        return Response({'detail': 'Item count increased'}, status=status.HTTP_200_OK)
