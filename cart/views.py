@@ -1,11 +1,12 @@
 from django.conf import settings
+from rest_framework.exceptions import ValidationError
 from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 
-from .serializers import CartItemSerializer, CartProductSerializer
-from .services import get_product_by_id
+from .serializers import CartItemSerializer
+from .services import CartManager
 
 
 class CartView(APIView):
@@ -15,7 +16,7 @@ class CartView(APIView):
     Methods:
         get: Claims GET requests.
     """
-    def get(self, request: Request, *args, **kwargs):
+    def get(self, request: Request, *args, **kwargs) -> Response:
         """
         Retrieve current list of cart items by session ID.
 
@@ -37,7 +38,7 @@ class AddItemView(APIView):
     Methods:
         post: Claims POST requests.
     """
-    def post(self, request: Request, *args, **kwargs):
+    def post(self, request: Request, *args, **kwargs) -> Response:
         """
         Add a new cart item.
 
@@ -47,23 +48,16 @@ class AddItemView(APIView):
         Returns:
             Response: Response with 200 status code if data is valid, else 400
         """
-        product_id = request.data.get('product')
         item_data = request.data.copy()
-
-        product = get_product_by_id(product_id)
-        product = CartProductSerializer(product)
-
-        item_data['product'] = product.data
-        cart = request.session.get(settings.CART_SESSION_ID, [])
-        item_data['id'] = len(cart) + 1
-
-        cart_item = CartItemSerializer(data=item_data)
-        if not cart_item.is_valid():
-            return Response(status=status.HTTP_400_BAD_REQUEST, data='Invalid request data.')
-
-        cart.append(cart_item.data)
-
-        request.session[settings.CART_SESSION_ID] = cart
+        cart = CartManager(request.session, settings.CART_SESSION_ID)
+        try:
+            cart.add_to_cart(item_data)
+        except ValidationError as exception:
+            return Response(
+                status=status.HTTP_400_BAD_REQUEST,
+                data=exception.detail,
+            )
+        cart.commit()
         return Response(
             {'detail': 'Successfully added item to the cart.'},
             status=status.HTTP_201_CREATED,
@@ -77,7 +71,7 @@ class DeleteItemView(APIView):
     Methods:
         delete: Claims DELETE requests.
     """
-    def delete(self, request: Request, item_id: int):
+    def delete(self, request: Request, item_id: int) -> Response:
         """
         Delete a cart item.
 
@@ -88,10 +82,13 @@ class DeleteItemView(APIView):
         Returns:
             Response: Response with 204 status code.
         """
-        cart = request.session.get(settings.CART_SESSION_ID, [])
-        cart = [cart_item for cart_item in cart if cart_item.get('id') != item_id]
-        request.session[settings.CART_SESSION_ID] = cart
-        return Response({'detail': 'Item removed'}, status=status.HTTP_204_NO_CONTENT)
+        cart = CartManager(request.session, settings.CART_SESSION_ID)
+        cart.remove_from_cart(item_id)
+        cart.commit()
+        return Response(
+            {'detail': 'Item removed'},
+            status=status.HTTP_204_NO_CONTENT,
+        )
 
 
 class DecreaseItemCountView(APIView):
@@ -112,20 +109,19 @@ class DecreaseItemCountView(APIView):
         Returns:
             Response: Response with 200 status code if item exists, else 404.
         """
-        cart: list[dict] = request.session.get(settings.CART_SESSION_ID, [])
-        if not cart:
+        cart = CartManager(request.session, settings.CART_SESSION_ID)
+        try:
+            cart.update_quantity(item_id=item_id, delta=-1)
+        except ValidationError as exception:
             return Response(
-                {'detail': 'Cart item not found'},
                 status=status.HTTP_404_NOT_FOUND,
+                data=exception.detail,
             )
-        for cart_item in cart:
-            if cart_item.get('id') == item_id:
-                if cart_item['count'] == 1:
-                    cart.remove(cart_item)
-                else:
-                    cart_item['count'] -= 1
-        request.session[settings.CART_SESSION_ID] = cart
-        return Response({'detail': 'Item count decreased'}, status=status.HTTP_200_OK)
+        cart.commit()
+        return Response(
+            {'detail': 'Item count decreased.'},
+            status=status.HTTP_200_OK,
+        )
 
 
 class IncreaseItemCountView(APIView):
@@ -146,14 +142,16 @@ class IncreaseItemCountView(APIView):
         Returns:
             Response: Response with 200 status code if item exists, else 404.
         """
-        cart: list[dict] = request.session.get(settings.CART_SESSION_ID, [])
-        if not cart:
+        cart = CartManager(request.session, settings.CART_SESSION_ID)
+        try:
+            cart.update_quantity(item_id=item_id, delta=1)
+        except ValidationError as exception:
             return Response(
-                {'detail': 'Cart item not found'},
                 status=status.HTTP_404_NOT_FOUND,
+                data=exception.detail,
             )
-        for cart_item in cart:
-            if cart_item.get('id') == item_id:
-                cart_item['count'] += 1
-        request.session[settings.CART_SESSION_ID] = cart
-        return Response({'detail': 'Item count increased'}, status=status.HTTP_200_OK)
+        cart.commit()
+        return Response(
+            {'detail': 'Item count increased.'},
+            status=status.HTTP_200_OK,
+        )
