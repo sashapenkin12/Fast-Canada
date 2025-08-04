@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_202_ACCEPTED
 from orders.serializers import OrderSerializer
+from orders.services.email_content import get_order_email_content
 
 
 class SendOrderView(APIView):
@@ -16,25 +17,17 @@ class SendOrderView(APIView):
             )
 
         data = serializer.validated_data
-
-        products_list = data.get('products', [])
-        products_str = "\n".join([f"- {item}" for item in products_list]) if products_list else "Нет товаров"
-
         subject = "Новый заказ"
-        message = f"""
-Поступил новый заказ от {data.get('full_name', 'неизвестно')}.
-Телефон: {data.get('phone_number', 'не указано')}
-Адрес: {data.get('address', 'не указано')}
-Продукты:
-{products_str}
-        """
+
+        text_message, html_message = get_order_email_content(data)
 
         try:
             send_mail(
                 subject=subject,
-                message=message.strip(),
+                message=text_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[settings.HR_EMAIL],
+                html_message=html_message,
                 fail_silently=False,
             )
         except Exception as e:
