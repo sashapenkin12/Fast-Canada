@@ -10,7 +10,7 @@ def get_order_email_content(data):
         'products': products,
     }
 
-    html_message = render_to_string('orders/email/order_email.html', context)
+    html_message = render_to_string('emails/new_order.html', context)
 
     if products:
         products_str = "\n".join(f"- {item}" for item in products)
