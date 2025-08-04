@@ -53,8 +53,7 @@ class AddItemView(APIView):
         product = get_product_by_id(product_id)
         product = CartProductSerializer(product)
 
-        item_data['product'] = product
-
+        item_data['product'] = product.data
         cart = request.session.get(settings.CART_SESSION_ID, [])
         item_data['id'] = len(cart) + 1
 

@@ -11,15 +11,15 @@ from .views import (CartView, AddItemView, DeleteItemView,
 
 urlpatterns: list[path] = [
     path('', CartView.as_view(), name='cart'),
-    path('cart/add/', AddItemView.as_view(), name='add-cart-item'),
-    path('cart/remove/<int:item_id>/', DeleteItemView.as_view(), name='remove-cart-item'),
+    path('add/', AddItemView.as_view(), name='add-cart-item'),
+    path('remove/<int:item_id>/', DeleteItemView.as_view(), name='remove-cart-item'),
     path(
-        'cart/decrease/<int:item_id>/',
+        'decrease/<int:item_id>/',
         DecreaseItemCountView.as_view(),
         name='decrease-item-count',
     ),
     path(
-        'cart/increase/<int:item_id>/',
+        'increase/<int:item_id>/',
         IncreaseItemCountView.as_view(),
         name='decrease-item-count',
     ),

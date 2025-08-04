@@ -6,8 +6,10 @@ from rest_framework import serializers
 
 from decimal import Decimal
 
+from household_chemicals.models import ChemicalProduct
 
-class CartProductSerializer(serializers.Serializer):
+
+class CartProductSerializer(serializers.ModelSerializer):
     """
     Serializer for representing products in DB.
 
@@ -15,8 +17,9 @@ class CartProductSerializer(serializers.Serializer):
         title: Title of the product.
         price: Product price.
     """
-    title = serializers.CharField()
-    price = serializers.DecimalField(max_digits=10, decimal_places=2)
+    class Meta:
+        model = ChemicalProduct
+        fields = ('title', 'price')
 
 
 class CartItemSerializer(serializers.Serializer):
@@ -34,7 +37,7 @@ class CartItemSerializer(serializers.Serializer):
     count = serializers.IntegerField(min_value=1)
     total_price = serializers.SerializerMethodField()
 
-    def get_total_price(self, obj: dict) -> Decimal:
+    def get_total_price(self, obj: dict) -> str:
         """
         Get total price of specified amount of products.
 
@@ -44,4 +47,4 @@ class CartItemSerializer(serializers.Serializer):
         Returns:
             Decimal: Total price.
         """
-        return obj['product']['price'] * obj['count']
+        return str(Decimal(obj['product']['price']) * obj['count'])
