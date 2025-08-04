@@ -6,11 +6,11 @@ from household_chemicals.paginations import ProductPagination
 
 
 class CatalogView(ListAPIView):
-    queryset = ChemicalProduct.objects.filter(is_available=True)
+    queryset = ChemicalProduct.objects.all()
     serializer_class = ProductBaseSerializer
     pagination_class = ProductPagination
 
 
 class ProductDetailView(RetrieveAPIView):
-    queryset = ChemicalProduct.objects.filter(is_available=True)
+    queryset = ChemicalProduct.objects.all()
     serializer_class = ProductDetailSerializer
