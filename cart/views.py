@@ -100,14 +100,10 @@ class CartViewSet(ViewSet, CartManagerMixin):
         Returns:
             Response: Response with 204 status code.
         """
-        print(type(pk))
         with self.get_cart_manager(request) as cart:
             cart.remove_from_cart(pk)
 
-        return Response(
-            {'detail': 'Item removed'},
-            status=status.HTTP_204_NO_CONTENT,
-        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     def increase(self, request: Request, pk: int):
         """
