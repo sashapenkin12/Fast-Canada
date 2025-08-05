@@ -211,7 +211,7 @@ class BrandSerializer(serializers.ModelSerializer):
 
     def get_translated_description(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.description, language)
+        return translate_text(obj.full_description, language)
 
     class Meta:
         model = Brand

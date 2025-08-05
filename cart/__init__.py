@@ -1,0 +1,3 @@
+"""
+Cart Django app.
+"""
