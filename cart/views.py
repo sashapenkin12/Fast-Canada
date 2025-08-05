@@ -1,23 +1,28 @@
 from django.conf import settings
 from rest_framework.exceptions import ValidationError
-from rest_framework.views import APIView
+from rest_framework.viewsets import ViewSet
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 
 from .serializers import CartItemSerializer
-from .services import CartManager
+from .services import CartManager, SessionCartStorage
 
+class CartManagerMixin:
+    @staticmethod
+    def get_cart_manager(request: Request) -> CartManager:
+        return CartManager(
+            SessionCartStorage(
+                request.session,
+                settings.CART_SESSION_ID,
+            ),
+        )
 
-class CartView(APIView):
-    """
-    Cart View for retrieving current list of cart items
-
-    Methods:
-        get: Claims GET requests.
-    """
-    def get(self, request: Request, *args, **kwargs) -> Response:
+class CartViewSet(ViewSet, CartManagerMixin):
+    def list(self, request: Request) -> Response:
         """
+        GET /cart/
+
         Retrieve current list of cart items by session ID.
 
         Args:
@@ -26,19 +31,12 @@ class CartView(APIView):
         Returns:
             Response: List of cart items.
         """
+
         cart = request.session.get(settings.CART_SESSION_ID, [])
         serializer = CartItemSerializer(cart, many=True)
         return Response(serializer.data)
 
-
-class AddItemView(APIView):
-    """
-    Cart View for adding a new item to the cart.
-
-    Methods:
-        post: Claims POST requests.
-    """
-    def post(self, request: Request, *args, **kwargs) -> Response:
+    def create(self, request: Request) -> Response:
         """
         Add a new cart item.
 
@@ -49,109 +47,85 @@ class AddItemView(APIView):
             Response: Response with 200 status code if data is valid, else 400
         """
         item_data = request.data.copy()
-        cart = CartManager(request.session, settings.CART_SESSION_ID)
         try:
-            cart.add_to_cart(item_data)
+            with self.get_cart_manager(request) as cart:
+                cart.add_to_cart(item_data)
         except ValidationError as exception:
             return Response(
                 status=status.HTTP_400_BAD_REQUEST,
-                data=exception.detail,
+                data={'detail': exception.detail},
             )
-        cart.commit()
+
         return Response(
             {'detail': 'Successfully added item to the cart.'},
             status=status.HTTP_201_CREATED,
         )
 
-
-class DeleteItemView(APIView):
-    """
-    Cart View for deleting an item from the cart.
-
-    Methods:
-        delete: Claims DELETE requests.
-    """
-    def delete(self, request: Request, item_id: int) -> Response:
+    def destroy(self, request: Request, pk: int) -> Response:
         """
         Delete a cart item.
 
         Args:
             request: Current HTTP request.
-            item_id: ID of the cart item, which needs to be deleted.
+            pk: ID of the cart item, which needs to be deleted.
 
         Returns:
             Response: Response with 204 status code.
         """
-        cart = CartManager(request.session, settings.CART_SESSION_ID)
-        cart.remove_from_cart(item_id)
-        cart.commit()
+        print(type(pk))
+        with self.get_cart_manager(request) as cart:
+            cart.remove_from_cart(pk)
+
         return Response(
             {'detail': 'Item removed'},
             status=status.HTTP_204_NO_CONTENT,
         )
 
-
-class DecreaseItemCountView(APIView):
-    """
-    Cart View for decreasing an amount of items in the cart.
-
-    Methods:
-        patch: Claims PATCH requests.
-    """
-    def patch(self, request: Request, item_id: int) -> Response:
-        """
-        Decrease a count of the cart item.
-
-        Args:
-            request: Current HTTP request.
-            item_id: ID of the cart item, which needs to be deleted.
-
-        Returns:
-            Response: Response with 200 status code if item exists, else 404.
-        """
-        cart = CartManager(request.session, settings.CART_SESSION_ID)
-        try:
-            cart.update_quantity(item_id=item_id, delta=-1)
-        except ValidationError as exception:
-            return Response(
-                status=status.HTTP_404_NOT_FOUND,
-                data=exception.detail,
-            )
-        cart.commit()
-        return Response(
-            {'detail': 'Item count decreased.'},
-            status=status.HTTP_200_OK,
-        )
-
-
-class IncreaseItemCountView(APIView):
-    """
-    Cart View for increasing an amount of items in the cart.
-
-    Methods:
-        patch: Claims PATCH requests.
-    """
-    def patch(self, request, item_id: int) -> Response:
+    def increase(self, request: Request, pk: int):
         """
         Increase a count of the cart item.
 
         Args:
             request: Current HTTP request.
-            item_id: ID of the cart item, which needs to be deleted.
+            pk: ID of the cart item, which count needs to be increased.
 
         Returns:
             Response: Response with 200 status code if item exists, else 404.
         """
-        cart = CartManager(request.session, settings.CART_SESSION_ID)
         try:
-            cart.update_quantity(item_id=item_id, delta=1)
+            with self.get_cart_manager(request) as cart:
+                cart.update_quantity(item_id=pk, delta=1)
         except ValidationError as exception:
             return Response(
                 status=status.HTTP_404_NOT_FOUND,
-                data=exception.detail,
+                data={'detail': exception.detail},
             )
-        cart.commit()
         return Response(
             {'detail': 'Item count increased.'},
+            status=status.HTTP_200_OK,
+        )
+
+    def decrease(self, request: Request, pk: int):
+        """
+        Decrease a count of the cart item.
+
+        Args:
+            request: Current HTTP request.
+            pk: ID of the cart item, which needs to be deleted.
+
+        Returns:
+            Response: Response with 200 status code if item exists, else 404.
+        """
+
+        try:
+            with self.get_cart_manager(request) as cart:
+                cart.update_quantity(item_id=pk, delta=-1)
+        except ValidationError as exception:
+            return Response(
+                status=status.HTTP_404_NOT_FOUND,
+                data={'detail': exception.detail},
+            )
+        return Response(
+            {'detail': 'Item count decreased.'},
             status=status.HTTP_200_OK,
         )
