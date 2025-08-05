@@ -1,3 +1,7 @@
+"""
+Views for cart app.
+"""
+
 from django.conf import settings
 from rest_framework.exceptions import ValidationError
 from rest_framework.viewsets import ViewSet
@@ -9,8 +13,23 @@ from .serializers import CartItemSerializer
 from .services import CartManager, SessionCartStorage
 
 class CartManagerMixin:
+    """
+    Mixin for CartManager access.
+
+    Methods:
+        get_cart_manager: Retrieve cart manager by current request.
+    """
     @staticmethod
     def get_cart_manager(request: Request) -> CartManager:
+        """
+        Retrieve cart manager by current request.
+
+        Args:
+            request: Current HTTP request.
+
+        Returns:
+            CartManager: Cart manager.
+        """
         return CartManager(
             SessionCartStorage(
                 request.session,
@@ -18,10 +37,14 @@ class CartManagerMixin:
             ),
         )
 
+
 class CartViewSet(ViewSet, CartManagerMixin):
+    """
+    ViewSet for working with cart.
+    """
     def list(self, request: Request) -> Response:
         """
-        GET /cart/
+        GET /api/cart/
 
         Retrieve current list of cart items by session ID.
 
@@ -38,6 +61,9 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     def create(self, request: Request) -> Response:
         """
+
+        POST /api/cart/add/
+
         Add a new cart item.
 
         Args:
@@ -46,7 +72,7 @@ class CartViewSet(ViewSet, CartManagerMixin):
         Returns:
             Response: Response with 200 status code if data is valid, else 400
         """
-        item_data = request.data.copy()
+        item_data: dict = request.data.copy()
         try:
             with self.get_cart_manager(request) as cart:
                 cart.add_to_cart(item_data)
@@ -63,6 +89,8 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     def destroy(self, request: Request, pk: int) -> Response:
         """
+        DELETE /api/cart/remove/<int:pk>/
+
         Delete a cart item.
 
         Args:
@@ -83,6 +111,8 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     def increase(self, request: Request, pk: int):
         """
+        PATCH /api/cart/increase/<int:pk>/
+
         Increase a count of the cart item.
 
         Args:
@@ -107,6 +137,8 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     def decrease(self, request: Request, pk: int):
         """
+        PATCH /api/cart/decrease/<int:pk>/
+
         Decrease a count of the cart item.
 
         Args:
