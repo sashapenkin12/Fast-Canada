@@ -7,15 +7,15 @@
     </style>
 </head>
 <body>
-    <h2>Поступил новый заказ</h2>
-    <p><strong>Имя:</strong> {{ full_name }}</p>
-    <p><strong>Телефон:</strong> {{ phone_number }}</p>
-    <p><strong>Адрес:</strong> {{ address }}</p>
+    <h2>New order received.</h2>
+    <p><strong>Name:</strong> {{ full_name }}</p>
+    <p><strong>Phone number:</strong> {{ phone_number }}</p>
+    <p><strong>Address:</strong> {{ address }}</p>
 
-    <h3>Продукты:</h3>
+    <h3>Products:</h3>
     <ul>
-        {% for product in products %}
-            <li>{{ product }}</li>
+        {% for item in items %}
+            <li>{{ item.product.title }} x {{ item.count }} = {{ item.total_price }}</li>
         {% empty %}
             <li>Нет товаров</li>
         {% endfor %}

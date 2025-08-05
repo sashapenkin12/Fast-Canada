@@ -16,8 +16,8 @@ class SendOrderView(APIView):
                 status=HTTP_400_BAD_REQUEST,
             )
 
-        data = serializer.validated_data
-        subject = "Новый заказ"
+        data = serializer.data
+        subject = "New order"
 
         text_message, html_message = get_order_email_content(data)
 
@@ -32,8 +32,14 @@ class SendOrderView(APIView):
             )
         except Exception as e:
             return Response(
-                {'detail': 'Ошибка при отправке письма', 'error': str(e)},
+                {'detail': 'Error sending email.', 'error': str(e)},
                 status=HTTP_400_BAD_REQUEST
             )
 
-        return Response({'detail': 'Спасибо! Ваш заказ оформлен. Скоро наши менеджеры свяжутся с вами.'}, status=HTTP_202_ACCEPTED)
+        return Response(
+            {
+                'detail':
+                    'Thanks! Your order has been placed. Our managers will contact you soon.',
+            },
+            status=HTTP_202_ACCEPTED,
+        )
