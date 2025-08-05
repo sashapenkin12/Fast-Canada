@@ -1,0 +1,1387 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-08-04T06:40:03.800Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "1",
+      "object_repr": "Cif универсальный чистящий крем, в ассортименте, 500мл",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-08-05T08:52:54.809Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "2",
+      "object_repr": "Synergetic средство для мытья посуды и детских игрушек, Сочный арбуз, 1л",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-08-05T08:53:48.310Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "3",
+      "object_repr": "Finish Powerball таблетки для посудомоечной машины, 100шт",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-08-05T08:56:02.273Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "4",
+      "object_repr": "Frosch средство для мытья посуды, Зеленый Лимон, 1л",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-08-05T08:57:05.982Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "5",
+      "object_repr": "Persil Color стиральный порошок автомат, для цветного белья, 10кг",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-08-05T08:57:53.879Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "6",
+      "object_repr": "ARIEL Color стиральный порошок автомат, для цветного белья, в ассортименте, 3кг",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-08-05T08:58:48.058Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "7",
+      "object_repr": "Tide Color стиральный порошок автомат в ассортименте, для цветного белья, 3кг",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-08-05T09:00:15.841Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "8",
+      "object_repr": "Palmolive натурэль туалетное мыло, интенсивное увлажнение, 150гр",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-08-05T09:01:21.441Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "9",
+      "object_repr": "MiLGurt ухаживающее жидкое крем-мыло, манго и дыня в йогурте, 860мл",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-08-05T09:02:15.769Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "10",
+      "object_repr": "Sanfor гель для прочистки труб, 5 мин, 1000гр",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-08-05T09:03:16.544Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "11",
+      "object_repr": "Mr.Muscle Универсал после дождя средство для мытья пола, 500мл",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-08-05T09:07:59.100Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "11",
+      "object_repr": "Mr. Muscle Universal After Rain Floor Cleaner, 500 ml",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-08-05T09:08:22.947Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "10",
+      "object_repr": "Sanfor pipe cleaning gel, 5 min, 1000 g",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-08-05T09:08:39.194Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "9",
+      "object_repr": "MiLGurt nourishing liquid cream soap, mango and melon in yogurt, 860ml",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-08-05T09:08:56.673Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "8",
+      "object_repr": "Palmolive Natural Toilet Soap, Intensive Moisturizing, 150g",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-08-05T09:09:11.907Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "7",
+      "object_repr": "Tide Color washing powder for washing machines, for colored laundry, 3 kg",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-08-05T09:09:27.598Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "6",
+      "object_repr": "ARIEL Color washing powder for automatic washing machines, for colored laundry, assorted, 3 kg",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-08-05T09:09:44.175Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "5",
+      "object_repr": "Persil Color washing powder for washing machines, for colored laundry, 10 kg",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-08-05T09:09:59.864Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "4",
+      "object_repr": "Frosch dishwashing liquid, Green Lemon, 1 liter",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-08-05T09:10:31.426Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "3",
+      "object_repr": "Finish Powerball dishwasher tablets, 100 pcs",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-08-05T09:10:47.437Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "2",
+      "object_repr": "Synergetic dishwashing liquid and children's toy cleaner, Juicy Watermelon, 1L",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-08-05T09:11:00.839Z",
+      "user": 1,
+      "content_type": 26,
+      "object_id": "1",
+      "object_repr": "Cif universal cleaning cream, assorted, 500 ml",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Full description\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Promotion",
+      "content_type": 7,
+      "codename": "add_promotion"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Promotion",
+      "content_type": 7,
+      "codename": "change_promotion"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Promotion",
+      "content_type": 7,
+      "codename": "delete_promotion"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Promotion",
+      "content_type": 7,
+      "codename": "view_promotion"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Guarantee",
+      "content_type": 8,
+      "codename": "add_guarantee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Guarantee",
+      "content_type": 8,
+      "codename": "change_guarantee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Guarantee",
+      "content_type": 8,
+      "codename": "delete_guarantee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Guarantee",
+      "content_type": 8,
+      "codename": "view_guarantee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add City",
+      "content_type": 9,
+      "codename": "add_city"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change City",
+      "content_type": 9,
+      "codename": "change_city"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete City",
+      "content_type": 9,
+      "codename": "delete_city"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view City",
+      "content_type": 9,
+      "codename": "view_city"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Repair",
+      "content_type": 10,
+      "codename": "add_repair"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Repair",
+      "content_type": 10,
+      "codename": "change_repair"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Repair",
+      "content_type": 10,
+      "codename": "delete_repair"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Repair",
+      "content_type": 10,
+      "codename": "view_repair"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add Installation",
+      "content_type": 11,
+      "codename": "add_installation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change Installation",
+      "content_type": 11,
+      "codename": "change_installation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete Installation",
+      "content_type": 11,
+      "codename": "delete_installation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view Installation",
+      "content_type": 11,
+      "codename": "view_installation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add location",
+      "content_type": 12,
+      "codename": "add_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change location",
+      "content_type": 12,
+      "codename": "change_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete location",
+      "content_type": 12,
+      "codename": "delete_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view location",
+      "content_type": 12,
+      "codename": "view_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add Brand",
+      "content_type": 13,
+      "codename": "add_brand"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change Brand",
+      "content_type": 13,
+      "codename": "change_brand"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete Brand",
+      "content_type": 13,
+      "codename": "delete_brand"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view Brand",
+      "content_type": 13,
+      "codename": "view_brand"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add Product",
+      "content_type": 14,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change Product",
+      "content_type": 14,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete Product",
+      "content_type": 14,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view Product",
+      "content_type": 14,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add Blog Post",
+      "content_type": 15,
+      "codename": "add_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change Blog Post",
+      "content_type": 15,
+      "codename": "change_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete Blog Post",
+      "content_type": 15,
+      "codename": "delete_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view Blog Post",
+      "content_type": 15,
+      "codename": "view_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add Blog Image",
+      "content_type": 16,
+      "codename": "add_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change Blog Image",
+      "content_type": 16,
+      "codename": "change_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete Blog Image",
+      "content_type": 16,
+      "codename": "delete_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view Blog Image",
+      "content_type": 16,
+      "codename": "view_blogimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add Contact",
+      "content_type": 17,
+      "codename": "add_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change Contact",
+      "content_type": 17,
+      "codename": "change_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete Contact",
+      "content_type": 17,
+      "codename": "delete_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view Contact",
+      "content_type": 17,
+      "codename": "view_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add About",
+      "content_type": 18,
+      "codename": "add_about"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change About",
+      "content_type": 18,
+      "codename": "change_about"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete About",
+      "content_type": 18,
+      "codename": "delete_about"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view About",
+      "content_type": 18,
+      "codename": "view_about"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add Case Study",
+      "content_type": 19,
+      "codename": "add_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change Case Study",
+      "content_type": 19,
+      "codename": "change_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete Case Study",
+      "content_type": 19,
+      "codename": "delete_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view Case Study",
+      "content_type": 19,
+      "codename": "view_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add Case Study Image",
+      "content_type": 20,
+      "codename": "add_casestudyimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change Case Study Image",
+      "content_type": 20,
+      "codename": "change_casestudyimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete Case Study Image",
+      "content_type": 20,
+      "codename": "delete_casestudyimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view Case Study Image",
+      "content_type": 20,
+      "codename": "view_casestudyimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Can add FAQ",
+      "content_type": 21,
+      "codename": "add_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Can change FAQ",
+      "content_type": 21,
+      "codename": "change_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Can delete FAQ",
+      "content_type": 21,
+      "codename": "delete_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Can view FAQ",
+      "content_type": 21,
+      "codename": "view_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "name": "Can add Vacancy",
+      "content_type": 22,
+      "codename": "add_vacancy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "name": "Can change Vacancy",
+      "content_type": 22,
+      "codename": "change_vacancy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "name": "Can delete Vacancy",
+      "content_type": 22,
+      "codename": "delete_vacancy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "name": "Can view Vacancy",
+      "content_type": 22,
+      "codename": "view_vacancy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "name": "Can add Vacancy Application",
+      "content_type": 23,
+      "codename": "add_vacancyapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "name": "Can change Vacancy Application",
+      "content_type": 23,
+      "codename": "change_vacancyapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "name": "Can delete Vacancy Application",
+      "content_type": 23,
+      "codename": "delete_vacancyapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "name": "Can view Vacancy Application",
+      "content_type": 23,
+      "codename": "view_vacancyapplication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 24,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 24,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 24,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 24,
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 25,
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 25,
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 25,
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 25,
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+      "name": "Can add chemical product",
+      "content_type": 26,
+      "codename": "add_chemicalproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+      "name": "Can change chemical product",
+      "content_type": 26,
+      "codename": "change_chemicalproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+      "name": "Can delete chemical product",
+      "content_type": 26,
+      "codename": "delete_chemicalproduct"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+      "name": "Can view chemical product",
+      "content_type": 26,
+      "codename": "view_chemicalproduct"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$UfpKbMvOQCcGxcb1haOVlG$7b1zWLxVnv+aHyDCh9m1EQX4ybT7WjN2zdEtXjIoSRQ=",
+      "last_login": "2025-08-04T06:39:42.916Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-08-04T06:39:36.892Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cn3810vjw85aufme32qgt0xidd1hi75o",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hCgQAeX7j0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kTgLLU6_W8L84LYDumO7zTLPbV2mJHdFHrTL60z8vBzu30HFXr-1KoVwsMl47xxyQKshmxx88gDF5sGNbEIqFhVC8Lkob0YgIi6GlAbx_gDwJjhC:1uiorG:xPxI6VxNKt5rwdNRy2NmKI-WEzEoDqSmgOgTb-GEmVQ",
+      "expire_date": "2025-08-18T06:39:42.921Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "qszjsv1w5g6bbceud6u567wiym62236x",
+    "fields": {
+      "session_data": ".eJxdUMsKwyAQ_BXZsxTjg9Zc-xlpKcmagBBqCXqS_HuTtaD0MiwzuzPLZMBxi9APGbyDvuPw2YJLeFAZoo_rDD3c_cIeSWitTlSO8EYoCQ2pgrAjhmY1EYP1ShOjbLG7VqNypslOL4S2iSkHaqw5JVMhL4pkNfbnVR6Zm9dk44iNiWtUw5kRolmZ4OzE41lEZ83FWtg5YEjvoyPJIYY4rq__jef-BdFlYWw:1ujD3P:F8C0_9V8HwTFKO4umf1okhLmQnfp9Mwpoi6j0dEqX1A",
+      "expire_date": "2025-08-19T08:29:51.334Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "w76bv5ptwiamiiqo5kv0hyxwvdp3uos7",
+    "fields": {
+      "session_data": ".eJxdUMsKwyAQ_BXZsxTjg9Zc-xlpKcmagBBqCXqS_HuTtaD0MiwzuzPLZMBxi9APGbyDvuPw2YJLeFAZoo_rDD3c_cIeSWitTlSO8EYoCQ2pgrAjhmY1EYP1ShOjbLG7VqNypslOL4S2iSkHaqw5JVMhL4pkNfbnVR6Zm9dk44iNiWtUw5kRolmZ4OzE41lEZ83FWtg5YEjvoyPJIYY4rq__jef-BdFlYWw:1uivj3:NqKLw8iuburDf4SLZhBRbJVbdEuo8Rej_3AIIlaZf00",
+      "expire_date": "2025-08-18T13:59:41.697Z"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 1,
+    "fields": {
+      "title": "Cif universal cleaning cream, assorted, 500 ml",
+      "full_description": "Volume: 500 ml\r\n\r\nRemoves dirt in the kitchen and bathroom\r\nEasy to rinse off\r\nPenetrates and completely removes stubborn dirt and limescale",
+      "price": "195.99",
+      "is_available": true,
+      "image": "products/9969-700x770_NEd8XCb.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 2,
+    "fields": {
+      "title": "Synergetic dishwashing liquid and children's toy cleaner, Juicy Watermelon, 1L",
+      "full_description": "Volume: 1 liter\r\n\r\nConcentrated high-foaming detergent for washing all types of dishes from any type of dirt.\r\n100% washable\r\nSuitable for washing fruit, children's dishes, and toys.\r\nEffectively eliminates odors and removes grease even in ice water!\r\n    100% biodegradable in water, does not harm the microflora of septic systems.\r\nComplies with SAN PIN standards.\r\n\r\nManufacturer: Russia",
+      "price": "4.89",
+      "is_available": true,
+      "image": "products/synergetic.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 3,
+    "fields": {
+      "title": "Finish Powerball dishwasher tablets, 100 pcs",
+      "full_description": "Quantity: 100 pieces\r\n\r\n    Finish “All in 1” dishwasher detergent with “shine and protection” function ensures sparkling cleanliness and shine of dishes, as well as protects glassware from corrosion\r\nA special glass protection formula extends the life of your dishes and gives them a brilliant shine after every wash",
+      "price": "31.18",
+      "is_available": true,
+      "image": "products/finish.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 4,
+    "fields": {
+      "title": "Frosch dishwashing liquid, Green Lemon, 1 liter",
+      "full_description": "Volume: 1 liter\r\n\r\nDishwashing liquid (Lemon) dissolves grease and helps dishes dry on their own\r\nNatural active ingredients (with lemon peel extract) break down food residue, quickly cleaning dishes and leaving a pleasant lemon scent.\r\n    Does not harm the skin of the hands thanks to its neutral pH\r\nTested through repeated trials\r\nContains plant-based active ingredients that are 98% biodegradable\r\n\r\nManufacturer: Germany",
+      "price": "3.71",
+      "is_available": true,
+      "image": "products/frosch.jpeg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 5,
+    "fields": {
+      "title": "Persil Color washing powder for washing machines, for colored laundry, 10 kg",
+      "full_description": "Weight: 10 kg \r\n\r\nLaundry type: for colored items\r\n\r\n    Effectively removes stains, keeping the colors of your clothes bright and vibrant for a long time!\r\n    Designed for washing cotton, linen, synthetic, and blended fabrics in water of any hardness\r\n    Always follow the recommendations on the product labels when selecting the washing temperature\r\n    Use special detergents for wool and silk items",
+      "price": "26.44",
+      "is_available": true,
+      "image": "products/persil.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 6,
+    "fields": {
+      "title": "ARIEL Color washing powder for automatic washing machines, for colored laundry, assorted, 3 kg",
+      "full_description": "Weight: 3 kg\r\n\r\nLaundry type: for colored items\r\n\r\nAvailable in a range of colors, aqua powder, etc.\r\n    The innovative formula of Aquapowder is based on microgranules.\r\n    They dissolve instantly in water and start working from the very first minute.\r\n    Aquapowder leaves no traces or streaks and does not require additional rinsing.\r\n    The powder is effective even at 30⁰C.\r\n    Synthetic detergent, powder form, for use in all types of washing machines.\r\n    The powder contains special ingredients that help preserve fabric colors during washing and give clothes a fresh look.\r\n    The powder contains components that help protect the washing machine from scale and limescale buildup.",
+      "price": "8.19",
+      "is_available": true,
+      "image": "products/ariel.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 7,
+    "fields": {
+      "title": "Tide Color washing powder for washing machines, for colored laundry, 3 kg",
+      "full_description": "Weight: 3 kg\r\n\r\nLaundry type: for colored items\r\n\r\nSynthetic powder detergent for use in all types of washing machines\r\n    The recommended washing temperature is indicated on the labels of textile products\r\nRecommended washing cycle: from 20 minutes at a water temperature of 30°C and above\r\nNot suitable for washing silk and wool items\r\nAvailable in a range of varieties",
+      "price": "7.88",
+      "is_available": true,
+      "image": "products/tide.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 8,
+    "fields": {
+      "title": "Palmolive Natural Toilet Soap, Intensive Moisturizing, 150g",
+      "full_description": "Weight: 150g\r\n\r\nWith olive extract and moisturizing milk\r\nThe new improved formula contains even more moisturizing ingredients and helps make the skin soft and silky.",
+      "price": "1.50",
+      "is_available": true,
+      "image": "products/palmolive.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 9,
+    "fields": {
+      "title": "MiLGurt nourishing liquid cream soap, mango and melon in yogurt, 860ml",
+      "full_description": "Volume: 860 ml\r\n\r\n    Against street and household grease stains\r\n    Eliminates strong odors\r\n    Does not irritate the skin\r\n    Contains plant extract\r\n\r\nManufacturer: Russia",
+      "price": "2.67",
+      "is_available": true,
+      "image": "products/milgurt.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 10,
+    "fields": {
+      "title": "Sanfor pipe cleaning gel, 5 min, 1000 g",
+      "full_description": "Volume: 1000 ml\r\n\r\nQuickly removes even very stubborn blockages in sewer drains. Results can be seen in just 5 minutes. Thanks to its thick consistency, it penetrates deep into the pipe directly to the blockage, even in the presence of water. Effectively dissolves hair, food residues, grease, and other contaminants in drains. Neutralizes unpleasant odors. The product is safe for all types of pipes, including plastic ones. Kills germs in 60 minutes. Contains CHLORINE, the most effective disinfectant.",
+      "price": "4.03",
+      "is_available": true,
+      "image": "products/sanfor.jpg"
+    }
+  },
+  {
+    "model": "household_chemicals.chemicalproduct",
+    "pk": 11,
+    "fields": {
+      "title": "Mr. Muscle Universal After Rain Floor Cleaner, 500 ml",
+      "full_description": "Volume: 500ml\r\n\r\nFor floors and other surfaces\r\nCombines the cleaning power of Mr. Muscle for flawless cleaning and the delightful scent of Glade for freshness throughout your home\r\nIdeal for all types of floors, tiles, kitchen and other surfaces\r\n    You will see instant results—perfect cleanliness, freshness, and a pleasant scent throughout your home",
+      "price": "3.14",
+      "is_available": true,
+      "image": "products/mr.muscle.jpg"
+    }
+  }
+]

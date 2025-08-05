@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "d14ad8c9-9be5-4980-b7e4-cfa38cb9a756",
+		"name": "Fast-Canada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33110885"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "add-order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"Sasha\",\r\n    \"address\": \"Bishkek, Chui\",\r\n    \"phone_number\": \"+996700123456\",\r\n    \"email\": \"sasha@example.com\",\r\n    \"items\": [\r\n        {\r\n            \"id\": 1,\r\n            \"count\": 2,\r\n            \"product\": {\r\n                \"title\": \"Mr. Muscle Universal After Rain Floor Cleaner, 500 ml\",\r\n                \"price\": \"3.14\"\r\n            },\r\n            \"total_price\": \"6.28\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"product\": {\r\n                \"title\": \"Cif universal cleaning cream, assorted, 500 ml\",\r\n                \"price\": \"195.99\"\r\n            },\r\n            \"count\": 1,\r\n            \"total_price\": \"195.99\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/orders/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/cart/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-cart-item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"count\": 1,\r\n    \"product\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/cart/add/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "increase-item-count",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"count\": 1,\r\n    \"product\": 1\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/cart/increase/1/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"increase",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decrease-item-count",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"count\": 1,\r\n    \"product\": 1\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/cart/decrease/1/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"decrease",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-cart-item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/cart/remove/1/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"remove",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Household_chem",
+			"item": [
+				{
+					"name": "get_catalog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/household_chemicals/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"household_chemicals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/household_chemicals/1/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"household_chemicals",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost",
+			"type": "default"
+		}
+	]
+}

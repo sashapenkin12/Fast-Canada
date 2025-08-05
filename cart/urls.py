@@ -6,21 +6,14 @@ Attributes:
 """
 
 from django.urls import path
-from .views import (CartView, AddItemView, DeleteItemView,
-                    DecreaseItemCountView, IncreaseItemCountView)
+
+from .views import CartViewSet
+
 
 urlpatterns: list[path] = [
-    path('', CartView.as_view(), name='cart'),
-    path('add/', AddItemView.as_view(), name='add-cart-item'),
-    path('remove/<int:item_id>/', DeleteItemView.as_view(), name='remove-cart-item'),
-    path(
-        'decrease/<int:item_id>/',
-        DecreaseItemCountView.as_view(),
-        name='decrease-item-count',
-    ),
-    path(
-        'increase/<int:item_id>/',
-        IncreaseItemCountView.as_view(),
-        name='decrease-item-count',
-    ),
+    path('', CartViewSet.as_view({'get': 'list'}), name='cart-list'),
+    path('add/', CartViewSet.as_view({'post': 'create'}), name='add-cart-item'),
+    path('remove/<int:pk>/', CartViewSet.as_view({'delete': 'destroy'}), name='remove-cart-item'),
+    path('increase/<int:pk>/', CartViewSet.as_view({'patch': 'increase'}), name='cart-item-increase'),
+    path('decrease/<int:pk>/', CartViewSet.as_view({'patch': 'decrease'}), name='cart-item-decrease'),
 ]
