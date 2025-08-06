@@ -71,7 +71,6 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     def create(self, request: Request) -> Response:
         """
-
         POST /api/cart/add/
 
         Add a new cart item.
@@ -80,7 +79,7 @@ class CartViewSet(ViewSet, CartManagerMixin):
             request: Current HTTP request.
 
         Returns:
-            Response: Response with 200 status code if data is valid, else 400
+            Response: Response with 201 status code if data is valid, else 400.
         """
         item_data: dict = request.data.copy()
         try:
@@ -110,8 +109,14 @@ class CartViewSet(ViewSet, CartManagerMixin):
         Returns:
             Response: Response with 204 status code.
         """
-        with self.get_cart_manager(request) as cart:
-            cart.remove_from_cart(pk)
+        try:
+            with self.get_cart_manager(request) as cart:
+                cart.remove_from_cart(pk)
+        except ValidationError as exception:
+            return Response(
+                status=status.HTTP_404_NOT_FOUND,
+                data={'detail': exception.detail},
+            )
 
         return Response(status=status.HTTP_204_NO_CONTENT)
 

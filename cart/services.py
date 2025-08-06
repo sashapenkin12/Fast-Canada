@@ -134,6 +134,8 @@ class CartManager:
             if cart_item.get('id') == item_id:
                 self.cart.remove(cart_item)
                 break
+        else:
+            raise ValidationError(detail='Cart item not found.')
 
     def update_quantity(self, item_id: int, delta: int) -> None:
         if item_id not in [cart_item['id'] for cart_item in self.cart]:
