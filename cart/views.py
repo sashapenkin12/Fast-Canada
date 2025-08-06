@@ -11,6 +11,7 @@ from rest_framework import status
 
 from .serializers import CartItemSerializer
 from .services import CartManager, SessionCartStorage
+from .paginations import CartPagination
 
 class CartManagerMixin:
     """
@@ -41,7 +42,12 @@ class CartManagerMixin:
 class CartViewSet(ViewSet, CartManagerMixin):
     """
     ViewSet for working with cart.
+
+    Attributes:
+        pagination_class: Class for paginate cart items.
     """
+    pagination_class = CartPagination
+
     def list(self, request: Request) -> Response:
         """
         GET /api/cart/
@@ -55,8 +61,12 @@ class CartViewSet(ViewSet, CartManagerMixin):
             Response: List of cart items.
         """
 
-        cart = request.session.get(settings.CART_SESSION_ID, [])
-        serializer = CartItemSerializer(cart, many=True)
+        cart: list = request.session.get(settings.CART_SESSION_ID, [])
+
+        paginator = self.pagination_class()
+        page = paginator.paginate_queryset(cart, request)
+
+        serializer = CartItemSerializer(page, many=True)
         return Response(serializer.data)
 
     def create(self, request: Request) -> Response:
