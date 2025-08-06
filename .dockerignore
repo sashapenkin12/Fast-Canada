@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.venv
+venv
+env
+env.exemle
+*.log
+*.sqlite3
+staticfiles
+media
+*.md
+Dockerfile
+docker-compose.yml
+test
