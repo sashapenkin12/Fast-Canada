@@ -91,6 +91,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'EXCEPTION_HANDLER': 'utils.exceptions.custom_exception_handler',
 }
 
 AUTH_PASSWORD_VALIDATORS = [
