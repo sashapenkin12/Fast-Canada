@@ -2,12 +2,15 @@
 Views for cart app.
 """
 
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from django.conf import settings
 from rest_framework.exceptions import ValidationError
 from rest_framework.viewsets import ViewSet
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
+
 
 from .serializers import CartItemSerializer
 from .services import CartManager, SessionCartStorage
@@ -48,6 +51,10 @@ class CartViewSet(ViewSet, CartManagerMixin):
     """
     pagination_class = CartPagination
 
+    @swagger_auto_schema(
+        operation_summary="Get cart items",
+        responses={200: CartItemSerializer(many=True)},
+    )
     def list(self, request: Request) -> Response:
         """
         GET /api/cart/
@@ -69,6 +76,14 @@ class CartViewSet(ViewSet, CartManagerMixin):
         serializer = CartItemSerializer(page, many=True)
         return Response(serializer.data)
 
+    @swagger_auto_schema(
+        operation_summary="Add item to cart",
+        request_body=CartItemSerializer,
+        responses={
+            201: openapi.Response(description="Created"),
+            400: openapi.Response(description="Validation error"),
+        },
+    )
     def create(self, request: Request) -> Response:
         """
         POST /api/cart/add/
@@ -96,6 +111,16 @@ class CartViewSet(ViewSet, CartManagerMixin):
             status=status.HTTP_201_CREATED,
         )
 
+    @swagger_auto_schema(
+        operation_summary="Delete item from cart",
+        manual_parameters=[
+            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
+        ],
+        responses={
+            204: openapi.Response(description="No content"),
+            404: openapi.Response(description="Not found"),
+        },
+    )
     def destroy(self, request: Request, pk: int) -> Response:
         """
         DELETE /api/cart/remove/<int:pk>/
@@ -120,6 +145,16 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+    @swagger_auto_schema(
+        operation_summary="Increase item count",
+        manual_parameters=[
+            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
+        ],
+        responses={
+            200: openapi.Response(description="Item count increased"),
+            404: openapi.Response(description="Not found"),
+        },
+    )
     def increase(self, request: Request, pk: int):
         """
         PATCH /api/cart/increase/<int:pk>/
@@ -146,6 +181,16 @@ class CartViewSet(ViewSet, CartManagerMixin):
             status=status.HTTP_200_OK,
         )
 
+    @swagger_auto_schema(
+        operation_summary="Decrease item count",
+        manual_parameters=[
+            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
+        ],
+        responses={
+            200: openapi.Response(description="Item count decreased"),
+            404: openapi.Response(description="Not found"),
+        },
+    )
     def decrease(self, request: Request, pk: int):
         """
         PATCH /api/cart/decrease/<int:pk>/
