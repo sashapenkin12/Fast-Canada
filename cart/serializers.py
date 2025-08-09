@@ -48,3 +48,8 @@ class CartItemSerializer(serializers.Serializer):
             Decimal: Total price.
         """
         return str(Decimal(obj['product']['price']) * obj['count'])
+
+
+class AddCartItemRequestData(serializers.Serializer):
+    count = serializers.IntegerField(min_value=1)
+    product = serializers.IntegerField()

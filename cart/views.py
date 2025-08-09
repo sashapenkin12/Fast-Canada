@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-from .serializers import CartItemSerializer
+from .serializers import CartItemSerializer, AddCartItemRequestData
 from .services import CartManager, SessionCartStorage
 from .paginations import CartPagination
 
@@ -78,7 +78,7 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     @swagger_auto_schema(
         operation_summary="Add item to cart",
-        request_body=CartItemSerializer,
+        request_body=AddCartItemRequestData,
         responses={
             201: openapi.Response(description="Created"),
             400: openapi.Response(description="Validation error"),
@@ -113,9 +113,6 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     @swagger_auto_schema(
         operation_summary="Delete item from cart",
-        manual_parameters=[
-            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
-        ],
         responses={
             204: openapi.Response(description="No content"),
             404: openapi.Response(description="Not found"),
@@ -147,9 +144,6 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     @swagger_auto_schema(
         operation_summary="Increase item count",
-        manual_parameters=[
-            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
-        ],
         responses={
             200: openapi.Response(description="Item count increased"),
             404: openapi.Response(description="Not found"),
@@ -183,9 +177,6 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     @swagger_auto_schema(
         operation_summary="Decrease item count",
-        manual_parameters=[
-            openapi.Parameter('pk', openapi.IN_PATH, description="Item ID", type=openapi.TYPE_INTEGER)
-        ],
         responses={
             200: openapi.Response(description="Item count decreased"),
             404: openapi.Response(description="Not found"),
