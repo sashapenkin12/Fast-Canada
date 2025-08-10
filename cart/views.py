@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-from .serializers import CartItemSerializer, AddCartItemRequestData
+from .serializers import CartItemSerializer, AddCartItemSerializer
 from .services import CartManager, SessionCartStorage
 from .paginations import CartPagination
 
@@ -78,7 +78,7 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
     @swagger_auto_schema(
         operation_summary="Add item to cart",
-        request_body=AddCartItemRequestData,
+        request_body=AddCartItemSerializer,
         responses={
             201: openapi.Response(description="Created"),
             400: openapi.Response(description="Validation error"),

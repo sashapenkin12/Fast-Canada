@@ -120,7 +120,6 @@ class CartManager:
         cart_item = CartItemSerializer(data=item_data)
         if not cart_item.is_valid():
             raise ValidationError(detail=f'Invalid request data: {cart_item.errors}')
-
         self.cart.append(cart_item.data)
 
     def remove_from_cart(self, item_id: int) -> None:

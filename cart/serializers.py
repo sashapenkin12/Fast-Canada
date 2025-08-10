@@ -8,18 +8,18 @@ from decimal import Decimal
 
 from household_chemicals.models import ChemicalProduct
 
+class AddCartItemSerializer(serializers.Serializer):
+    product = serializers.PrimaryKeyRelatedField(queryset=ChemicalProduct.objects.all())
+    count = serializers.IntegerField(min_value=1)
+
 
 class CartProductSerializer(serializers.ModelSerializer):
     """
     Serializer for representing products in DB.
-
-    Attributes:
-        title: Title of the product.
-        price: Product price.
     """
     class Meta:
         model = ChemicalProduct
-        fields = ('title', 'price')
+        fields = ('title', 'price', 'is_available')
 
 
 class CartItemSerializer(serializers.Serializer):
@@ -48,8 +48,3 @@ class CartItemSerializer(serializers.Serializer):
             Decimal: Total price.
         """
         return str(Decimal(obj['product']['price']) * obj['count'])
-
-
-class AddCartItemRequestData(serializers.Serializer):
-    count = serializers.IntegerField(min_value=1)
-    product = serializers.IntegerField()
