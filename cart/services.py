@@ -108,10 +108,7 @@ class CartManager:
         if not product_id:
             raise ValidationError(detail='Product ID is required')
         product = get_product_by_id(product_id)
-        product_data = CartProductSerializer(
-            product,
-            context={'request': self.request},
-        ).data
+        product_data = CartProductSerializer(product).data
 
         if self.cart:
             duplicate_index = check_duplicate(self.cart, product_data['title'])
@@ -121,7 +118,7 @@ class CartManager:
 
         item_data['id'] = max([cart_item['id'] for cart_item in self.cart], default=0) + 1
         item_data['product'] = product_data
-        item_data['image'] = product_data.get('image')
+        item_data['image'] = self.request.build_absolute_uri(product.image.url) if product.image else None
 
         cart_item = CartItemSerializer(data=item_data)
         if not cart_item.is_valid():

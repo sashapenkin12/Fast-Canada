@@ -70,12 +70,7 @@ class CartViewSet(ViewSet, CartManagerMixin):
         """
 
         cart: list = request.session.get(settings.CART_SESSION_ID, [])
-
-        # paginator = self.pagination_class()
-        # page = paginator.paginate_queryset(cart, request)
-
-        serializer = CartItemSerializer(cart, many=True)
-        return Response(serializer.data)
+        return Response(cart)
 
     @swagger_auto_schema(
         operation_summary="Add item to cart",
