@@ -35,10 +35,11 @@ class CartManagerMixin:
             CartManager: Cart manager.
         """
         return CartManager(
-            SessionCartStorage(
+            storage=SessionCartStorage(
                 request.session,
                 settings.CART_SESSION_ID,
             ),
+            request=request,
         )
 
 
@@ -70,10 +71,10 @@ class CartViewSet(ViewSet, CartManagerMixin):
 
         cart: list = request.session.get(settings.CART_SESSION_ID, [])
 
-        paginator = self.pagination_class()
-        page = paginator.paginate_queryset(cart, request)
+        # paginator = self.pagination_class()
+        # page = paginator.paginate_queryset(cart, request)
 
-        serializer = CartItemSerializer(page, many=True)
+        serializer = CartItemSerializer(cart, many=True)
         return Response(serializer.data)
 
     @swagger_auto_schema(

@@ -1,7 +1,6 @@
 """
 Serializers for cart app.
 """
-
 from rest_framework import serializers
 
 from decimal import Decimal
@@ -17,9 +16,11 @@ class CartProductSerializer(serializers.ModelSerializer):
     """
     Serializer for representing products in DB.
     """
+    image = serializers.ImageField(read_only=True)
+
     class Meta:
         model = ChemicalProduct
-        fields = ('title', 'price', 'is_available')
+        fields = ('title', 'price', 'is_available', 'image')
 
 
 class CartItemSerializer(serializers.Serializer):
@@ -35,6 +36,7 @@ class CartItemSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     product = CartProductSerializer()
     count = serializers.IntegerField(min_value=1)
+    image = serializers.CharField(required=False)
     total_price = serializers.SerializerMethodField()
 
     def get_total_price(self, obj: dict) -> str:

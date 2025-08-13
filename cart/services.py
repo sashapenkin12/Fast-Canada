@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 from typing import Callable, Optional
 
 from rest_framework.exceptions import ValidationError
+from rest_framework.request import Request
 
 from .crud import get_product_by_id
 from .serializers import CartProductSerializer, CartItemSerializer
@@ -78,8 +79,9 @@ class CartManager:
     """
     Manager for working with cart.
     """
-    def __init__(self, storage: CartStorage):
+    def __init__(self, storage: CartStorage, request: Request):
         self.storage = storage
+        self.request = request
 
     def __enter__(self):
         self.cart = self.storage.load()
@@ -106,7 +108,10 @@ class CartManager:
         if not product_id:
             raise ValidationError(detail='Product ID is required')
         product = get_product_by_id(product_id)
-        product_data = CartProductSerializer(product).data
+        product_data = CartProductSerializer(
+            product,
+            context={'request': self.request},
+        ).data
 
         if self.cart:
             duplicate_index = check_duplicate(self.cart, product_data['title'])
@@ -116,6 +121,7 @@ class CartManager:
 
         item_data['id'] = max([cart_item['id'] for cart_item in self.cart], default=0) + 1
         item_data['product'] = product_data
+        item_data['image'] = product_data.get('image')
 
         cart_item = CartItemSerializer(data=item_data)
         if not cart_item.is_valid():
