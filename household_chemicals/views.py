@@ -6,9 +6,13 @@ from household_chemicals.paginations import ProductPagination
 
 
 class CatalogView(ListAPIView):
-    queryset = ChemicalProduct.objects.all().order_by('id')
     serializer_class = ProductBaseSerializer
     pagination_class = ProductPagination
+
+    def get_queryset(self):
+        return ChemicalProduct.objects.only(
+            'id', 'title', 'image', 'price', 'full_description', 'is_available'
+        ).order_by('id')
 
 
 class ProductDetailView(RetrieveAPIView):
