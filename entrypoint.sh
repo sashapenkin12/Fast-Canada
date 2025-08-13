@@ -9,6 +9,9 @@ echo "PostgreSQL is ready."
 echo "Collecting static..."
 python manage.py collectstatic --noinput
 
+echo "Creating migrations"
+python manage.py makemigrations
+
 echo "👉 Applying migrations..."
 python manage.py migrate --noinput
 
