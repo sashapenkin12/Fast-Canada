@@ -9,7 +9,8 @@ load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '38.180.37.83', '.onrender.com']
+PUBLIC_API_URL = os.getenv('PUBLIC_API_URL', 'http://localhost')
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '38.180.37.83', '.onrender.com', PUBLIC_API_URL]
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 HOUSECALL_API_KEY = os.getenv('HOUSECALL_API_KEY')
@@ -47,18 +48,29 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
+    # 'corsheaders.middleware.CorsMiddleware',
+    'core.middleware.AllowAllCorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# CORS settings
+from corsheaders.defaults import default_headers
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'ngrok-skip-browser-warning',
+]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://38.180.37.83',
+    'http://localhost',
+    f'https://{PUBLIC_API_URL}',
+    f'http://{PUBLIC_API_URL}',
+    'https://fast-appliance-repair-pro-master-35.vercel.app',
 ]
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'core.urls'
 
@@ -83,7 +95,11 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL'),
         conn_max_age=600
-    )
+    ),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 REST_FRAMEWORK = {
@@ -117,18 +133,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
 
+# https protocol settings
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = not DEBUG
+
+# CSRF
 CSRF_TRUSTED_ORIGINS = [
-    "https://grubworm-calm-vaguely.ngrok-free.app",
+    'http://localhost',
+    f"http://{PUBLIC_API_URL}",
+    f"https://{PUBLIC_API_URL}",
 ]
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-USE_X_FORWARDED_HOST = True
-SECURE_SSL_REDIRECT = True
-
-CORS_ALLOW_CREDENTIALS = True
-
-SESSION_COOKIE_SAMESITE = 'None'
+# Настройки cookies
 SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = "None"
 CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = "None"
