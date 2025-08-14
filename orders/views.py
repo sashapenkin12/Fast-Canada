@@ -1,3 +1,5 @@
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from django.core.mail import send_mail
 from django.conf import settings
 from rest_framework.views import APIView
@@ -8,6 +10,14 @@ from orders.services.email_content import get_order_email_content
 
 
 class SendOrderView(APIView):
+    @swagger_auto_schema(
+        operation_summary="Send order.",
+        request_body=OrderSerializer,
+        responses={
+            202: openapi.Response(description="Sent"),
+            400: openapi.Response(description="Validation error"),
+        },
+    )
     def post(self, request, *args, **kwargs):
         serializer = OrderSerializer(data=request.data)
         if not serializer.is_valid():

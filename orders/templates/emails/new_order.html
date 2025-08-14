@@ -17,8 +17,10 @@
         {% for item in items %}
             <li>{{ item.product.title }} x {{ item.count }} = {{ item.total_price }}</li>
         {% empty %}
-            <li>Нет товаров</li>
+            <li>No products</li>
         {% endfor %}
     </ul>
+    <h3>Comment:</h3>
+    <p>{{ comment }}</p>
 </body>
 </html>
