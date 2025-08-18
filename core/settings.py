@@ -134,12 +134,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CART_SESSION_ID = 'cart'
 
 # https protocol settings
+USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = not DEBUG
 
 # CSRF
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
+    'https://localhost',
     f"http://{PUBLIC_API_URL}",
     f"https://{PUBLIC_API_URL}",
 ]

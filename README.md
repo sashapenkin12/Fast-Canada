@@ -18,12 +18,6 @@ git clone https://github.com/sashapenkin12/Fast-Canada
 
 #### Заполните своими значениями (необязательно)
 
-### Создайте миграции для базы данных
-
-```bash
-python manage.py makemigrations
-```
-
 ### Скачайте Docker. (если не установлен)
 
 #### Сделать это можно [здесь](https://www.docker.com/products/docker-desktop/)
