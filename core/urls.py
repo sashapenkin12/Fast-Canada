@@ -31,7 +31,7 @@ schema_view = get_schema_view(
     ),
     public=True,
     permission_classes=[permissions.AllowAny,],
-    # url='https://grubworm-calm-vaguely.ngrok-free.app', # DEBUG
+    url='https://grubworm-calm-vaguely.ngrok-free.app', # DEBUG
 )
 
 urlpatterns = [
