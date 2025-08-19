@@ -252,7 +252,7 @@ class CaseStudySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CaseStudy
-        fields = ['id', 'title', 'slug', 'short_description', 'description', 'city', 'created_at', 'video_on_youtube',
+        fields = ['id', 'title', 'image', 'slug', 'short_description', 'description', 'city', 'created_at', 'video_on_youtube',
                   'images']
 
 class VacancySerializer(serializers.ModelSerializer):
