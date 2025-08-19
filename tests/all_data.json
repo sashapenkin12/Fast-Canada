@@ -3822,5 +3822,61 @@
       "is_available": true,
       "image": "products/mr.muscle.jpg"
     }
+  },
+    {
+    "model": "api_models.installation",
+    "pk": 2,
+    "fields": {
+      "name": "Refrigerator Installation & Repair",
+      "slug": "refrigerator-installation-repair",
+      "short_description": "Professional refrigerator installation and repair service.",
+      "full_description": "<p>We provide comprehensive refrigerator installation and repair services for all brands. This includes electrical connection, temperature setup, door sealing check, and cooling system testing. We also handle repairs: compressor replacement, refrigerant leak fixing, thermostat replacement, and more.</p>",
+      "cart_description": "Refrigerator installation and repair.",
+      "icon": "service_icon/refrigerator-icon.jpg",
+      "image": "service_image/refrigerator.webp",
+      "created_at": "2025-08-19T16:15:34.541Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 3,
+    "fields": {
+      "name": "Dishwasher Installation & Repair",
+      "slug": "dishwasher-installation-repair",
+      "short_description": "Fast and reliable dishwasher installation and repair.",
+      "full_description": "<p>Our technicians provide professional installation of dishwashers, including water supply, drainage, and electrical connection. We also perform diagnostics and repairs: filter replacement, leak fixing, electronic system recovery, and heating element repair.</p>",
+      "cart_description": "Dishwasher installation and repair.",
+      "icon": "service_icon/dishwasher-icon.jpg",
+      "image": "service_image/dishwasher.png",
+      "created_at": "2025-08-19T16:18:18.707Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 4,
+    "fields": {
+      "name": "Cooker Installation & Repair",
+      "slug": "cooker-installation-repair",
+      "short_description": "Safe installation and repair of gas and electric cookers.",
+      "full_description": "<p>We ensure safe and proper installation of gas or electric cookers, including connection to power or gas supply, sealing checks, and performance testing. We also provide repair services: burner replacement, thermostat repair, and electronic system maintenance.</p>",
+      "cart_description": "Cooker installation and repair.",
+      "icon": "service_icon/cooker-icon.webp",
+      "image": "service_image/cooker.jpg",
+      "created_at": "2025-08-19T16:20:15.195Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 5,
+    "fields": {
+      "name": "Oven Installation & Repair",
+      "slug": "oven-installation-repair",
+      "short_description": "Professional oven installation and repair service.",
+      "full_description": "<p>We provide oven installation with precise electrical connection, correct fitting into the kitchen niche, and ventilation and heating system check. Our repair services include heating element replacement, timer repair, and touch panel maintenance.</p>",
+      "cart_description": "Oven installation and repair.",
+      "icon": "service_icon/oven-icon.webp",
+      "image": "service_image/oven.jpg",
+      "created_at": "2025-08-19T16:21:23.362Z"
+    }
   }
 ]
