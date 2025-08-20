@@ -35,7 +35,7 @@ class CartItemSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     product = CartProductSerializer()
     count = serializers.IntegerField(min_value=1)
-    image = serializers.CharField(allow_null=True)
+    image = serializers.CharField(allow_null=True, required=False)
     total_price = serializers.SerializerMethodField()
 
     def get_total_price(self, obj: dict) -> str:

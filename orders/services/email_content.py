@@ -7,6 +7,7 @@ def get_order_email_content(data):
         'full_name': data.get('full_name', 'not specified'),
         'phone_number': data.get('phone_number', 'not specified'),
         'address': data.get('address', 'not specified'),
+        'email': data.get('email'),
         'items': items,
         'comment': data.get('comment', 'not specified')
     }

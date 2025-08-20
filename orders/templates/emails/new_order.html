@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body { font-family: Arial, sans-serif; }
-    </style>
+<meta charset="UTF-8">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f6fa;
+        color: #2f3640;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        padding: 30px;
+    }
+    h2 {
+        color: #e84118;
+        text-align: center;
+    }
+    h3 {
+        color: #718093;
+        border-bottom: 1px solid #dcdde1;
+        padding-bottom: 5px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .info p {
+        margin: 5px 0;
+    }
+    ul.products {
+        list-style: none;
+        padding: 0;
+    }
+    ul.products li {
+        background: #f1f2f6;
+        margin: 10px 0;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+    }
+    ul.products li span {
+        font-weight: 700;
+        color: #2f3640;
+    }
+    .comment {
+        background: #f1f2f6;
+        padding: 15px;
+        border-radius: 8px;
+        font-style: italic;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #7f8fa6;
+    }
+</style>
 </head>
 <body>
-    <h2>New order received.</h2>
-    <p><strong>Name:</strong> {{ full_name }}</p>
-    <p><strong>Phone number:</strong> {{ phone_number }}</p>
-    <p><strong>Address:</strong> {{ address }}</p>
+<div class="container">
+    <h2>New Order Received!</h2>
+
+    <div class="info">
+        <p><strong>Name:</strong> {{ full_name }}</p>
+        <p><strong>Phone:</strong> {{ phone_number }}</p>
+        <p><strong>Address:</strong> {{ address }}</p>
+        {%  if email %}
+            <p><strong>E-mail:</strong> {{ email }}</p>
+        {% endif %}
+    </div>
 
     <h3>Products:</h3>
-    <ul>
+    <ul class="products">
         {% for item in items %}
-            <li>{{ item.product.title }} x {{ item.count }} = {{ item.total_price }}</li>
+            <li>
+                <span>{{ item.product.title }} x {{ item.count }} = {{ item.total_price }} CAD</span>
+            </li>
         {% empty %}
             <li>No products</li>
         {% endfor %}
     </ul>
+
     <h3>Comment:</h3>
-    <p>{{ comment }}</p>
+    <div class="comment">{{ comment }}</div>
+
+    <div class="footer">
+        Thank you for your order! We will contact you shortly.
+    </div>
+</div>
 </body>
 </html>
