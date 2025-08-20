@@ -2920,21 +2920,6 @@
   },
   {
     "model": "api_models.city",
-    "pk": 2,
-    "fields": {
-      "name": "Calgary",
-      "province": "Alberta",
-      "latitude": 51.05011,
-      "longitude": -114.08529,
-      "place_id": "2",
-      "created_at": "2025-08-14T02:25:01.158Z",
-      "slug": "calgary-alberta",
-      "repairs": [],
-      "installations": []
-    }
-  },
-  {
-    "model": "api_models.city",
     "pk": 3,
     "fields": {
       "name": "Pickering",
@@ -2982,7 +2967,7 @@
     "model": "api_models.repair",
     "pk": 1,
     "fields": {
-      "name": "Repairs_HomeAppliances",
+      "name": "Repairs Home Appliances",
       "slug": "repairs-home-appliances",
       "short_description": "Fast and reliable repair of household appliances at your home.",
       "full_description": "<p>Our technicians repair all types of household appliances: washing machines, dishwashers, refrigerators, ovens, and stoves. We work quickly and offer a warranty on our services and replacement parts. Diagnostics are free of charge with repairs.</p>",
@@ -2996,12 +2981,12 @@
     "model": "api_models.location",
     "pk": 1,
     "fields": {
-      "name": "Toronto",
+      "name": "North York, Ontario",
       "city": 1,
-      "slug": "toronto",
+      "slug": "north-york",
       "place_id": "ChIJDbdkHFQayUwR7-8fITgxTmU",
-      "latitude": 43.6532,
-      "longitude": -79.3832,
+      "latitude": 43.7577073,
+      "longitude": -79.475199,
       "created_at": "2025-08-13T16:13:48.488Z"
     }
   },
@@ -3045,27 +3030,14 @@
     }
   },
   {
-    "model": "api_models.location",
-    "pk": 5,
-    "fields": {
-      "name": "King West",
-      "city": 1,
-      "slug": "king-west-toronto",
-      "place_id": "ChIJx9k-5lO0K4gRzjR_2Ykz0l8",
-      "latitude": 43.6475,
-      "longitude": -79.399,
-      "created_at": "2025-08-14T03:53:32.836Z"
-    }
-  },
-  {
     "model": "api_models.brand",
     "pk": 1,
     "fields": {
       "name": "Kenmore",
       "slug": "kenmore",
-      "logo": "brands_images/2_Kenmore_com_wordmark___2_Logo.jpg",
-      "description": "Kenmore is an American brand of household appliances and other home goods. It's owned and licensed by Transformco, an affiliate of ESL Investments. The brand was originally associated with Sears, but after Sears Holdings filed for bankruptcy, Transformco acquired the assets.",
-      "created_at": "2025-08-13T15:19:39.860Z"
+      "logo": "brands_images/2_Kenmore_com_wordmark___2_Logo.png",
+      "description": "Kenmore is a trusted American appliance brand established in 1913. It offers a wide range of home appliances, including washers, dryers, refrigerators, vacuum cleaners, and HVAC systems. Known for reliability and innovation, Kenmore products are widely sold through major retailers and online.",
+      "created_at": "2025-08-13T15:26:51.840Z"
     }
   },
   {
@@ -3515,7 +3487,7 @@
     "pk": 6,
     "fields": {
       "blog_post": 6,
-      "image": "blog_images/Appliance-17_pHG38Eb.webp",
+      "image": "blog_images/Appliance-17.webp",
       "caption": "",
       "created_at": "2025-08-14T02:14:28.288Z"
     }
@@ -3524,45 +3496,9 @@
     "model": "api_models.about",
     "pk": 1,
     "fields": {
-      "mission": "Repair/installation of refrigerators",
-      "experience": "We fix any malfunctions: not freezing, noisy, leaking, or not turning on. We work quickly and with a guarantee.",
-      "created_at": "2025-08-13T15:53:14.534Z"
-    }
-  },
-  {
-    "model": "api_models.about",
-    "pk": 2,
-    "fields": {
-      "mission": "Repair/installation of washing machines",
-      "experience": "We repair any malfunctions: not draining water, not spinning, leaking, or not turning on. Quick response and warranty on work.",
-      "created_at": "2025-08-13T15:56:37.582Z"
-    }
-  },
-  {
-    "model": "api_models.about",
-    "pk": 3,
-    "fields": {
-      "mission": "Repair/installation of dishwashers",
-      "experience": "We fix any malfunctions: not washing, not drying, leaking, or displaying an error message. Professional service with a guarantee.",
-      "created_at": "2025-08-13T15:56:51.247Z"
-    }
-  },
-  {
-    "model": "api_models.about",
-    "pk": 4,
-    "fields": {
-      "mission": "Repair/installation of stoves and ovens",
-      "experience": "We repair gas and electric models: not heating up, turning off, sparking, or smelling like gas. Reliable and safe.",
-      "created_at": "2025-08-13T15:57:11.965Z"
-    }
-  },
-  {
-    "model": "api_models.about",
-    "pk": 5,
-    "fields": {
-      "mission": "Repair/installation of appliances",
-      "experience": "We repair and install all types of household appliances. Experienced technicians, fast service, and quality guarantee.",
-      "created_at": "2025-08-13T15:57:23.793Z"
+      "mission": "We also serve nearby cities. Our certified technicians get continuous training and have years of experience. This ensures we can handle all your home appliance repair needs quickly and professionally.",
+      "experience": "Speed matters. Broken appliances disrupt daily life, so we provide same-day repairs in Hopm-York and Toronto. We aim to fix your fridge, stove, washer, dishwasher, and more during our first visit.",
+      "created_at": "2025-08-20T02:28:56.150Z"
     }
   },
   {
@@ -3629,7 +3565,40 @@
       "object_id": 1,
       "question": "Is there a time frame for the appointment?",
       "answer": "<p>Yes. We will allow 1-2 hours for the repair technician to arrive at your home or apartment. We understand how important your time is, so we do our best to arrive early in our scheduled service window. However, if an earlier repair or appointment takes much longer than we expected, this time frame allows our repair technician to arrive on schedule within the service window. Our repair technicians always call 10-20 minutes before their arrival to notify you.</p>",
+      "order": 3
+    }
+  },
+  {
+    "model": "api_models.faq",
+    "pk": 2,
+    "fields": {
+      "content_type": 19,
+      "object_id": 2,
+      "question": "Which is better: repairing or replacing the appliance?",
+      "answer": "<p>In most cases, repair is the more cost-effective option. Our technicians will inspect your appliance and let you know if fixing it is worthwhile or if replacement would save you more in the long run.</p>",
       "order": 0
+    }
+  },
+  {
+    "model": "api_models.faq",
+    "pk": 3,
+    "fields": {
+      "content_type": 19,
+      "object_id": 3,
+      "question": "Can you provide a warranty?",
+      "answer": "<p>Yes! We provide a warranty on both parts and labor. If the same issue reappears within the warranty period, we&rsquo;ll fix it free of charge. Your peace of mind is our priority.</p>",
+      "order": 1
+    }
+  },
+  {
+    "model": "api_models.faq",
+    "pk": 4,
+    "fields": {
+      "content_type": 19,
+      "object_id": 4,
+      "question": "Do you repair the appliance during the first visit?",
+      "answer": "<p>In most cases, yes. Our technicians carry common tools and parts to complete the repair during the first visit. If a special part is required, we&rsquo;ll order it quickly and return as soon as it arrives.</p>",
+      "order": 2
     }
   },
   {
@@ -3686,20 +3655,6 @@
       "updated_at": "2025-08-14T03:46:01.369Z",
       "is_active": true,
       "requirements": "Strong organizational skills, excellent English communication, experience with MS Office and Google Workspace, ability to handle multiple tasks."
-    }
-  },
-  {
-    "model": "api_models.vacancy",
-    "pk": 5,
-    "fields": {
-      "title": "Customer Support Representative",
-      "slug": "customer-support-representative",
-      "conditions": "Full-time or part-time, remote option available, training provided.",
-      "location": 2,
-      "created_at": "2025-08-14T03:46:20.341Z",
-      "updated_at": "2025-08-14T03:46:20.341Z",
-      "is_active": true,
-      "requirements": "Excellent communication skills, friendly and patient, basic technical knowledge, ability to handle calls and emails professionally."
     }
   },
   {
@@ -3877,6 +3832,98 @@
       "icon": "service_icon/oven-icon.webp",
       "image": "service_image/oven.jpg",
       "created_at": "2025-08-19T16:21:23.362Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 1,
+    "fields": {
+      "image": "product_images/washers-kenmore-elite-washer.webp",
+      "brand": 1,
+      "name": "Kenmore Elite Washer 5000",
+      "slug": "kenmore-kenmore-elite-washer-5000",
+      "description": "<p>Top-load washing machine with advanced cleaning technology, large capacity, and smart cycle settings.</p>",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 2,
+    "fields": {
+      "image": "product_images/KitchenAidArtisanStandMixer.jpg",
+      "brand": 3,
+      "name": "KitchenAid Artisan Stand Mixer",
+      "slug": "kitchenaid-kitchenaid-artisan-stand-mixer",
+      "description": "<p>Iconic stand mixer with 10-speed settings, durable metal construction, and versatile attachments.</p>",
+      "created_at": "2025-08-20T03:18:24.386Z",
+      "updated_at": "2025-08-20T03:18:24.386Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 3,
+    "fields": {
+      "image": "product_images/SilhouetteCameo4.jpg",
+      "brand": 11,
+      "name": "Silhouette Cameo 4",
+      "slug": "silhouette-silhouette-cameo-4",
+      "description": "<p>Precision cutting machine for craft projects, vinyl, and paper. Includes software for easy design creation.</p>",
+      "created_at": "2025-08-20T03:19:15.032Z",
+      "updated_at": "2025-08-20T03:19:15.032Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 4,
+    "fields": {
+      "image": "product_images/LGFrenchDoorRefrigerator.avif",
+      "brand": 2,
+      "name": "LG French Door Refrigerator",
+      "slug": "lg-lg-french-door-refrigerator",
+      "description": "<div>\r\n<div>\r\n<p>Key features</p>\r\n</div>\r\n\r\n<div>\r\n<div>\r\n<ul>\r\n\t<li>LG&nbsp;STUDIO&nbsp;ThinQ&nbsp;Offer: Enjoy a 3-year limited warranty on select appliances purchased through December 31, 2025 via the ThinQ&reg; app. Terms apply.ᶲ</li>\r\n\t<li>Essence White line of products delivers a luxurious, unique matte finish that&rsquo;s as bold as you are</li>\r\n\t<li>Elevated light bronze handles&sup1; add an elegant accent to your kitchen</li>\r\n\t<li>27 cu.ft. ultra-large capacity can fit everything you need to host your next dinner party</li>\r\n\t<li>Internal Water Dispenser offers sleek functionality in a minimalist design</li>\r\n\t<li>Ice Maker makes sure you&rsquo;re always ready for iced coffees, smoothies and more</li>\r\n\t<li>Door Cooling+ vent extends cool air to all areas of the refrigerator to help keep food fresh</li>\r\n\t<li>ThinQ&reg; Technology with ThinQ Care gives extra peace of mind</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>",
+      "created_at": "2025-08-20T03:21:07.705Z",
+      "updated_at": "2025-08-20T03:21:07.705Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 5,
+    "fields": {
+      "image": "product_images/BOSCHSeries6Dishwasher.webp",
+      "brand": 17,
+      "name": "BOSCH Series 6 Dishwasher",
+      "slug": "bosch-bosch-series-6-dishwasher",
+      "description": "<p>Energy-efficient dishwasher with multiple washing programs, quiet operation, and flexible loading options.</p>",
+      "created_at": "2025-08-20T03:21:48.506Z",
+      "updated_at": "2025-08-20T03:21:48.506Z"
+    }
+  },
+  {
+    "model": "api_models.vacancyapplication",
+    "pk": 1,
+    "fields": {
+      "vacancy": 1,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "phone": "+1234234234",
+      "resume": "",
+      "message": "I am a very smart specialist.",
+      "created_at": "2025-08-20T03:24:49.226Z"
+    }
+  },
+  {
+    "model": "api_models.contact",
+    "pk": 1,
+    "fields": {
+      "name": "John Doe",
+      "phone": "+1 (213) 555-1212",
+      "email": "someemail@gmail.com",
+      "address": "3867 Chesswood Dr, North York, ON M3J 2R8, Канада",
+      "description": "Please repair my refrigerator",
+      "created_at": "2025-08-20T03:29:14.303Z",
+      "sent_to_crm": true,
+      "status": "new"
     }
   }
 ]
