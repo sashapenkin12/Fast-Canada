@@ -256,6 +256,8 @@ class CaseStudySerializer(serializers.ModelSerializer):
                   'images']
 
 class VacancySerializer(serializers.ModelSerializer):
+    location = serializers.StringRelatedField()
+
     class Meta:
         model = Vacancy
         fields = ['id', 'title', 'slug', 'conditions', 'location', 'created_at', 'updated_at', 'requirements',

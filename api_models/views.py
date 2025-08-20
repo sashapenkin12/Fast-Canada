@@ -264,7 +264,7 @@ class CaseStudyViewSet(viewsets.ModelViewSet):
 
 
 class VacancyViewSet(viewsets.ModelViewSet):
-    queryset = Vacancy.objects.filter(is_active=True)
+    queryset = Vacancy.objects.filter(is_active=True).select_related('location').order_by('created_at')
     serializer_class = VacancySerializer
     lookup_field = 'slug'
     pagination_class = VacancyPagination
