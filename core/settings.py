@@ -73,16 +73,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    "ngrok-skip-browser-warning",
-]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "http://127.0.0.1",
     "http://0.0.0.0",
     "http://localhost:3000",
-    "https://fast-appliance-repair-pro-master-35.vercel.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
