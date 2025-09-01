@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
-from .serializers import CartItemSerializer, AddCartItemRequestData
+from .serializers import CartItemSerializer, AddCartItemSerializer
 from .services import CartManager, SessionCartStorage
 from .paginations import CartPagination
 
@@ -35,10 +35,11 @@ class CartManagerMixin:
             CartManager: Cart manager.
         """
         return CartManager(
-            SessionCartStorage(
+            storage=SessionCartStorage(
                 request.session,
                 settings.CART_SESSION_ID,
             ),
+            request=request,
         )
 
 
@@ -69,16 +70,11 @@ class CartViewSet(ViewSet, CartManagerMixin):
         """
 
         cart: list = request.session.get(settings.CART_SESSION_ID, [])
-
-        paginator = self.pagination_class()
-        page = paginator.paginate_queryset(cart, request)
-
-        serializer = CartItemSerializer(page, many=True)
-        return Response(serializer.data)
+        return Response(cart)
 
     @swagger_auto_schema(
         operation_summary="Add item to cart",
-        request_body=AddCartItemRequestData,
+        request_body=AddCartItemSerializer,
         responses={
             201: openapi.Response(description="Created"),
             400: openapi.Response(description="Validation error"),

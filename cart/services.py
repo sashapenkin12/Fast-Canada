@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 from typing import Callable, Optional
 
 from rest_framework.exceptions import ValidationError
+from rest_framework.request import Request
 
 from .crud import get_product_by_id
 from .serializers import CartProductSerializer, CartItemSerializer
@@ -78,8 +79,9 @@ class CartManager:
     """
     Manager for working with cart.
     """
-    def __init__(self, storage: CartStorage):
+    def __init__(self, storage: CartStorage, request: Request):
         self.storage = storage
+        self.request = request
 
     def __enter__(self):
         self.cart = self.storage.load()
@@ -116,11 +118,11 @@ class CartManager:
 
         item_data['id'] = max([cart_item['id'] for cart_item in self.cart], default=0) + 1
         item_data['product'] = product_data
+        item_data['image'] = self.request.build_absolute_uri(product.image.url) if product.image else None
 
         cart_item = CartItemSerializer(data=item_data)
         if not cart_item.is_valid():
             raise ValidationError(detail=f'Invalid request data: {cart_item.errors}')
-
         self.cart.append(cart_item.data)
 
     def remove_from_cart(self, item_id: int) -> None:

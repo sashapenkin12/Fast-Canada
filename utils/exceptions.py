@@ -29,14 +29,14 @@ def custom_exception_handler(
         response.data = {
             'error': True,
             'status_code': response.status_code,
-            'message': response.data.get('detail', 'An error has occurred'),
+            'message': response.data.get('detail', str(exc)),
             'details': response.data if 'detail' not in response.data else {},
         }
     else:
         return Response({
             'error': True,
             'status_code': HTTP_500_INTERNAL_SERVER_ERROR,
-            'message': 'Internal server error.'
+            'message': str(exc) or 'Internal server error.',
         }, status=HTTP_500_INTERNAL_SERVER_ERROR)
 
     return response

@@ -1,16 +1,35 @@
 from rest_framework import serializers
+from .models import ChemicalProduct
+
+class ProductBaseSerializer(serializers.ModelSerializer):
+    description = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ChemicalProduct
+        fields = ['id', 'title', 'image_url', 'price', 'description', 'is_available']
+
+    @staticmethod
+    def get_description(obj):
+        if obj.full_description:
+            return obj.full_description[:100]
+        return ""
+
+    def get_image_url(self, obj):
+        if obj.image:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.image.url)
+            return obj.image.url
+        return None
 
 
-class ProductBaseSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
-    title = serializers.CharField()
-    image = serializers.ImageField()
-    price = serializers.DecimalField(max_digits=10, decimal_places=2)
-    is_available = serializers.BooleanField()
-
-
-class ProductDetailSerializer(ProductBaseSerializer):
+class ProductDetailSerializer(serializers.ModelSerializer):
     description = serializers.CharField(
         style={'base_template': 'textarea.html'},
-        source='full_description',
+        source='full_description'
     )
+
+    class Meta(ProductBaseSerializer.Meta):
+        model = ChemicalProduct
+        fields = '__all__'

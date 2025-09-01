@@ -211,7 +211,7 @@ class BrandSerializer(serializers.ModelSerializer):
 
     def get_translated_description(self, obj):
         language = self.context['request'].query_params.get('language', 'en')
-        return translate_text(obj.full_description, language)
+        return translate_text(obj.description, language)
 
     class Meta:
         model = Brand
@@ -252,10 +252,12 @@ class CaseStudySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CaseStudy
-        fields = ['id', 'title', 'slug', 'short_description', 'description', 'city', 'created_at', 'video_on_youtube',
+        fields = ['id', 'title', 'image', 'slug', 'short_description', 'description', 'city', 'created_at', 'video_on_youtube',
                   'images']
 
 class VacancySerializer(serializers.ModelSerializer):
+    location = serializers.StringRelatedField()
+
     class Meta:
         model = Vacancy
         fields = ['id', 'title', 'slug', 'conditions', 'location', 'created_at', 'updated_at', 'requirements',

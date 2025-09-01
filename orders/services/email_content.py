@@ -4,10 +4,12 @@ def get_order_email_content(data):
     items = data.get('items', [])
 
     context = {
-        'full_name': data.get('full_name', 'неизвестно'),
-        'phone_number': data.get('phone_number', 'не указано'),
-        'address': data.get('address', 'не указано'),
+        'full_name': data.get('full_name', 'not specified'),
+        'phone_number': data.get('phone_number', 'not specified'),
+        'address': data.get('address', 'not specified'),
+        'email': data.get('email'),
         'items': items,
+        'comment': data.get('comment', 'not specified')
     }
 
     html_message = render_to_string('emails/new_order.html', context)

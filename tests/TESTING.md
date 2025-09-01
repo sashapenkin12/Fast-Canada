@@ -7,7 +7,7 @@
 ### Загрузить данные с test-fixture.json:
 
 ```bash
-docker compose exec web python manage.py loaddata tests/test-fixture.json
+docker compose exec web python manage.py loaddata tests/all_data.json
 ```
 
 ### Использование:
