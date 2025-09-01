@@ -2907,13 +2907,28 @@
     "model": "api_models.city",
     "pk": 1,
     "fields": {
-      "name": "Toronto",
+      "name": "Ajax",
       "province": "Ontario",
-      "latitude": 43.6532,
-      "longitude": -79.3832,
+      "latitude": 43.8505,
+      "longitude": -79.0204,
       "place_id": "1",
-      "created_at": "2025-08-13T16:13:33.917Z",
-      "slug": "toronto",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "ajax-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 2,
+    "fields": {
+      "name": "Aurora",
+      "province": "Ontario",
+      "latitude": 44.0041,
+      "longitude": -79.4345,
+      "place_id": "2",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "aurora-ontario",
       "repairs": [],
       "installations": []
     }
@@ -2922,13 +2937,13 @@
     "model": "api_models.city",
     "pk": 3,
     "fields": {
-      "name": "Pickering",
+      "name": "Baby Point",
       "province": "Ontario",
-      "latitude": 43.838413,
-      "longitude": -79.086761,
+      "latitude": 43.6609,
+      "longitude": -79.4906,
       "place_id": "3",
-      "created_at": "2025-08-14T02:32:37.563Z",
-      "slug": "pickering-ontario",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "baby-point-ontario",
       "repairs": [],
       "installations": []
     }
@@ -2937,13 +2952,13 @@
     "model": "api_models.city",
     "pk": 4,
     "fields": {
-      "name": "Mississauga",
+      "name": "Brampton",
       "province": "Ontario",
-      "latitude": 43.59531,
-      "longitude": -79.640579,
-      "place_id": "5",
+      "latitude": 43.7315,
+      "longitude": -79.7624,
+      "place_id": "4",
       "created_at": "2025-08-14T02:45:12.842Z",
-      "slug": "mississauga-ontario",
+      "slug": "brampton-ontario",
       "repairs": [],
       "installations": []
     }
@@ -2952,81 +2967,1228 @@
     "model": "api_models.city",
     "pk": 5,
     "fields": {
-      "name": "Scarborough",
+      "name": "Brock",
       "province": "Ontario",
-      "latitude": 43.777702,
-      "longitude": -79.233238,
+      "latitude": 44.113,
+      "longitude": -78.777,
       "place_id": "5",
-      "created_at": "2025-08-14T02:48:15.328Z",
-      "slug": "scarborough-ontario",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "brock-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 6,
+    "fields": {
+      "name": "Burlington",
+      "province": "Ontario",
+      "latitude": 43.3255,
+      "longitude": -79.799,
+      "place_id": "6",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "burlington-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 7,
+    "fields": {
+      "name": "Caledon",
+      "province": "Ontario",
+      "latitude": 43.8561,
+      "longitude": -79.9371,
+      "place_id": "7",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "caledon-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 8,
+    "fields": {
+      "name": "Chaplin Estates",
+      "province": "Ontario",
+      "latitude": 43.7142,
+      "longitude": -79.4286,
+      "place_id": "8",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "chaplin-estates-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 9,
+    "fields": {
+      "name": "Church Wellesley",
+      "province": "Ontario",
+      "latitude": 43.67,
+      "longitude": -79.381,
+      "place_id": "9",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "church-wellesley-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 10,
+    "fields": {
+      "name": "Clarington",
+      "province": "Ontario",
+      "latitude": 43.9406,
+      "longitude": -78.5737,
+      "place_id": "10",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "clarington-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 11,
+    "fields": {
+      "name": "Danforth",
+      "province": "Ontario",
+      "latitude": 43.6844,
+      "longitude": -79.3219,
+      "place_id": "11",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "danforth-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 12,
+    "fields": {
+      "name": "East Gwillimbury",
+      "province": "Ontario",
+      "latitude": 44.1091,
+      "longitude": -79.4397,
+      "place_id": "12",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "east-gwillimbury-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 13,
+    "fields": {
+      "name": "Forest HIll North",
+      "province": "Ontario",
+      "latitude": 43.716,
+      "longitude": -79.443,
+      "place_id": "13",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "forest-hill-north-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 14,
+    "fields": {
+      "name": "Georgina",
+      "province": "Ontario",
+      "latitude": 44.2413,
+      "longitude": -79.451,
+      "place_id": "14",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "georgina-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 15,
+    "fields": {
+      "name": "Halton Hill",
+      "province": "Ontario",
+      "latitude": 43.677,
+      "longitude": -79.9693,
+      "place_id": "15",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "halton-hill-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 16,
+    "fields": {
+      "name": "High Park North",
+      "province": "Ontario",
+      "latitude": 43.6618,
+      "longitude": -79.4636,
+      "place_id": "16",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "high-park-north-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 17,
+    "fields": {
+      "name": "Islington",
+      "province": "Ontario",
+      "latitude": 43.6824,
+      "longitude": -79.5409,
+      "place_id": "17",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "islington-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 18,
+    "fields": {
+      "name": "Keelesdale - eglinton west",
+      "province": "Ontario",
+      "latitude": 43.7029,
+      "longitude": -79.4662,
+      "place_id": "18",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "keelesdale-eglinton-west-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 19,
+    "fields": {
+      "name": "King city",
+      "province": "Ontario",
+      "latitude": 43.9151,
+      "longitude": -79.5652,
+      "place_id": "19",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "king-city-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 20,
+    "fields": {
+      "name": "Lang Branch",
+      "province": "Ontario",
+      "latitude": 43.585,
+      "longitude": -79.517,
+      "place_id": "20",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "lang-branch-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 21,
+    "fields": {
+      "name": "Markham",
+      "province": "Ontario",
+      "latitude": 43.8561,
+      "longitude": -79.337,
+      "place_id": "21",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "markham-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 22,
+    "fields": {
+      "name": "Milton",
+      "province": "Ontario",
+      "latitude": 43.5185,
+      "longitude": -79.8774,
+      "place_id": "22",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "milton-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 23,
+    "fields": {
+      "name": "Mimico Queensway",
+      "province": "Ontario",
+      "latitude": 43.6292,
+      "longitude": -79.4938,
+      "place_id": "23",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "mimico-queensway-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 24,
+    "fields": {
+      "name": "Mississauga",
+      "province": "Ontario",
+      "latitude": 43.59531,
+      "longitude": -79.640579,
+      "place_id": "24",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "mississauga-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 25,
+    "fields": {
+      "name": "Moss Park",
+      "province": "Ontario",
+      "latitude": 43.6572,
+      "longitude": -79.3723,
+      "place_id": "25",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "moss-park-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 26,
+    "fields": {
+      "name": "Newmarket",
+      "province": "Ontario",
+      "latitude": 44.0592,
+      "longitude": -79.4617,
+      "place_id": "26",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "newmarket-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 27,
+    "fields": {
+      "name": "New Tecumseth",
+      "province": "Ontario",
+      "latitude": 44.1183,
+      "longitude": -79.7304,
+      "place_id": "27",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "new-tecumseth-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 28,
+    "fields": {
+      "name": "New Toronto",
+      "province": "Ontario",
+      "latitude": 43.6219,
+      "longitude": -79.5054,
+      "place_id": "28",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "new-toronto-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 29,
+    "fields": {
+      "name": "North Toronto",
+      "province": "Ontario",
+      "latitude": 43.7091,
+      "longitude": -79.4074,
+      "place_id": "29",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "north-toronto-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 30,
+    "fields": {
+      "name": "Oakville",
+      "province": "Ontario",
+      "latitude": 43.4675,
+      "longitude": -79.6877,
+      "place_id": "30",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "oakville-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 31,
+    "fields": {
+      "name": "Old Toronto",
+      "province": "Ontario",
+      "latitude": 43.654,
+      "longitude": -79.3883,
+      "place_id": "31",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "old-toronto-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 32,
+    "fields": {
+      "name": "Oshawa",
+      "province": "Ontario",
+      "latitude": 43.8971,
+      "longitude": -78.8658,
+      "place_id": "32",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "oshawa-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 33,
+    "fields": {
+      "name": "Pickering",
+      "province": "Ontario",
+      "latitude": 43.8386,
+      "longitude": -79.089,
+      "place_id": "33",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "pickering-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 34,
+    "fields": {
+      "name": "Regent Park",
+      "province": "Ontario",
+      "latitude": 43.6609,
+      "longitude": -79.3596,
+      "place_id": "34",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "regent-park-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 35,
+    "fields": {
+      "name": "Richmond Hill",
+      "province": "Ontario",
+      "latitude": 43.8828,
+      "longitude": -79.4403,
+      "place_id": "35",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "richmond-hill-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 36,
+    "fields": {
+      "name": "Scarorough",
+      "province": "Ontario",
+      "latitude": 43.773,
+      "longitude": -79.2578,
+      "place_id": "36",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "scarorough-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 37,
+    "fields": {
+      "name": "Toronto",
+      "province": "Ontario",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "place_id": "37",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "toronto-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 38,
+    "fields": {
+      "name": "Uxbridge",
+      "province": "Ontario",
+      "latitude": 44.1069,
+      "longitude": -79.1299,
+      "place_id": "38",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "uxbridge-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 39,
+    "fields": {
+      "name": "Vaughan",
+      "province": "Ontario",
+      "latitude": 43.8372,
+      "longitude": -79.5083,
+      "place_id": "39",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "vaughan-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 40,
+    "fields": {
+      "name": "Whitby",
+      "province": "Ontario",
+      "latitude": 43.8975,
+      "longitude": -78.9408,
+      "place_id": "40",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "whitby-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 41,
+    "fields": {
+      "name": "Whitchurch-Stouffville",
+      "province": "Ontario",
+      "latitude": 44.0548,
+      "longitude": -79.3012,
+      "place_id": "41",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "whitchurch-stouffville-ontario",
+      "repairs": [],
+      "installations": []
+    }
+  },
+  {
+    "model": "api_models.city",
+    "pk": 42,
+    "fields": {
+      "name": "York",
+      "province": "Ontario",
+      "latitude": 43.7081,
+      "longitude": -79.4686,
+      "place_id": "42",
+      "created_at": "2025-08-14T02:45:12.842Z",
+      "slug": "york-ontario",
       "repairs": [],
       "installations": []
     }
   },
   {
     "model": "api_models.repair",
-    "pk": 1,
+    "pk": 2,
     "fields": {
-      "name": "Repairs Home Appliances",
-      "slug": "repairs-home-appliances",
-      "short_description": "Fast and reliable repair of household appliances at your home.",
-      "full_description": "<p>Our technicians repair all types of household appliances: washing machines, dishwashers, refrigerators, ovens, and stoves. We work quickly and offer a warranty on our services and replacement parts. Diagnostics are free of charge with repairs.</p>",
-      "cart_description": "Repair of your household appliances with a warranty and a technician visiting your home.",
-      "icon": "",
-      "image": "",
-      "created_at": "2025-08-14T03:43:37.753Z"
+      "name": "Fridge Repair",
+      "slug": "fridge-repair",
+      "short_description": "Repair and troubleshooting for refrigerators and freezers.",
+      "full_description": "<p>We diagnose and repair cooling issues, compressor faults, thermostat failures, leaks and ice maker problems. Replacement parts and a service warranty are provided. Same-day emergency visits available in many areas.</p>",
+      "cart_description": "Fridge repair with warranty and original or OEM-equivalent parts.",
+      "icon": "service_icon/fridge-icon.webp",
+      "image": "service_image/fridge.jpg",
+      "created_at": "2025-08-14T03:45:00Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 3,
+    "fields": {
+      "name": "Stove Repair",
+      "slug": "stove-repair",
+      "short_description": "Repair of electric and gas stoves and ranges.",
+      "full_description": "<p>Repair services include ignition and burner repairs, control knob replacement, wiring and safety checks for both electric and gas stoves. We ensure safe operation and proper flame/electric heating performance.</p>",
+      "cart_description": "Stove repair and safety check performed by certified technicians.",
+      "icon": "service_icon/stove-icon.webp",
+      "image": "service_image/stove.jpg",
+      "created_at": "2025-08-14T03:45:10Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 4,
+    "fields": {
+      "name": "Cooktop Repair",
+      "slug": "cooktop-repair",
+      "short_description": "Repair for gas, electric and induction cooktops.",
+      "full_description": "<p>We fix element failures, glass top cracks, control panel issues and gas valve/ignition problems on cooktops. Replacement parts and glass top handling are performed with care.</p>",
+      "cart_description": "Cooktop diagnostics and repair with parts and warranty.",
+      "icon": "service_icon/cooktop-icon.webp",
+      "image": "service_image/cooktop.jpg",
+      "created_at": "2025-08-14T03:45:20Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 5,
+    "fields": {
+      "name": "Wall Oven Repair",
+      "slug": "wall-oven-repair",
+      "short_description": "Service and repair for built-in wall ovens.",
+      "full_description": "<p>We repair heating elements, thermostats, control boards, door seals and convection systems in wall ovens. Work includes safety checks and calibration for even cooking.</p>",
+      "cart_description": "Wall oven repair, calibration and safety verification.",
+      "icon": "service_icon/wall-oven-icon.webp",
+      "image": "service_image/wall-oven.jpg",
+      "created_at": "2025-08-14T03:45:30Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 6,
+    "fields": {
+      "name": "Range/Oven Repair",
+      "slug": "range-oven-repair",
+      "short_description": "Repair services for freestanding ranges and ovens.",
+      "full_description": "<p>We fix electric and gas ranges: heating elements, ignition, ovens and control panels. Includes diagnostics, part replacement and post-repair testing to ensure proper operation.</p>",
+      "cart_description": "Range and oven repair with part replacement and testing.",
+      "icon": "service_icon/range-icon.webp",
+      "image": "service_image/range.jpg",
+      "created_at": "2025-08-14T03:45:40Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 7,
+    "fields": {
+      "name": "Washer Repair",
+      "slug": "washer-repair",
+      "short_description": "Repair and maintenance for washing machines.",
+      "full_description": "<p>We handle drum, motor, pump, valve, electronic control and leak repairs for top-load and front-load washing machines. Diagnostics and part replacements are included with a service warranty.</p>",
+      "cart_description": "Washing machine repair and diagnostics by certified technicians.",
+      "icon": "service_icon/washer-icon.webp",
+      "image": "service_image/washer.jpg",
+      "created_at": "2025-08-14T03:45:50Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 8,
+    "fields": {
+      "name": "Dryer Repair",
+      "slug": "dryer-repair",
+      "short_description": "Repair for electric and gas dryers.",
+      "full_description": "<p>We repair heating elements, thermostats, belts, drums, gas valves and lint systems. Service includes safety checks and performance testing to ensure efficient drying.</p>",
+      "cart_description": "Dryer repair with safety inspection and part replacement.",
+      "icon": "service_icon/dryer-icon.webp",
+      "image": "service_image/dryer.jpg",
+      "created_at": "2025-08-14T03:46:00Z"
+    }
+  },
+  {
+    "model": "api_models.repair",
+    "pk": 9,
+    "fields": {
+      "name": "Dishwasher Repair",
+      "slug": "dishwasher-repair",
+      "short_description": "Repair and troubleshooting for dishwashers.",
+      "full_description": "<p>Services include pump and motor repair, spray arm replacement, door seal fixes, electronic control board diagnostics, and leak repairs. We provide part replacement and post-repair testing.</p>",
+      "cart_description": "Dishwasher repair with diagnostics, parts and warranty.",
+      "icon": "service_icon/dishwasher-icon.webp",
+      "image": "service_image/dishwasher.jpg",
+      "created_at": "2025-08-14T03:46:10Z"
     }
   },
   {
     "model": "api_models.location",
     "pk": 1,
     "fields": {
-      "name": "North York, Ontario",
+      "name": "Ajax",
       "city": 1,
-      "slug": "north-york",
-      "place_id": "ChIJDbdkHFQayUwR7-8fITgxTmU",
-      "latitude": 43.7577073,
-      "longitude": -79.475199,
-      "created_at": "2025-08-13T16:13:48.488Z"
+      "slug": "ajax",
+      "place_id": "c8d7e6f5-4a3b-4c2d-8e1f-9a0b1c2d3e4a",
+      "latitude": 43.8584,
+      "longitude": -79.0363,
+      "created_at": "2025-08-22T10:00:00.000Z"
     }
   },
   {
     "model": "api_models.location",
     "pk": 2,
     "fields": {
-      "name": "Mississauga",
-      "city": 4,
-      "slug": "mississauga",
-      "place_id": "ChIJt1qJjLx1K4gR8H5S06K6aXU",
-      "latitude": 43.589045,
-      "longitude": -79.6441,
-      "created_at": "2025-08-14T03:52:16.877Z"
+      "name": "Aurora",
+      "city": 2,
+      "slug": "aurora",
+      "place_id": "b7c6d5e4-3f2a-4b1c-9d8e-0f1a2b3c4d5b",
+      "latitude": 44.006,
+      "longitude": -79.466,
+      "created_at": "2025-08-22T10:00:00.000Z"
     }
   },
   {
     "model": "api_models.location",
     "pk": 3,
     "fields": {
-      "name": "Pickering",
+      "name": "Baby Point",
       "city": 3,
-      "slug": "pickering",
-      "place_id": "ChIJ4zL4akQ2K4gR3-Te6Y7X8nE",
-      "latitude": 43.8386,
-      "longitude": -79.086,
-      "created_at": "2025-08-14T03:52:41.155Z"
+      "slug": "baby-point",
+      "place_id": "a6b5c4d3-2e1f-4a0b-8c7d-9e0f1a2b3c4d",
+      "latitude": 43.6629,
+      "longitude": -79.4937,
+      "created_at": "2025-08-22T10:00:00.000Z"
     }
   },
   {
     "model": "api_models.location",
     "pk": 4,
     "fields": {
-      "name": "Scarborough",
+      "name": "Brampton",
+      "city": 4,
+      "slug": "brampton",
+      "place_id": "d5e4f3a2-4b1c-4d0e-9f8a-1b2c3d4e5f6a",
+      "latitude": 43.7315,
+      "longitude": -79.7624,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 5,
+    "fields": {
+      "name": "Brock",
       "city": 5,
-      "slug": "scarborough",
-      "place_id": "ChIJiW6g_B4K1IkRk24Kw6mIQvU",
-      "latitude": 43.7731,
-      "longitude": -79.2578,
-      "created_at": "2025-08-14T03:53:04.556Z"
+      "slug": "brock",
+      "place_id": "e4f3a2b1-4c0d-4e9f-8a7b-2c3d4e5f6a7b",
+      "latitude": 44.3167,
+      "longitude": -79.1333,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 6,
+    "fields": {
+      "name": "Burlington",
+      "city": 6,
+      "slug": "burlington",
+      "place_id": "f3a2b1c0-4d9e-4f8a-7b6c-3d4e5f6a7b8c",
+      "latitude": 43.3255,
+      "longitude": -79.799,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 7,
+    "fields": {
+      "name": "Caledon",
+      "city": 7,
+      "slug": "caledon",
+      "place_id": "a2b1c0d9-4e8f-4a7b-6c5d-4e5f6a7b8c9d",
+      "latitude": 43.8668,
+      "longitude": -80.0,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 8,
+    "fields": {
+      "name": "Chaplin Estates",
+      "city": 8,
+      "slug": "chaplin-estates",
+      "place_id": "b1c0d9e8-4f7a-4b6c-5d4e-5f6a7b8c9d0e",
+      "latitude": 43.7021,
+      "longitude": -79.4021,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 9,
+    "fields": {
+      "name": "Church Wellesley",
+      "city": 9,
+      "slug": "church-wellesley",
+      "place_id": "c0d9e8f7-4a6b-4c5d-4e3f-6a7b8c9d0e1f",
+      "latitude": 43.6652,
+      "longitude": -79.3835,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 10,
+    "fields": {
+      "name": "Clarington",
+      "city": 10,
+      "slug": "clarington",
+      "place_id": "d9e8f7a6-4b5c-4d4e-3f2a-7b8c9d0e1f2a",
+      "latitude": 43.9357,
+      "longitude": -78.6085,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 11,
+    "fields": {
+      "name": "Danforth",
+      "city": 11,
+      "slug": "danforth",
+      "place_id": "e8f7a6b5-4c4d-4e3f-2a1b-8c9d0e1f2a3b",
+      "latitude": 43.6834,
+      "longitude": -79.3144,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 12,
+    "fields": {
+      "name": "East Gwillimbury",
+      "city": 12,
+      "slug": "east-gwillimbury",
+      "place_id": "f7a6b5c4-4d3e-4f2a-1b0c-9d0e1f2a3b4c",
+      "latitude": 44.1167,
+      "longitude": -79.4333,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 13,
+    "fields": {
+      "name": "Forest HIll North",
+      "city": 13,
+      "slug": "forest-hill-north",
+      "place_id": "a6b5c4d3-4e2f-4a1b-0c9d-0e1f2a3b4c5d",
+      "latitude": 43.7,
+      "longitude": -79.425,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 14,
+    "fields": {
+      "name": "Georgina",
+      "city": 14,
+      "slug": "georgina",
+      "place_id": "b5c4d3e2-4f1a-4b0c-9d8e-1f2a3b4c5d6e",
+      "latitude": 44.3,
+      "longitude": -79.4333,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 15,
+    "fields": {
+      "name": "Halton Hill",
+      "city": 15,
+      "slug": "halton-hill",
+      "place_id": "c4d3e2f1-4a0b-4c9d-8e7f-2a3b4c5d6e7f",
+      "latitude": 43.6291,
+      "longitude": -79.9552,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 16,
+    "fields": {
+      "name": "High Park North",
+      "city": 16,
+      "slug": "high-park-north",
+      "place_id": "d3e2f1a0-4b9c-4d8e-7f6a-3b4c5d6e7f8a",
+      "latitude": 43.662,
+      "longitude": -79.467,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 17,
+    "fields": {
+      "name": "Islington",
+      "city": 17,
+      "slug": "islington",
+      "place_id": "e2f1a0b9-4c8d-4e7f-6a5b-4c5d6e7f8a9b",
+      "latitude": 43.6456,
+      "longitude": -79.5336,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 18,
+    "fields": {
+      "name": "Keelesdale - eglinton west",
+      "city": 18,
+      "slug": "keelesdale-eglinton-west",
+      "place_id": "f1a0b9c8-4d7e-4f6a-5b4c-5d6e7f8a9b0c",
+      "latitude": 43.69,
+      "longitude": -79.47,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 19,
+    "fields": {
+      "name": "King city",
+      "city": 19,
+      "slug": "king-city",
+      "place_id": "a0b9c8d7-4e6f-4a5b-4c3d-6e7f8a9b0c1d",
+      "latitude": 43.931,
+      "longitude": -79.525,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 20,
+    "fields": {
+      "name": "Lang Branch",
+      "city": 20,
+      "slug": "lang-branch",
+      "place_id": "b9c8d7e6-4f5a-4b4c-3d2e-7f8a9b0c1d2e",
+      "latitude": 43.78,
+      "longitude": -79.42,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 21,
+    "fields": {
+      "name": "Markham",
+      "city": 21,
+      "slug": "markham",
+      "place_id": "c8d7e6f5-4a4b-4c3d-2e1f-8a9b0c1d2e3f",
+      "latitude": 43.8561,
+      "longitude": -79.337,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 22,
+    "fields": {
+      "name": "Milton",
+      "city": 22,
+      "slug": "milton",
+      "place_id": "d7e6f5a4-4b3c-4d2e-1f0a-9b0c1d2e3f4a",
+      "latitude": 43.5183,
+      "longitude": -79.8774,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 23,
+    "fields": {
+      "name": "Mimico Queensway",
+      "city": 23,
+      "slug": "mimico-queensway",
+      "place_id": "e6f5a4b3-4c2d-4e1f-0a9b-0c1d2e3f4a5b",
+      "latitude": 43.62,
+      "longitude": -79.49,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 24,
+    "fields": {
+      "name": "Mississauga",
+      "city": 24,
+      "slug": "mississauga",
+      "place_id": "f5a4b3c2-4d1e-4f0a-9b8c-1d2e3f4a5b6c",
+      "latitude": 43.589,
+      "longitude": -79.6441,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 25,
+    "fields": {
+      "name": "MOss Park",
+      "city": 25,
+      "slug": "moss-park",
+      "place_id": "a4b3c2d1-4e0f-4a9b-8c7d-2e3f4a5b6c7d",
+      "latitude": 43.658,
+      "longitude": -79.37,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 26,
+    "fields": {
+      "name": "New Tecumseth",
+      "city": 26,
+      "slug": "new-tecumseth",
+      "place_id": "b3c2d1e0-4f9a-4b8c-7d6e-3f4a5b6c7d8e",
+      "latitude": 44.0833,
+      "longitude": -79.75,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 27,
+    "fields": {
+      "name": "New Toronto",
+      "city": 27,
+      "slug": "new-toronto",
+      "place_id": "c2d1e0f9-4a8b-4c7d-6e5f-4a5b6c7d8e9f",
+      "latitude": 43.6,
+      "longitude": -79.51,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 28,
+    "fields": {
+      "name": "Newmarket",
+      "city": 28,
+      "slug": "newmarket",
+      "place_id": "d1e0f9a8-4b7c-4d6e-5f4a-5b6c7d8e9f0a",
+      "latitude": 44.06,
+      "longitude": -79.46,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 29,
+    "fields": {
+      "name": "North Toronto",
+      "city": 29,
+      "slug": "north-toronto",
+      "place_id": "e0f9a8b7-4c6d-4e5f-4a3b-6c7d8e9f0a1b",
+      "latitude": 43.72,
+      "longitude": -79.4,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 30,
+    "fields": {
+      "name": "Oakville",
+      "city": 30,
+      "slug": "oakville",
+      "place_id": "f9a8b7c6-4d5e-4f4a-3b2c-7d8e9f0a1b2c",
+      "latitude": 43.4675,
+      "longitude": -79.6877,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 31,
+    "fields": {
+      "name": "Old Toronto",
+      "city": 31,
+      "slug": "old-toronto",
+      "place_id": "a8b7c6d5-4e4f-4a3b-2c1d-8e9f0a1b2c3d",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 32,
+    "fields": {
+      "name": "Oshawa",
+      "city": 32,
+      "slug": "oshawa",
+      "place_id": "b7c6d5e4-4f3a-4b2c-1d0e-9f0a1b2c3d4e",
+      "latitude": 43.8971,
+      "longitude": -78.8658,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 33,
+    "fields": {
+      "name": "Pickering",
+      "city": 33,
+      "slug": "pickering",
+      "place_id": "c6d5e4f3-4a2b-4c1d-0e9f-0a1b2c3d4e5f",
+      "latitude": 43.8374,
+      "longitude": -79.0863,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 34,
+    "fields": {
+      "name": "Regent Park",
+      "city": 34,
+      "slug": "regent-park",
+      "place_id": "d5e4f3a2-4b1c-4d0e-9f8a-1b2c3d4e5f6a",
+      "latitude": 43.662,
+      "longitude": -79.362,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 35,
+    "fields": {
+      "name": "Richmond Hill",
+      "city": 35,
+      "slug": "richmond-hill",
+      "place_id": "e4f3a2b1-4c0d-4e9f-8a7b-2c3d4e5f6a7b",
+      "latitude": 43.8828,
+      "longitude": -79.4403,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 36,
+    "fields": {
+      "name": "Scarorough",
+      "city": 36,
+      "slug": "scarorough",
+      "place_id": "f3a2b1c0-4d9e-4f8a-7b6c-3d4e5f6a7b8c",
+      "latitude": 43.7764,
+      "longitude": -79.2318,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 37,
+    "fields": {
+      "name": "Toronto",
+      "city": 37,
+      "slug": "toronto",
+      "place_id": "a2b1c0d9-4e8f-4a7b-6c5d-4e5f6a7b8c9d",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 38,
+    "fields": {
+      "name": "Uxbridge",
+      "city": 38,
+      "slug": "uxbridge",
+      "place_id": "b1c0d9e8-4f7a-4b6c-5d4e-5f6a7b8c9d0e",
+      "latitude": 44.1167,
+      "longitude": -79.1333,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 39,
+    "fields": {
+      "name": "Vaughan",
+      "city": 39,
+      "slug": "vaughan",
+      "place_id": "c0d9e8f7-4a6b-4c5d-4e3f-6a7b8c9d0e1f",
+      "latitude": 43.8563,
+      "longitude": -79.5085,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 40,
+    "fields": {
+      "name": "Whitby",
+      "city": 40,
+      "slug": "whitby",
+      "place_id": "d9e8f7a6-4b5c-4d4e-3f2a-7b8c9d0e1f2a",
+      "latitude": 43.8975,
+      "longitude": -78.9428,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 41,
+    "fields": {
+      "name": "Whitchurch-Stouffville",
+      "city": 41,
+      "slug": "whitchurch-stouffville",
+      "place_id": "e8f7a6b5-4c4d-4e3f-2a1b-8c9d0e1f2a3b",
+      "latitude": 43.9667,
+      "longitude": -79.25,
+      "created_at": "2025-08-22T10:00:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.location",
+    "pk": 42,
+    "fields": {
+      "name": "York",
+      "city": 42,
+      "slug": "york",
+      "place_id": "f7a6b5c4-4d3e-4f2a-1b0c-9d0e1f2a3b4c",
+      "latitude": 43.689,
+      "longitude": -79.494,
+      "created_at": "2025-08-22T10:00:00.000Z"
     }
   },
   {
@@ -3778,71 +4940,113 @@
       "image": "products/mr.muscle.jpg"
     }
   },
-    {
-    "model": "api_models.installation",
-    "pk": 2,
-    "fields": {
-      "name": "Refrigerator Installation & Repair",
-      "slug": "refrigerator-installation-repair",
-      "short_description": "Professional refrigerator installation and repair service.",
-      "full_description": "<p>We provide comprehensive refrigerator installation and repair services for all brands. This includes electrical connection, temperature setup, door sealing check, and cooling system testing. We also handle repairs: compressor replacement, refrigerant leak fixing, thermostat replacement, and more.</p>",
-      "cart_description": "Refrigerator installation and repair.",
-      "icon": "service_icon/refrigerator-icon.jpg",
-      "image": "service_image/refrigerator.webp",
-      "created_at": "2025-08-19T16:15:34.541Z"
-    }
-  },
-  {
-    "model": "api_models.installation",
-    "pk": 3,
-    "fields": {
-      "name": "Dishwasher Installation & Repair",
-      "slug": "dishwasher-installation-repair",
-      "short_description": "Fast and reliable dishwasher installation and repair.",
-      "full_description": "<p>Our technicians provide professional installation of dishwashers, including water supply, drainage, and electrical connection. We also perform diagnostics and repairs: filter replacement, leak fixing, electronic system recovery, and heating element repair.</p>",
-      "cart_description": "Dishwasher installation and repair.",
-      "icon": "service_icon/dishwasher-icon.jpg",
-      "image": "service_image/dishwasher.png",
-      "created_at": "2025-08-19T16:18:18.707Z"
-    }
-  },
-  {
-    "model": "api_models.installation",
-    "pk": 4,
-    "fields": {
-      "name": "Cooker Installation & Repair",
-      "slug": "cooker-installation-repair",
-      "short_description": "Safe installation and repair of gas and electric cookers.",
-      "full_description": "<p>We ensure safe and proper installation of gas or electric cookers, including connection to power or gas supply, sealing checks, and performance testing. We also provide repair services: burner replacement, thermostat repair, and electronic system maintenance.</p>",
-      "cart_description": "Cooker installation and repair.",
-      "icon": "service_icon/cooker-icon.webp",
-      "image": "service_image/cooker.jpg",
-      "created_at": "2025-08-19T16:20:15.195Z"
-    }
-  },
   {
     "model": "api_models.installation",
     "pk": 5,
     "fields": {
-      "name": "Oven Installation & Repair",
-      "slug": "oven-installation-repair",
-      "short_description": "Professional oven installation and repair service.",
-      "full_description": "<p>We provide oven installation with precise electrical connection, correct fitting into the kitchen niche, and ventilation and heating system check. Our repair services include heating element replacement, timer repair, and touch panel maintenance.</p>",
-      "cart_description": "Oven installation and repair.",
+      "name": "Range/Oven installation",
+      "slug": "range-oven-installation",
+      "short_description": "Professional oven/range installation and setup.",
+      "full_description": "<p>We provide oven installation with precise electrical connection, correct fitting into the kitchen niche, and ventilation and heating system checks. Includes installation of gas lines where required and a post-installation safety inspection.</p>",
+      "cart_description": "Oven or range installation with electrical/gas hookup and safety check.",
       "icon": "service_icon/oven-icon.webp",
       "image": "service_image/oven.jpg",
       "created_at": "2025-08-19T16:21:23.362Z"
     }
   },
   {
+    "model": "api_models.installation",
+    "pk": 6,
+    "fields": {
+      "name": "Fridge installation",
+      "slug": "fridge-installation",
+      "short_description": "Professional refrigerator installation and leveling.",
+      "full_description": "<p>We install refrigerators and freezers with proper leveling, water line connection for ice/water dispensers, and electrical safety checks. Includes instruction on features and warranty registration assistance.</p>",
+      "cart_description": "Fridge installation with water line hookup and safety checks.",
+      "icon": "service_icon/fridge-icon.webp",
+      "image": "service_image/fridge.jpg",
+      "created_at": "2025-08-19T16:22:00.000Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 7,
+    "fields": {
+      "name": "Stove installation",
+      "slug": "stove-installation",
+      "short_description": "Safe installation of electric and gas stoves and ranges.",
+      "full_description": "<p>We install stoves with correct electrical wiring or gas connections, verify ventilation and clearances, and perform an initial operation test. Gas installs include leak tests and safety certification where required.</p>",
+      "cart_description": "Stove installation with gas/electrical hookup and safety test.",
+      "icon": "service_icon/stove-icon.webp",
+      "image": "service_image/stove_install.jpg",
+      "created_at": "2025-08-19T16:22:10.000Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 8,
+    "fields": {
+      "name": "Cooktop installation",
+      "slug": "cooktop-installation",
+      "short_description": "Installation of built-in gas, electric and induction cooktops.",
+      "full_description": "<p>We cut/fine-tune countertop openings, install and seal cooktops, connect gas lines or electrical circuits, and perform safety and performance tests. Glass top handling and leveling are included.</p>",
+      "cart_description": "Cooktop installation, countertop cutout and hookup.",
+      "icon": "service_icon/cooktop-icon.webp",
+      "image": "service_image/cooktop_install.jpg",
+      "created_at": "2025-08-19T16:22:20.000Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 9,
+    "fields": {
+      "name": "Wall Oven installation",
+      "slug": "wall-oven-installation",
+      "short_description": "Built-in wall oven installation and alignment.",
+      "full_description": "<p>We mount and install wall ovens, secure cabinets, connect electrical circuits, and verify ventilation. Includes calibration and a post-install safety inspection to ensure correct operation.</p>",
+      "cart_description": "Wall oven installation with cabinet fitting and electrical hookup.",
+      "icon": "service_icon/wall-oven-icon.webp",
+      "image": "service_image/wall_oven_install.jpg",
+      "created_at": "2025-08-19T16:22:30.000Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 10,
+    "fields": {
+      "name": "Washer/Dryer installation",
+      "slug": "washer-dryer-installation",
+      "short_description": "Installation of washing machines and dryers, electric or gas.",
+      "full_description": "<p>We install washers and dryers, connect water lines and drains, perform electrical hookups, and for gas dryers install and test gas connections. Includes leveling, vibration checks and first-run tests.</p>",
+      "cart_description": "Washer and dryer installation with hookups and test run.",
+      "icon": "service_icon/washer-dryer-icon.webp",
+      "image": "service_image/washer_dryer_install.jpg",
+      "created_at": "2025-08-19T16:22:40.000Z"
+    }
+  },
+  {
+    "model": "api_models.installation",
+    "pk": 11,
+    "fields": {
+      "name": "Dishwasher installation",
+      "slug": "dishwasher-installation",
+      "short_description": "Professional dishwasher installation and water/electrical hookup.",
+      "full_description": "<p>We install dishwashers including water supply, drain connections, electrical hookup and leveling. After installation we run a test cycle to check for leaks and confirm proper operation.</p>",
+      "cart_description": "Dishwasher installation with leak test and first-run check.",
+      "icon": "service_icon/dishwasher-icon.webp",
+      "image": "service_image/dishwasher_install.jpg",
+      "created_at": "2025-08-19T16:22:50.000Z"
+    }
+  },
+  {
     "model": "api_models.product",
     "pk": 1,
     "fields": {
-      "image": "product_images/washers-kenmore-elite-washer.webp",
+      "image": "product_images/refrigerator.png",
       "brand": 1,
-      "name": "Kenmore Elite Washer 5000",
-      "slug": "kenmore-kenmore-elite-washer-5000",
-      "description": "<p>Top-load washing machine with advanced cleaning technology, large capacity, and smart cycle settings.</p>",
+      "name": "Refrigerator",
+      "slug": "kenmore-refrigerator",
+      "description": "Refrigerator by Kenmore - reliable, high-quality refrigerator with modern cooling features and energy-efficient operation. Includes manufacturer support.",
       "created_at": "2025-08-20T03:17:25.732Z",
       "updated_at": "2025-08-20T03:17:25.732Z"
     }
@@ -3851,52 +5055,3003 @@
     "model": "api_models.product",
     "pk": 2,
     "fields": {
-      "image": "product_images/KitchenAidArtisanStandMixer.jpg",
-      "brand": 3,
-      "name": "KitchenAid Artisan Stand Mixer",
-      "slug": "kitchenaid-kitchenaid-artisan-stand-mixer",
-      "description": "<p>Iconic stand mixer with 10-speed settings, durable metal construction, and versatile attachments.</p>",
-      "created_at": "2025-08-20T03:18:24.386Z",
-      "updated_at": "2025-08-20T03:18:24.386Z"
+      "image": "product_images/refrigerator.png",
+      "brand": 2,
+      "name": "Refrigerator",
+      "slug": "lg-refrigerator",
+      "description": "Refrigerator by LG - modern cooling technology, smart features and energy efficiency designed for everyday use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
     }
   },
   {
     "model": "api_models.product",
     "pk": 3,
     "fields": {
-      "image": "product_images/SilhouetteCameo4.jpg",
-      "brand": 11,
-      "name": "Silhouette Cameo 4",
-      "slug": "silhouette-silhouette-cameo-4",
-      "description": "<p>Precision cutting machine for craft projects, vinyl, and paper. Includes software for easy design creation.</p>",
-      "created_at": "2025-08-20T03:19:15.032Z",
-      "updated_at": "2025-08-20T03:19:15.032Z"
+      "image": "product_images/refrigerator.png",
+      "brand": 3,
+      "name": "Refrigerator",
+      "slug": "kitchenaid-refrigerator",
+      "description": "Refrigerator by KitchenAid - stylish design with professional-grade cooling, built for reliability and performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
     }
   },
   {
     "model": "api_models.product",
     "pk": 4,
     "fields": {
-      "image": "product_images/LGFrenchDoorRefrigerator.avif",
-      "brand": 2,
-      "name": "LG French Door Refrigerator",
-      "slug": "lg-lg-french-door-refrigerator",
-      "description": "<div>\r\n<div>\r\n<p>Key features</p>\r\n</div>\r\n\r\n<div>\r\n<div>\r\n<ul>\r\n\t<li>LG&nbsp;STUDIO&nbsp;ThinQ&nbsp;Offer: Enjoy a 3-year limited warranty on select appliances purchased through December 31, 2025 via the ThinQ&reg; app. Terms apply.ᶲ</li>\r\n\t<li>Essence White line of products delivers a luxurious, unique matte finish that&rsquo;s as bold as you are</li>\r\n\t<li>Elevated light bronze handles&sup1; add an elegant accent to your kitchen</li>\r\n\t<li>27 cu.ft. ultra-large capacity can fit everything you need to host your next dinner party</li>\r\n\t<li>Internal Water Dispenser offers sleek functionality in a minimalist design</li>\r\n\t<li>Ice Maker makes sure you&rsquo;re always ready for iced coffees, smoothies and more</li>\r\n\t<li>Door Cooling+ vent extends cool air to all areas of the refrigerator to help keep food fresh</li>\r\n\t<li>ThinQ&reg; Technology with ThinQ Care gives extra peace of mind</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>",
-      "created_at": "2025-08-20T03:21:07.705Z",
-      "updated_at": "2025-08-20T03:21:07.705Z"
+      "image": "product_images/refrigerator.png",
+      "brand": 4,
+      "name": "Refrigerator",
+      "slug": "monogram-refrigerator",
+      "description": "Refrigerator by Monogram - premium build quality with advanced temperature control and refined styling.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
     }
   },
   {
     "model": "api_models.product",
     "pk": 5,
     "fields": {
-      "image": "product_images/BOSCHSeries6Dishwasher.webp",
+      "image": "product_images/refrigerator.png",
+      "brand": 5,
+      "name": "Refrigerator",
+      "slug": "panasonic-refrigerator",
+      "description": "Refrigerator by Panasonic - energy-efficient refrigeration with reliable components and quiet operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 6,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 6,
+      "name": "Refrigerator",
+      "slug": "sharp-refrigerator",
+      "description": "Refrigerator by SHARP - compact and efficient cooling with practical storage solutions and dependable performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 7,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 7,
+      "name": "Refrigerator",
+      "slug": "faber-refrigerator",
+      "description": "Refrigerator by FABER - well-built appliance with focus on durability and efficient cooling performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 8,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 8,
+      "name": "Refrigerator",
+      "slug": "dacor-refrigerator",
+      "description": "Refrigerator by Dacor - premium features and refined engineering for demanding kitchen environments.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 9,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 9,
+      "name": "Refrigerator",
+      "slug": "electrolux-refrigerator",
+      "description": "Refrigerator by Electrolux - efficient cooling, organized storage and modern features for convenient use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 10,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 10,
+      "name": "Refrigerator",
+      "slug": "elica-refrigerator",
+      "description": "Refrigerator by Elica - compact, stylish and engineered for seamless integration into modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 11,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 11,
+      "name": "Refrigerator",
+      "slug": "silhouette-refrigerator",
+      "description": "Refrigerator by Silhouette - designed for efficient daily use with straightforward features and reliable cooling.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 12,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 12,
+      "name": "Refrigerator",
+      "slug": "frigidaire-refrigerator",
+      "description": "Refrigerator by Frigidaire - proven reliability with practical features and energy-conscious performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 13,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 13,
+      "name": "Refrigerator",
+      "slug": "sears-refrigerator",
+      "description": "Refrigerator by Sears - dependable appliance for everyday refrigeration needs with straightforward maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 14,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 14,
+      "name": "Refrigerator",
+      "slug": "ge-general-electric-refrigerator",
+      "description": "Refrigerator by GE (General Electric) - engineering-focused cooling solutions with reliable components and support.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 15,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 15,
+      "name": "Refrigerator",
+      "slug": "whirlpool-refrigerator",
+      "description": "Refrigerator by Whirlpool - practical, energy-efficient refrigerator built for reliable everyday use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 16,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 16,
+      "name": "Refrigerator",
+      "slug": "maytag-refrigerator",
+      "description": "Refrigerator by Maytag - durable construction and straightforward functionality for long-term use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 17,
+    "fields": {
+      "image": "product_images/refrigerator.png",
       "brand": 17,
-      "name": "BOSCH Series 6 Dishwasher",
-      "slug": "bosch-bosch-series-6-dishwasher",
-      "description": "<p>Energy-efficient dishwasher with multiple washing programs, quiet operation, and flexible loading options.</p>",
-      "created_at": "2025-08-20T03:21:48.506Z",
-      "updated_at": "2025-08-20T03:21:48.506Z"
+      "name": "Refrigerator",
+      "slug": "bosch-refrigerator",
+      "description": "Refrigerator by Bosch - precision engineering, quiet operation and efficient cooling for modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 18,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 18,
+      "name": "Refrigerator",
+      "slug": "sub-zero-refrigerator",
+      "description": "Refrigerator by Sub-Zero - high-end refrigeration with exceptional preservation technology and premium build.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 19,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 19,
+      "name": "Refrigerator",
+      "slug": "wolf-refrigerator",
+      "description": "Refrigerator by Wolf - professional-grade components and premium performance for serious kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 20,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 20,
+      "name": "Refrigerator",
+      "slug": "amana-refrigerator",
+      "description": "Refrigerator by Amana - budget-friendly refrigeration with reliable performance and practical storage.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 21,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 21,
+      "name": "Refrigerator",
+      "slug": "samsung-refrigerator",
+      "description": "Refrigerator by Samsung - advanced features, smart connectivity and efficient cooling technology.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 22,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 22,
+      "name": "Refrigerator",
+      "slug": "blomberg-refrigerator",
+      "description": "Refrigerator by Blomberg - European design influence, efficient cooling and smart storage layout.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 23,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 23,
+      "name": "Refrigerator",
+      "slug": "fisher-and-paykel-refrigerator",
+      "description": "Refrigerator by Fisher & Paykel - innovative storage solutions and consistent cooling performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 24,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 24,
+      "name": "Refrigerator",
+      "slug": "inglis-refrigerator",
+      "description": "Refrigerator by Inglis - practical refrigeration with a focus on value and dependable operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 25,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 25,
+      "name": "Refrigerator",
+      "slug": "jenn-air-refrigerator",
+      "description": "Refrigerator by Jenn Air - stylish, high-performance refrigeration with refined details for modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 26,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 26,
+      "name": "Refrigerator",
+      "slug": "miele-refrigerator",
+      "description": "Refrigerator by Miele - premium German engineering, long-lasting components and precise temperature control.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 27,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 27,
+      "name": "Refrigerator",
+      "slug": "thermador-refrigerator",
+      "description": "Refrigerator by Thermador - built for serious kitchens with professional-level preservation technologies.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 28,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 28,
+      "name": "Refrigerator",
+      "slug": "thor-refrigerator",
+      "description": "Refrigerator by Thor - rugged design and functional features suitable for heavy-duty use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 29,
+    "fields": {
+      "image": "product_images/refrigerator.png",
+      "brand": 29,
+      "name": "Refrigerator",
+      "slug": "viking-refrigerator",
+      "description": "Refrigerator by Viking - premium performance and commercial-inspired features for demanding home kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 30,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 1,
+      "name": "Stove",
+      "slug": "kenmore-stove",
+      "description": "Stove by Kenmore - reliable performance for everyday cooking, available in gas and electric configurations with straightforward controls and durable components.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 31,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 2,
+      "name": "Stove",
+      "slug": "lg-stove",
+      "description": "Stove by LG - modern features, even heating and intuitive controls, designed for efficient home cooking and energy savings.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 32,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 3,
+      "name": "Stove",
+      "slug": "kitchenaid-stove",
+      "description": "Stove by KitchenAid - professional-inspired cooking performance with precise controls and durable construction for serious home cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 33,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 4,
+      "name": "Stove",
+      "slug": "monogram-stove",
+      "description": "Stove by Monogram - premium materials and refined controls delivering consistent heat and a high-end kitchen presence.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 34,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 5,
+      "name": "Stove",
+      "slug": "panasonic-stove",
+      "description": "Stove by Panasonic - efficient heating, user-friendly features and dependable operation suitable for everyday meals.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 35,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 6,
+      "name": "Stove",
+      "slug": "sharp-stove",
+      "description": "Stove by SHARP - compact and versatile cooking appliance with straightforward controls and reliable performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 36,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 7,
+      "name": "Stove",
+      "slug": "faber-stove",
+      "description": "Stove by FABER - built with focus on durability and practical cooking features, suitable for both gas and electric setups.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 37,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 8,
+      "name": "Stove",
+      "slug": "dacor-stove",
+      "description": "Stove by Dacor - premium performance and refined controls for demanding kitchens, combining power and precision.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 38,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 9,
+      "name": "Stove",
+      "slug": "electrolux-stove",
+      "description": "Stove by Electrolux - efficient cooking performance with thoughtful features for reliable everyday use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 39,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 10,
+      "name": "Stove",
+      "slug": "elica-stove",
+      "description": "Stove by Elica - designed for integration into contemporary kitchens with reliable heating performance and clean lines.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 40,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 11,
+      "name": "Stove",
+      "slug": "silhouette-stove",
+      "description": "Stove by Silhouette - straightforward, dependable stove with practical features for everyday cooking tasks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 41,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 12,
+      "name": "Stove",
+      "slug": "frigidaire-stove",
+      "description": "Stove by Frigidaire - proven reliability with balanced performance and easy-to-use controls for home kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 42,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 13,
+      "name": "Stove",
+      "slug": "sears-stove",
+      "description": "Stove by Sears - dependable and practical cooking appliance, designed for reliable daily use and simple maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 43,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 14,
+      "name": "Stove",
+      "slug": "ge-general-electric-stove",
+      "description": "Stove by GE (General Electric) - engineered for consistent performance with emphasis on safety and durability.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 44,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 15,
+      "name": "Stove",
+      "slug": "whirlpool-stove",
+      "description": "Stove by Whirlpool - practical and energy-conscious cooking appliance with reliable controls and easy maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 45,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 16,
+      "name": "Stove",
+      "slug": "maytag-stove",
+      "description": "Stove by Maytag - sturdy construction and dependable performance for households seeking long-term reliability.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 46,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 17,
+      "name": "Stove",
+      "slug": "bosch-stove",
+      "description": "Stove by Bosch - precision engineering, quiet operation and consistent heat distribution for quality cooking results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 47,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 18,
+      "name": "Stove",
+      "slug": "sub-zero-stove",
+      "description": "Stove by Sub-Zero - high-end components and premium build quality for kitchens that demand professional-level performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 48,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 19,
+      "name": "Stove",
+      "slug": "wolf-stove",
+      "description": "Stove by Wolf - professional-grade stove engineered for precision, durability and powerful cooking performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 49,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 20,
+      "name": "Stove",
+      "slug": "amana-stove",
+      "description": "Stove by Amana - budget-friendly stove option with practical features and dependable day-to-day performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 50,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 21,
+      "name": "Stove",
+      "slug": "samsung-stove",
+      "description": "Stove by Samsung - advanced cooking features, smart integration options and efficient heating for modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 51,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 22,
+      "name": "Stove",
+      "slug": "blomberg-stove",
+      "description": "Stove by Blomberg - European-influenced design with efficient heating and practical controls for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 52,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 23,
+      "name": "Stove",
+      "slug": "fisher-and-paykel-stove",
+      "description": "Stove by Fisher & Paykel - innovative features and consistent heating performance with thoughtful design for home chefs.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 53,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 24,
+      "name": "Stove",
+      "slug": "inglis-stove",
+      "description": "Stove by Inglis - practical and value-oriented appliance with reliable heating and simple controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 54,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 25,
+      "name": "Stove",
+      "slug": "jenn-air-stove",
+      "description": "Stove by Jenn Air - stylish, high-performance stove with refined controls and premium finishes for modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 55,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 26,
+      "name": "Stove",
+      "slug": "miele-stove",
+      "description": "Stove by Miele - German engineering and long-lasting components that deliver precise heating and excellent build quality.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 56,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 27,
+      "name": "Stove",
+      "slug": "thermador-stove",
+      "description": "Stove by Thermador - professional-level performance designed for serious cooking tasks with powerful burners and robust controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 57,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 28,
+      "name": "Stove",
+      "slug": "thor-stove",
+      "description": "Stove by Thor - rugged and functional appliance built for heavy-duty cooking and lasting performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 58,
+    "fields": {
+      "image": "product_images/stove.png",
+      "brand": 29,
+      "name": "Stove",
+      "slug": "viking-stove",
+      "description": "Stove by Viking - commercial-inspired performance and robust construction for home kitchens that demand power and reliability.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 59,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 1,
+      "name": "Cooktop",
+      "slug": "kenmore-cooktop",
+      "description": "Cooktop by Kenmore - reliable cooktop options in gas and electric configurations with easy-to-clean surfaces and durable burners.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 60,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 2,
+      "name": "Cooktop",
+      "slug": "lg-cooktop",
+      "description": "Cooktop by LG - sleek induction and electric cooktops with rapid heating, precise controls and energy-efficient performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 61,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 3,
+      "name": "Cooktop",
+      "slug": "kitchenaid-cooktop",
+      "description": "Cooktop by KitchenAid - professional-inspired cooktops with robust burners, intuitive controls and a focus on consistent heat.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 62,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 4,
+      "name": "Cooktop",
+      "slug": "monogram-cooktop",
+      "description": "Cooktop by Monogram - premium cooktops engineered for power and precision, with refined finishes for upscale kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 63,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 5,
+      "name": "Cooktop",
+      "slug": "panasonic-cooktop",
+      "description": "Cooktop by Panasonic - dependable heating performance with user-friendly controls and compact design options.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 64,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 6,
+      "name": "Cooktop",
+      "slug": "sharp-cooktop",
+      "description": "Cooktop by SHARP - practical cooktops with reliable elements and straightforward controls for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 65,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 7,
+      "name": "Cooktop",
+      "slug": "faber-cooktop",
+      "description": "Cooktop by FABER - well-built cooktops designed for durability, with attention to gas safety and heat distribution.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 66,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 8,
+      "name": "Cooktop",
+      "slug": "dacor-cooktop",
+      "description": "Cooktop by Dacor - high-performance cooktops offering precise control and premium materials for demanding cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 67,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 9,
+      "name": "Cooktop",
+      "slug": "electrolux-cooktop",
+      "description": "Cooktop by Electrolux - efficient cooktops with well-designed burners and user-friendly layouts for everyday convenience.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 68,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 10,
+      "name": "Cooktop",
+      "slug": "elica-cooktop",
+      "description": "Cooktop by Elica - compact and stylish cooktops designed to blend into modern kitchen designs with dependable performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 69,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 11,
+      "name": "Cooktop",
+      "slug": "silhouette-cooktop",
+      "description": "Cooktop by Silhouette - practical and easy-to-use cooktops with reliable heating elements for daily use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 70,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 12,
+      "name": "Cooktop",
+      "slug": "frigidaire-cooktop",
+      "description": "Cooktop by Frigidaire - proven performance with balanced heating and easy maintenance for home kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 71,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 13,
+      "name": "Cooktop",
+      "slug": "sears-cooktop",
+      "description": "Cooktop by Sears - straightforward cooktop models focused on value and dependable day-to-day cooking performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 72,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 14,
+      "name": "Cooktop",
+      "slug": "ge-general-electric-cooktop",
+      "description": "Cooktop by GE (General Electric) - engineered cooktops with safety features, reliable burners and consistent heat control.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 73,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 15,
+      "name": "Cooktop",
+      "slug": "whirlpool-cooktop",
+      "description": "Cooktop by Whirlpool - user-friendly cooktops with consistent heating and easy cleanup for busy households.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 74,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 16,
+      "name": "Cooktop",
+      "slug": "maytag-cooktop",
+      "description": "Cooktop by Maytag - durable cooktops built for long-term use, offering dependable burners and simple controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 75,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 17,
+      "name": "Cooktop",
+      "slug": "bosch-cooktop",
+      "description": "Cooktop by Bosch - precision-engineered cooktops with quiet operation and even heat distribution for quality cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 76,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 18,
+      "name": "Cooktop",
+      "slug": "sub-zero-cooktop",
+      "description": "Cooktop by Sub-Zero - high-end cooktop options combining premium materials and precise heat control for serious kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 77,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 19,
+      "name": "Cooktop",
+      "slug": "wolf-cooktop",
+      "description": "Cooktop by Wolf - professional-grade burners and robust construction for power and precise temperature control.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 78,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 20,
+      "name": "Cooktop",
+      "slug": "amana-cooktop",
+      "description": "Cooktop by Amana - budget-friendly cooktops designed for reliable everyday use with practical controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 79,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 21,
+      "name": "Cooktop",
+      "slug": "samsung-cooktop",
+      "description": "Cooktop by Samsung - modern induction and electric cooktops with smart features, fast heating and efficient performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 80,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 22,
+      "name": "Cooktop",
+      "slug": "blomberg-cooktop",
+      "description": "Cooktop by Blomberg - European-influenced cooktops with efficient burners and thoughtful ergonomics for kitchen use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 81,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 23,
+      "name": "Cooktop",
+      "slug": "fisher-and-paykel-cooktop",
+      "description": "Cooktop by Fisher & Paykel - innovative cooktops with intuitive controls and consistent heating performance for home chefs.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 82,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 24,
+      "name": "Cooktop",
+      "slug": "inglis-cooktop",
+      "description": "Cooktop by Inglis - value-oriented cooktops with dependable burners and simple controls for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 83,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 25,
+      "name": "Cooktop",
+      "slug": "jenn-air-cooktop",
+      "description": "Cooktop by Jenn Air - stylish cooktops with premium finishes and refined control options for modern culinary spaces.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 84,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 26,
+      "name": "Cooktop",
+      "slug": "miele-cooktop",
+      "description": "Cooktop by Miele - premium German engineering with precise heat control, durable components and elegant design.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 85,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 27,
+      "name": "Cooktop",
+      "slug": "thermador-cooktop",
+      "description": "Cooktop by Thermador - professional-level cooktops with powerful burners and precise controls for serious home cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 86,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 28,
+      "name": "Cooktop",
+      "slug": "thor-cooktop",
+      "description": "Cooktop by Thor - robust cooktops built for heavy-duty use with strong burners and durable construction.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 87,
+    "fields": {
+      "image": "product_images/cooktop.png",
+      "brand": 29,
+      "name": "Cooktop",
+      "slug": "viking-cooktop",
+      "description": "Cooktop by Viking - commercial-inspired cooktops offering powerful burners and professional-grade performance for demanding kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 88,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 1,
+      "name": "Wall Oven",
+      "slug": "kenmore-wall-oven",
+      "description": "Wall Oven by Kenmore - reliable built-in oven with even heating, straightforward controls and solid construction for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 89,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 2,
+      "name": "Wall Oven",
+      "slug": "lg-wall-oven",
+      "description": "Wall Oven by LG - modern features, precise temperature control and energy-efficient performance for consistent results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 90,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 3,
+      "name": "Wall Oven",
+      "slug": "kitchenaid-wall-oven",
+      "description": "Wall Oven by KitchenAid - professional-inspired baking and roasting performance with durable components and intuitive controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 91,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 4,
+      "name": "Wall Oven",
+      "slug": "monogram-wall-oven",
+      "description": "Wall Oven by Monogram - premium build and advanced features for precise cooking in an upscale kitchen environment.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 92,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 5,
+      "name": "Wall Oven",
+      "slug": "panasonic-wall-oven",
+      "description": "Wall Oven by Panasonic - efficient heating and reliable performance with practical features for everyday cooking tasks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 93,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 6,
+      "name": "Wall Oven",
+      "slug": "sharp-wall-oven",
+      "description": "Wall Oven by SHARP - compact and dependable built-in oven options with user-friendly controls and consistent heating.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 94,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 7,
+      "name": "Wall Oven",
+      "slug": "faber-wall-oven",
+      "description": "Wall Oven by FABER - well-constructed built-in ovens focused on durability and stable cooking performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 95,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 8,
+      "name": "Wall Oven",
+      "slug": "dacor-wall-oven",
+      "description": "Wall Oven by Dacor - premium built-in ovens offering precise control, advanced cooking modes and refined styling.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 96,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 9,
+      "name": "Wall Oven",
+      "slug": "electrolux-wall-oven",
+      "description": "Wall Oven by Electrolux - efficient heating, smart features and thoughtful interior design for convenient cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 97,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 10,
+      "name": "Wall Oven",
+      "slug": "elica-wall-oven",
+      "description": "Wall Oven by Elica - stylish built-in ovens designed to integrate with modern kitchens while delivering reliable performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 98,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 11,
+      "name": "Wall Oven",
+      "slug": "silhouette-wall-oven",
+      "description": "Wall Oven by Silhouette - dependable built-in oven with straightforward controls and reliable temperature performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 99,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 12,
+      "name": "Wall Oven",
+      "slug": "frigidaire-wall-oven",
+      "description": "Wall Oven by Frigidaire - proven reliability with balanced cooking performance and easy-to-use features for home cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 100,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 13,
+      "name": "Wall Oven",
+      "slug": "sears-wall-oven",
+      "description": "Wall Oven by Sears - practical built-in oven options with dependable performance and simple maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 101,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 14,
+      "name": "Wall Oven",
+      "slug": "ge-general-electric-wall-oven",
+      "description": "Wall Oven by GE (General Electric) - engineered for consistent heating, safety and long-term reliability.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 102,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 15,
+      "name": "Wall Oven",
+      "slug": "whirlpool-wall-oven",
+      "description": "Wall Oven by Whirlpool - efficient performance, easy controls and reliable results suitable for everyday family cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 103,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 16,
+      "name": "Wall Oven",
+      "slug": "maytag-wall-oven",
+      "description": "Wall Oven by Maytag - sturdy construction and practical features focused on long-term dependable operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 104,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 17,
+      "name": "Wall Oven",
+      "slug": "bosch-wall-oven",
+      "description": "Wall Oven by Bosch - precision engineering, quiet operation and even heat distribution for consistent baking and roasting.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 105,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 18,
+      "name": "Wall Oven",
+      "slug": "sub-zero-wall-oven",
+      "description": "Wall Oven by Sub-Zero - premium built-in ovens with professional-level control and high-quality components for exceptional results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 106,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 19,
+      "name": "Wall Oven",
+      "slug": "wolf-wall-oven",
+      "description": "Wall Oven by Wolf - professional-grade built-in oven with precise controls, powerful elements and durable construction.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 107,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 20,
+      "name": "Wall Oven",
+      "slug": "amana-wall-oven",
+      "description": "Wall Oven by Amana - budget-friendly built-in ovens offering straightforward features and reliable day-to-day performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 108,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 21,
+      "name": "Wall Oven",
+      "slug": "samsung-wall-oven",
+      "description": "Wall Oven by Samsung - modern connectivity and advanced cooking modes combined with efficient heating and smart controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 109,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 22,
+      "name": "Wall Oven",
+      "slug": "blomberg-wall-oven",
+      "description": "Wall Oven by Blomberg - European-inspired built-in ovens with efficient performance and thoughtful interior layout.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 110,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 23,
+      "name": "Wall Oven",
+      "slug": "fisher-and-paykel-wall-oven",
+      "description": "Wall Oven by Fisher & Paykel - innovative features and consistent heating performance with a focus on intuitive use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 111,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 24,
+      "name": "Wall Oven",
+      "slug": "inglis-wall-oven",
+      "description": "Wall Oven by Inglis - value-oriented built-in ovens offering dependable cooking and simple controls for daily use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 112,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 25,
+      "name": "Wall Oven",
+      "slug": "jenn-air-wall-oven",
+      "description": "Wall Oven by Jenn Air - refined styling and premium features for modern kitchens, with precise temperature control.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 113,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 26,
+      "name": "Wall Oven",
+      "slug": "miele-wall-oven",
+      "description": "Wall Oven by Miele - premium German engineering ensuring precise temperature control, long-lasting components and excellent results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 114,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 27,
+      "name": "Wall Oven",
+      "slug": "thermador-wall-oven",
+      "description": "Wall Oven by Thermador - professional-level built-in ovens with powerful functions and precise control for serious home cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 115,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 28,
+      "name": "Wall Oven",
+      "slug": "thor-wall-oven",
+      "description": "Wall Oven by Thor - rugged built-in oven options designed for heavy-duty use and lasting performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 116,
+    "fields": {
+      "image": "product_images/wall-oven.png",
+      "brand": 29,
+      "name": "Wall Oven",
+      "slug": "viking-wall-oven",
+      "description": "Wall Oven by Viking - commercial-inspired built-in oven delivering powerful performance and professional-grade results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 117,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 1,
+      "name": "Range/Oven",
+      "slug": "kenmore-range-oven",
+      "description": "Range/Oven by Kenmore - dependable freestanding range offering balanced heating, reliable burners and practical controls for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 118,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 2,
+      "name": "Range/Oven",
+      "slug": "lg-range-oven",
+      "description": "Range/Oven by LG - modern features, even heat distribution and user-friendly controls paired with energy-efficient operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 119,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 3,
+      "name": "Range/Oven",
+      "slug": "kitchenaid-range-oven",
+      "description": "Range/Oven by KitchenAid - professional-inspired range with precise controls, robust burners and durable construction.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 120,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 4,
+      "name": "Range/Oven",
+      "slug": "monogram-range-oven",
+      "description": "Range/Oven by Monogram - premium freestanding range with high-end finishes, precise temperature control and powerful burners.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 121,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 5,
+      "name": "Range/Oven",
+      "slug": "panasonic-range-oven",
+      "description": "Range/Oven by Panasonic - dependable heating performance, intuitive controls and reliable day-to-day operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 122,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 6,
+      "name": "Range/Oven",
+      "slug": "sharp-range-oven",
+      "description": "Range/Oven by SHARP - compact and functional range options offering reliable burners and straightforward controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 123,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 7,
+      "name": "Range/Oven",
+      "slug": "faber-range-oven",
+      "description": "Range/Oven by FABER - robust range solutions focused on durability, safety and even heat distribution.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 124,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 8,
+      "name": "Range/Oven",
+      "slug": "dacor-range-oven",
+      "description": "Range/Oven by Dacor - premium freestanding range offering refined controls, powerful burners and professional-level performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 125,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 9,
+      "name": "Range/Oven",
+      "slug": "electrolux-range-oven",
+      "description": "Range/Oven by Electrolux - efficient heating, thoughtful features and consistent cooking performance for home kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 126,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 10,
+      "name": "Range/Oven",
+      "slug": "elica-range-oven",
+      "description": "Range/Oven by Elica - stylish and functional range options that integrate well into contemporary kitchen designs.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 127,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 11,
+      "name": "Range/Oven",
+      "slug": "silhouette-range-oven",
+      "description": "Range/Oven by Silhouette - straightforward and reliable freestanding ranges with practical controls and consistent output.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 128,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 12,
+      "name": "Range/Oven",
+      "slug": "frigidaire-range-oven",
+      "description": "Range/Oven by Frigidaire - proven, value-oriented ranges with balanced heating and easy-to-use controls for family kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 129,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 13,
+      "name": "Range/Oven",
+      "slug": "sears-range-oven",
+      "description": "Range/Oven by Sears - practical freestanding ranges built for dependable everyday performance and simple maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 130,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 14,
+      "name": "Range/Oven",
+      "slug": "ge-general-electric-range-oven",
+      "description": "Range/Oven by GE (General Electric) - engineered freestanding ranges with emphasis on safety, durability and consistent heating.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 131,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 15,
+      "name": "Range/Oven",
+      "slug": "whirlpool-range-oven",
+      "description": "Range/Oven by Whirlpool - user-friendly ranges with consistent performance, easy maintenance and energy-conscious design.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 132,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 16,
+      "name": "Range/Oven",
+      "slug": "maytag-range-oven",
+      "description": "Range/Oven by Maytag - sturdy construction and reliable operation designed for long-term household use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 133,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 17,
+      "name": "Range/Oven",
+      "slug": "bosch-range-oven",
+      "description": "Range/Oven by Bosch - precision engineering and quiet operation delivering even heat and consistent cooking results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 134,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 18,
+      "name": "Range/Oven",
+      "slug": "sub-zero-range-oven",
+      "description": "Range/Oven by Sub-Zero - high-end range options with premium components and exceptional build quality for demanding kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 135,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 19,
+      "name": "Range/Oven",
+      "slug": "wolf-range-oven",
+      "description": "Range/Oven by Wolf - professional-grade freestanding ranges with powerful burners and precise performance for serious cooks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 136,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 20,
+      "name": "Range/Oven",
+      "slug": "amana-range-oven",
+      "description": "Range/Oven by Amana - budget-friendly freestanding ranges offering straightforward features and dependable day-to-day heating.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 137,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 21,
+      "name": "Range/Oven",
+      "slug": "samsung-range-oven",
+      "description": "Range/Oven by Samsung - advanced features, smart integration and efficient heating for modern kitchen use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 138,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 22,
+      "name": "Range/Oven",
+      "slug": "blomberg-range-oven",
+      "description": "Range/Oven by Blomberg - European-influenced freestanding ranges with efficient burners and thoughtful ergonomics.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 139,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 23,
+      "name": "Range/Oven",
+      "slug": "fisher-and-paykel-range-oven",
+      "description": "Range/Oven by Fisher & Paykel - innovative freestanding ranges with intuitive controls and consistent heating performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 140,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 24,
+      "name": "Range/Oven",
+      "slug": "inglis-range-oven",
+      "description": "Range/Oven by Inglis - value-focused freestanding ranges with dependable burners and simple controls for everyday cooking.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 141,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 25,
+      "name": "Range/Oven",
+      "slug": "jenn-air-range-oven",
+      "description": "Range/Oven by Jenn Air - stylish freestanding ranges with premium finishes and refined cooking controls for modern kitchens.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 142,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 26,
+      "name": "Range/Oven",
+      "slug": "miele-range-oven",
+      "description": "Range/Oven by Miele - premium German engineering with precise heating elements and long-lasting components for consistent results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 143,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 27,
+      "name": "Range/Oven",
+      "slug": "thermador-range-oven",
+      "description": "Range/Oven by Thermador - professional-level freestanding ranges with powerful burners and precise controls for serious cooking tasks.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 144,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 28,
+      "name": "Range/Oven",
+      "slug": "thor-range-oven",
+      "description": "Range/Oven by Thor - heavy-duty freestanding ranges built for rugged use and lasting performance in demanding environments.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 145,
+    "fields": {
+      "image": "product_images/range-oven.png",
+      "brand": 29,
+      "name": "Range/Oven",
+      "slug": "viking-range-oven",
+      "description": "Range/Oven by Viking - commercial-inspired freestanding range with powerful burners and professional-grade construction for serious home chefs.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 146,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 1,
+      "name": "Washer",
+      "slug": "kenmore-washer",
+      "description": "Washer by Kenmore - reliable washing machine with efficient cycles and durable components for everyday laundry needs.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 147,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 2,
+      "name": "Washer",
+      "slug": "lg-washer",
+      "description": "Washer by LG - modern washing machine with smart features, gentle cleaning and energy-efficient operation.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 148,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 3,
+      "name": "Washer",
+      "slug": "kitchenaid-washer",
+      "description": "Washer by KitchenAid - durable washer with robust cycles and thoughtful design for consistent cleaning performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 149,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 4,
+      "name": "Washer",
+      "slug": "monogram-washer",
+      "description": "Washer by Monogram - premium washing machine offering quiet operation, precision cleaning and premium materials.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 150,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 5,
+      "name": "Washer",
+      "slug": "panasonic-washer",
+      "description": "Washer by Panasonic - efficient washer with reliable components and user-friendly cycle options for daily laundry.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 151,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 6,
+      "name": "Washer",
+      "slug": "sharp-washer",
+      "description": "Washer by SHARP - compact and reliable washing machine suited for smaller households and efficient cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 152,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 7,
+      "name": "Washer",
+      "slug": "faber-washer",
+      "description": "Washer by FABER - practical washer built for durability and steady performance over many cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 153,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 8,
+      "name": "Washer",
+      "slug": "dacor-washer",
+      "description": "Washer by Dacor - premium washing machine with refined features and high-quality construction for discerning users.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 154,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 9,
+      "name": "Washer",
+      "slug": "electrolux-washer",
+      "description": "Washer by Electrolux - efficient cleaning performance with thoughtful cycles and a focus on fabric care.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 155,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 10,
+      "name": "Washer",
+      "slug": "elica-washer",
+      "description": "Washer by Elica - compact washer options designed to blend into modern spaces while delivering dependable cleaning.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 156,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 11,
+      "name": "Washer",
+      "slug": "silhouette-washer",
+      "description": "Washer by Silhouette - straightforward washing machine with reliable cycles and easy-to-use controls for families.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 157,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 12,
+      "name": "Washer",
+      "slug": "frigidaire-washer",
+      "description": "Washer by Frigidaire - proven washer models offering balanced cleaning performance and straightforward maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 158,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 13,
+      "name": "Washer",
+      "slug": "sears-washer",
+      "description": "Washer by Sears - dependable washing machines designed for everyday use with simple upkeep and reliable cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 159,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 14,
+      "name": "Washer",
+      "slug": "ge-general-electric-washer",
+      "description": "Washer by GE (General Electric) - engineered washing machines with focus on durability, safety and consistent cleaning.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 160,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 15,
+      "name": "Washer",
+      "slug": "whirlpool-washer",
+      "description": "Washer by Whirlpool - practical washer offering efficient cycles, easy maintenance and reliable day-to-day performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 161,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 16,
+      "name": "Washer",
+      "slug": "maytag-washer",
+      "description": "Washer by Maytag - sturdy washer built for long-term reliability with simple, effective cleaning cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 162,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 17,
+      "name": "Washer",
+      "slug": "bosch-washer",
+      "description": "Washer by Bosch - precision engineering and quiet operation combined with effective cleaning and energy efficiency.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 163,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 18,
+      "name": "Washer",
+      "slug": "sub-zero-washer",
+      "description": "Washer by Sub-Zero - premium build and advanced features for users seeking high-end laundry performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 164,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 19,
+      "name": "Washer",
+      "slug": "wolf-washer",
+      "description": "Washer by Wolf - professional-level washer with robust components and precise cleaning cycles for demanding use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 165,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 20,
+      "name": "Washer",
+      "slug": "amana-washer",
+      "description": "Washer by Amana - budget-friendly washer offering simple controls and dependable cleaning for routine laundry.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 166,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 21,
+      "name": "Washer",
+      "slug": "samsung-washer",
+      "description": "Washer by Samsung - smart-connected washer options with advanced cycles, fast spin and energy-efficient features.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 167,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 22,
+      "name": "Washer",
+      "slug": "blomberg-washer",
+      "description": "Washer by Blomberg - European-influenced washer design focusing on efficiency, gentle cleaning and practical cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 168,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 23,
+      "name": "Washer",
+      "slug": "fisher-and-paykel-washer",
+      "description": "Washer by Fisher & Paykel - innovative laundry features and consistent cleaning performance with user-friendly controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 169,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 24,
+      "name": "Washer",
+      "slug": "inglis-washer",
+      "description": "Washer by Inglis - value-oriented washer with dependable cycles and simple maintenance for everyday use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 170,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 25,
+      "name": "Washer",
+      "slug": "jenn-air-washer",
+      "description": "Washer by Jenn Air - stylish washer solutions with premium finishes and refined cycle options for modern homes.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 171,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 26,
+      "name": "Washer",
+      "slug": "miele-washer",
+      "description": "Washer by Miele - premium German engineering with long-lasting components, precise cycles and excellent fabric care.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 172,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 27,
+      "name": "Washer",
+      "slug": "thermador-washer",
+      "description": "Washer by Thermador - high-performance washer options tailored for serious home kitchens and demanding households.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 173,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 28,
+      "name": "Washer",
+      "slug": "thor-washer",
+      "description": "Washer by Thor - rugged washer models built for heavy-duty use and lasting performance in demanding environments.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 174,
+    "fields": {
+      "image": "product_images/washer.png",
+      "brand": 29,
+      "name": "Washer",
+      "slug": "viking-washer",
+      "description": "Washer by Viking - commercial-inspired washer technology offering powerful cleaning performance and robust construction.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 175,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 1,
+      "name": "Dryer",
+      "slug": "kenmore-dryer",
+      "description": "Dryer by Kenmore - reliable electric and gas dryer options with efficient drying cycles and durable components for everyday laundry.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 176,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 2,
+      "name": "Dryer",
+      "slug": "lg-dryer",
+      "description": "Dryer by LG - modern dryers with smart features, fast drying cycles and energy-efficient performance for gentle fabric care.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 177,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 3,
+      "name": "Dryer",
+      "slug": "kitchenaid-dryer",
+      "description": "Dryer by KitchenAid - durable dryers with thoughtful cycles and reliable performance for consistent laundry results.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 178,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 4,
+      "name": "Dryer",
+      "slug": "monogram-dryer",
+      "description": "Dryer by Monogram - premium dryers offering quiet operation, advanced controls and refined drying performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 179,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 5,
+      "name": "Dryer",
+      "slug": "panasonic-dryer",
+      "description": "Dryer by Panasonic - efficient and reliable dryers with user-friendly cycles and consistent drying performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 180,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 6,
+      "name": "Dryer",
+      "slug": "sharp-dryer",
+      "description": "Dryer by SHARP - compact and dependable dryers suited for smaller households with straightforward controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 181,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 7,
+      "name": "Dryer",
+      "slug": "faber-dryer",
+      "description": "Dryer by FABER - practical dryers built for durability and efficient drying over many cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 182,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 8,
+      "name": "Dryer",
+      "slug": "dacor-dryer",
+      "description": "Dryer by Dacor - premium dryers with refined features, precise drying control and high-quality construction.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 183,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 9,
+      "name": "Dryer",
+      "slug": "electrolux-dryer",
+      "description": "Dryer by Electrolux - efficient drying performance with thoughtful cycles focused on fabric care and energy savings.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 184,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 10,
+      "name": "Dryer",
+      "slug": "elica-dryer",
+      "description": "Dryer by Elica - compact dryer options designed to integrate into modern spaces while delivering reliable drying.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 185,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 11,
+      "name": "Dryer",
+      "slug": "silhouette-dryer",
+      "description": "Dryer by Silhouette - straightforward dryers with reliable cycles and easy-to-use controls for family use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 186,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 12,
+      "name": "Dryer",
+      "slug": "frigidaire-dryer",
+      "description": "Dryer by Frigidaire - proven dryer models offering balanced drying performance and straightforward maintenance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 187,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 13,
+      "name": "Dryer",
+      "slug": "sears-dryer",
+      "description": "Dryer by Sears - dependable dryer options designed for everyday use with simple upkeep and reliable cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 188,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 14,
+      "name": "Dryer",
+      "slug": "ge-general-electric-dryer",
+      "description": "Dryer by GE (General Electric) - engineered dryers with focus on safety, consistent drying and long-term reliability.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 189,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 15,
+      "name": "Dryer",
+      "slug": "whirlpool-dryer",
+      "description": "Dryer by Whirlpool - practical dryers offering efficient cycles, easy maintenance and reliable day-to-day performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 190,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 16,
+      "name": "Dryer",
+      "slug": "maytag-dryer",
+      "description": "Dryer by Maytag - sturdy dryers built for long-term reliability with simple, effective drying cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 191,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 17,
+      "name": "Dryer",
+      "slug": "bosch-dryer",
+      "description": "Dryer by Bosch - precision engineering and quiet operation combined with effective drying and energy efficiency.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 192,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 18,
+      "name": "Dryer",
+      "slug": "sub-zero-dryer",
+      "description": "Dryer by Sub-Zero - premium dryers with advanced features and high-end build quality for users seeking top performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 193,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 19,
+      "name": "Dryer",
+      "slug": "wolf-dryer",
+      "description": "Dryer by Wolf - professional-grade dryers engineered for durability and precise drying performance in demanding environments.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 194,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 20,
+      "name": "Dryer",
+      "slug": "amana-dryer",
+      "description": "Dryer by Amana - budget-friendly dryer options offering practical features and dependable drying for routine laundry.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 195,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 21,
+      "name": "Dryer",
+      "slug": "samsung-dryer",
+      "description": "Dryer by Samsung - smart-connected dryers with advanced cycles, energy-efficient options and fast drying performance.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 196,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 22,
+      "name": "Dryer",
+      "slug": "blomberg-dryer",
+      "description": "Dryer by Blomberg - European-influenced dryers designed for efficiency, gentle fabric care and practical cycles.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 197,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 23,
+      "name": "Dryer",
+      "slug": "fisher-and-paykel-dryer",
+      "description": "Dryer by Fisher & Paykel - innovative drying features and consistent performance with user-friendly controls.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 198,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 24,
+      "name": "Dryer",
+      "slug": "inglis-dryer",
+      "description": "Dryer by Inglis - value-focused dryers with dependable cycles and simple controls for everyday use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 199,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 25,
+      "name": "Dryer",
+      "slug": "jenn-air-dryer",
+      "description": "Dryer by Jenn Air - premium dryers with refined controls, stylish finishes and reliable drying performance for modern homes.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 200,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 26,
+      "name": "Dryer",
+      "slug": "miele-dryer",
+      "description": "Dryer by Miele - premium German engineering with long-lasting components, precise drying cycles and superior fabric care.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 201,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 27,
+      "name": "Dryer",
+      "slug": "thermador-dryer",
+      "description": "Dryer by Thermador - high-performance dryer options tailored for demanding households and frequent use.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 202,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 28,
+      "name": "Dryer",
+      "slug": "thor-dryer",
+      "description": "Dryer by Thor - rugged dryer models built for heavy-duty use and lasting performance in demanding settings.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 203,
+    "fields": {
+      "image": "product_images/dryer.png",
+      "brand": 29,
+      "name": "Dryer",
+      "slug": "viking-dryer",
+      "description": "Dryer by Viking - commercial-inspired dryers offering powerful performance and robust construction for large households.",
+      "created_at": "2025-08-20T03:17:25.732Z",
+      "updated_at": "2025-08-20T03:17:25.732Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 204,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 1,
+      "name": "Dishwasher",
+      "slug": "kenmore-dishwasher",
+      "description": "Dishwasher by Kenmore - reliable and efficient dishwashers with advanced cleaning technology and quiet operation.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 205,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 2,
+      "name": "Dishwasher",
+      "slug": "lg-dishwasher",
+      "description": "Dishwasher by LG - smart dishwashers with innovative features like QuadWash and TrueSteam technology for superior cleaning.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 206,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 3,
+      "name": "Dishwasher",
+      "slug": "kitchenaid-dishwasher",
+      "description": "Dishwasher by KitchenAid - premium dishwashers with ProWash cycle and third-level rack for maximum loading flexibility.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 207,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 4,
+      "name": "Dishwasher",
+      "slug": "monogram-dishwasher",
+      "description": "Dishwasher by Monogram - luxury dishwashers with advanced sensor technology and sleek integrated design.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 208,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 5,
+      "name": "Dishwasher",
+      "slug": "panasonic-dishwasher",
+      "description": "Dishwasher by Panasonic - energy-efficient dishwashers with Nanoe technology and quiet operation features.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 209,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 6,
+      "name": "Dishwasher",
+      "slug": "sharp-dishwasher",
+      "description": "Dishwasher by SHARP - innovative dishwashers with Heatsplash drying system and advanced water filtration.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 210,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 7,
+      "name": "Dishwasher",
+      "slug": "faber-dishwasher",
+      "description": "Dishwasher by FABER - European-designed dishwashers with efficient water usage and elegant styling.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 211,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 8,
+      "name": "Dishwasher",
+      "slug": "dacor-dishwasher",
+      "description": "Dishwasher by Dacor - luxury dishwashers with intuitive controls and exceptional cleaning performance.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 212,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 9,
+      "name": "Dishwasher",
+      "slug": "electrolux-dishwasher",
+      "description": "Dishwasher by Electrolux - Scandinavian-designed dishwashers with PerfectDry technology and flexible loading options.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 213,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 10,
+      "name": "Dishwasher",
+      "slug": "elica-dishwasher",
+      "description": "Dishwasher by Elica - Italian-engineered dishwashers with advanced cleaning systems and elegant design.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 214,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 11,
+      "name": "Dishwasher",
+      "slug": "silhouette-dishwasher",
+      "description": "Dishwasher by Silhouette - modern dishwashers with sleek profiles and efficient cleaning technology.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 215,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 12,
+      "name": "Dishwasher",
+      "slug": "frigidaire-dishwasher",
+      "description": "Dishwasher by Frigidaire - reliable dishwashers with EvenDry system and multiple cycle options for everyday use.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 216,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 13,
+      "name": "Dishwasher",
+      "slug": "sears-dishwasher",
+      "description": "Dishwasher by Sears - affordable and dependable dishwashers with multiple wash cycles and energy efficiency.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 217,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 14,
+      "name": "Dishwasher",
+      "slug": "ge-dishwasher",
+      "description": "Dishwasher by GE - innovative dishwashers with Sanitize cycle and bottle jet washers for thorough cleaning.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 218,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 15,
+      "name": "Dishwasher",
+      "slug": "whirlpool-dishwasher",
+      "description": "Dishwasher by Whirlpool - dependable dishwashers with Soil Sensor technology and hard food disposers.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 219,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 16,
+      "name": "Dishwasher",
+      "slug": "maytag-dishwasher",
+      "description": "Dishwasher by Maytag - durable dishwashers with PowerBlast cycle and built-in water heating for tough cleaning.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 220,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 17,
+      "name": "Dishwasher",
+      "slug": "bosch-dishwasher",
+      "description": "Dishwasher by Bosch - German-engineered dishwashers with SilencePlus sound insulation and efficient drying systems.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 221,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 18,
+      "name": "Dishwasher",
+      "slug": "sub-zero-dishwasher",
+      "description": "Dishwasher by Sub-Zero - premium integrated dishwashers with advanced filtration and precise temperature control.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 222,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 19,
+      "name": "Dishwasher",
+      "slug": "wolf-dishwasher",
+      "description": "Dishwasher by Wolf - professional-style dishwashers with powerful cleaning performance and robust construction.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 223,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 20,
+      "name": "Dishwasher",
+      "slug": "amana-dishwasher",
+      "description": "Dishwasher by Amana - value-priced dishwashers with multiple wash options and reliable performance.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 224,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 21,
+      "name": "Dishwasher",
+      "slug": "samsung-dishwasher",
+      "description": "Dishwasher by Samsung - smart dishwashers with WaterWall technology and WiFi connectivity for modern kitchens.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 225,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 22,
+      "name": "Dishwasher",
+      "slug": "blomberg-dishwasher",
+      "description": "Dishwasher by Blomberg - European dishwashers with patented drying technology and energy-efficient operation.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 226,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 23,
+      "name": "Dishwasher",
+      "slug": "fisher-paykel-dishwasher",
+      "description": "Dishwasher by Fisher & Paykel - innovative dishwashers with DishDrawer design and flexible configuration options.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 227,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 24,
+      "name": "Dishwasher",
+      "slug": "inglis-dishwasher",
+      "description": "Dishwasher by Inglis - affordable and reliable dishwashers with basic features and durable construction.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 228,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 25,
+      "name": "Dishwasher",
+      "slug": "jenn-air-dishwasher",
+      "description": "Dishwasher by Jenn Air - premium dishwashers with custom panel options and professional cleaning performance.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 229,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 26,
+      "name": "Dishwasher",
+      "slug": "miele-dishwasher",
+      "description": "Dishwasher by Miele - German-engineered dishwashers with AutoOpen drying and exceptional energy efficiency.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 230,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 27,
+      "name": "Dishwasher",
+      "slug": "thermador-dishwasher",
+      "description": "Dishwasher by Thermador - luxury dishwashers with Star-Sanitization and professional-grade cleaning power.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 231,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 28,
+      "name": "Dishwasher",
+      "slug": "thor-dishwasher",
+      "description": "Dishwasher by Thor - commercial-inspired dishwashers with robust construction and powerful cleaning performance.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api_models.product",
+    "pk": 232,
+    "fields": {
+      "image": "product_images/dishwasher.png",
+      "brand": 29,
+      "name": "Dishwasher",
+      "slug": "viking-dishwasher",
+      "description": "Dishwasher by Viking - professional-grade dishwashers with powerful cleaning performance and durable stainless steel interior.",
+      "created_at": "2025-08-22T10:00:00Z",
+      "updated_at": "2025-08-22T10:00:00Z"
     }
   },
   {
