@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 
 
 class CityHeaderViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = City.objects.all()
+    queryset = City.objects.all().order_by('name')
     serializer_class = CityHeaderSerializer
 
 
@@ -206,7 +206,7 @@ class BrandViewSet(viewsets.ModelViewSet):
 
 
 class BrandHeaderViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Brand.objects.all()
+    queryset = Brand.objects.all().order_by('name')
     serializer_class = BrandHeaderSerializer
 
 
