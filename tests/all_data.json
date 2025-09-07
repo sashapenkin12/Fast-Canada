@@ -3626,7 +3626,7 @@
       "short_description": "Repair for electric and gas dryers.",
       "full_description": "<p>We repair heating elements, thermostats, belts, drums, gas valves and lint systems. Service includes safety checks and performance testing to ensure efficient drying.</p>",
       "cart_description": "Dryer repair with safety inspection and part replacement.",
-      "icon": "service_icon/dryer-icon.webp",
+      "icon": "service_icon/dryer-icon.png",
       "image": "service_image/dryer.jpg",
       "created_at": "2025-08-14T03:46:00Z"
     }
