@@ -35,7 +35,7 @@ docker compose up --build
 
 + **API-интерфейс**: http://localhost/api/
 
-+ **Админ-панель**: http://localhost/admin/
++ **Админ-панель**: http://localhost/api/admin/
 
 + **Медиафайлы**: http://localhost/media/
 
